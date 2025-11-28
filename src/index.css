@@ -69,8 +69,10 @@
 
 /* COMPONENTS */
 @layer components {
+
+    /* BUTTONS */
     .btn-primary {
-        @apply inline-flex items-center justify-center font-body font-semibold px-6 py-3 rounded-md bg-mustard text-black-rich transition-all duration-200;
+        @apply inline-flex items-center justify-center font-body font-semibold px-6 py-3 rounded-md bg-mustard text-black-rich cursor-pointer transition-all duration-200;
     }
 
     .btn-primary:hover {
@@ -78,16 +80,47 @@
     }
 
     .btn-secondary {
-        @apply inline-flex items-center justify-center font-body font-semibold px-6 py-3 rounded-md bg-teal text-black-rich transition-all duration-200;
+        @apply inline-flex items-center justify-center font-body font-semibold px-6 py-3 rounded-md bg-teal text-black-rich cursor-pointer transition-all duration-200;
     }
 
     .btn-secondary:hover {
         @apply brightness-90;
     }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center font-body font-medium px-6 py-3 rounded-md border border-gray-dark text-black-rich cursor-pointer transition-all duration-200;
+    }
+
+    .btn-ghost:hover {
+        @apply border-teal text-teal;
+    }
+
+    /* IMAGE FRAME */
+    .image-frame {
+        @apply bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 ease-out will-change-transform;
+    }
+
+    .image-frame:hover {
+        @apply scale-[1.03] shadow-lg;
+    }
+
+    /* The actual image inside */
+    .image-frame img {
+        @apply w-full h-auto rounded-md;
+    }
+
+    /* CARD */
+    .card {
+        @apply bg-white p-8 rounded-lg shadow-sm transition-all duration-300 ease-out;
+    }
+
+    .card:hover {
+        @apply -translate-y-1 shadow-md;
+    }
 }
 
 /* DEFAULTS */
-@layer {
+@layer base {
     body {
         font-family: var(--font-body);
         font-size: var(--text-base);
