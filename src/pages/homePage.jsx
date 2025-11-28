@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from '../components/ui/Button';
 
 const HomePage = () => {
     return (
@@ -6,8 +7,8 @@ const HomePage = () => {
             <section>
                 <h2>I design distinctive brands and build modern, fast websites.</h2>
                 <p>Brand identity + Web Development for small businesses, creators and founders who want to stand out.</p>
-                <button className="btn-secondary">View my Work</button>
-                <button className="btn-primary">Get in Touch</button>
+                <Button className="btn-secondary">View My Work</Button>
+                <Button className="btn-primary">Get in Touch</Button>
             </section>
             <section>
                 <h2>A selection of recent work blending brand identity, web design, and clean, modular development.</h2>
