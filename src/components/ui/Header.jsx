@@ -6,8 +6,11 @@ import logoHrz from "../../assets/tcr_logo_hrz.svg";
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const baseClasses = 'text-md text-lg transition hover:text-mustard';
+    const activeClasses = 'text-md text-lg text-mustard font-semibold';
+
     return (
-        <header className="relative flex items-center justify-between py-6 px-6 md:px-12">
+        <header className="sticky top-0 bg-white flex items-center justify-between py-6 px-6 md:px-12 shadow-md">
             <div className="">
                 <a href="/">
                     <img className="w-40 md:w-50" src={logoHrz} alt="TiagoCR Logo" />
@@ -17,10 +20,10 @@ const Header = () => {
                 {/* DESKTOP NAV */}
                 <div className="hidden md:flex items-center gap-6">
                     <div className="space-x-4 text-sm text-gray-600">
-                        <NavLink to="/">Home</NavLink>
-                        <NavLink to="/about">About</NavLink>
-                        <NavLink to="/projects">Projects</NavLink>
-                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/projects">Projects</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact">Contact</NavLink>
                     </div>
                 </div>
 
@@ -32,11 +35,11 @@ const Header = () => {
                 </div>
             </nav>
             {/* MOBILE NAV */}
-            {menuOpen && <div className="absolute top-full right-0 w-full bg-white shadow-md md:hidden flex flex-col items-center px-6 py-4 space-y-5 transition">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/about">About</NavLink>
-                <NavLink to="/projects">Projects</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
+            {menuOpen && <div className="absolute top-full right-0 w-full bg-white md:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
+                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
+                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
+                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/projects">Projects</NavLink>
+                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact">Contact</NavLink>
             </div>}
         </header >
     )
