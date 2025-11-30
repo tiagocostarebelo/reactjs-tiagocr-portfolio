@@ -10,7 +10,7 @@ const Header = () => {
     const activeClasses = 'text-md text-lg text-mustard font-semibold';
 
     return (
-        <header className="sticky top-0 bg-white flex items-center justify-between py-6 px-6 md:px-12 shadow-md">
+        <header className="sticky top-0 bg-white flex items-center justify-between py-6 px-6 md:px-12">
             <div className="">
                 <a href="/">
                     <img className="w-40 md:w-50" src={logoHrz} alt="TiagoCR Logo" />
@@ -35,7 +35,7 @@ const Header = () => {
                 </div>
             </nav>
             {/* MOBILE NAV */}
-            {menuOpen && <div className="absolute top-full right-0 w-full bg-white md:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
+            {menuOpen && <div className="absolute top-full z-50 right-0 w-full bg-white md:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
                 <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
                 <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
                 <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/projects">Projects</NavLink>
