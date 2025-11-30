@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <>
             <Hero />
-            <section>
+            <section className="w-full h-[80dvh] flex flex-col text-center">
                 <h2>A selection of recent work blending brand identity, web design, and clean, modular development.</h2>
                 <button>View full Portfolio</button>
             </section>
