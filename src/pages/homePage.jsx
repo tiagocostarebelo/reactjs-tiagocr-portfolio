@@ -1,15 +1,13 @@
 import React from 'react';
 import Hero from '../components/sections/Hero';
+import FeaturedProjects from '../components/sections/FeaturedProjects';
 
 const HomePage = () => {
     return (
         <>
             <Hero />
-            <section className="w-full h-[80dvh] flex flex-col text-center">
-                <h2>A selection of recent work blending brand identity, web design, and clean, modular development.</h2>
-                <button>View full Portfolio</button>
-            </section>
-            <section>
+            <FeaturedProjects />
+            <section >
                 <h2>I help businesses bring their ideas to life through strong visuals and functional, modern web experiences.</h2>
                 <div>
                     <h3>Brand Design</h3>
