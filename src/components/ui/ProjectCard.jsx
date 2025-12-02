@@ -5,7 +5,7 @@ import blnkCover from '../../assets/blnk_cover.webp'
 const ProjectCard = () => {
     return (
         <Link to={`/projects/projectId`} className="group block">
-            <div className="relative overflow-hidden bg-white">
+            <div className="relative overflow-hidden bg-white rounded-lg">
                 <div className="aspect-[16/16] overflow-hidden">
                     <img src={blnkCover}
                         alt="BLNK logo"

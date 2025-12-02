@@ -1,27 +1,14 @@
 import React from 'react';
 import Hero from '../components/sections/Hero';
 import FeaturedProjects from '../components/sections/FeaturedProjects';
+import Services from '../components/sections/Services';
 
 const HomePage = () => {
     return (
         <>
             <Hero />
             <FeaturedProjects />
-            <section >
-                <h2>I help businesses bring their ideas to life through strong visuals and functional, modern web experiences.</h2>
-                <div>
-                    <h3>Brand Design</h3>
-                    <p>Distinctive logos and identity systems built with clarity and personality. From strategy to final assets, everything is crafted to feel intentional and adaptable.</p>
-                </div>
-                <div>
-                    <h3>Web Design & Development</h3>
-                    <p>Thoughtful interfaces and fast, responsive websites using modern tools like React, Tailwind, and page animations. Designed to look great and perform even better.</p>
-                </div>
-                <div>
-                    <h3>Full Stack Development</h3>
-                    <p>Custom builds powered by Node.js, Express. APIs, integrations, and backend logic that keep your product reliable, scalable, and secure.</p>
-                </div>
-            </section>
+            <Services />
             <section>
                 <h2>A designer-dev with a focus on clarity and craft.</h2>
                 <p>I’m a Designer turned Full Stack Developer who combines brand thinking with clean, modular code. I care about usability, consistency, and the small details that make something feel right.

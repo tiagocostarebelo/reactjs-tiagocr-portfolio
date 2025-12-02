@@ -4,9 +4,9 @@ import ProjectCard from '../ui/ProjectCard'
 
 const FeaturedProjects = () => {
     return (
-        <section className="w-full h-auto flex flex-col text-center my-12">
-            <h2 className="text-2xl md:text-3xl font-bold uppercase my-12">A selection of recent work from brand identity, <br />web design, and web development</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-24 mb-12">
+        <section className="w-full h-auto flex flex-col text-center pb-24">
+            <h2 className="text-2xl md:text-3xl font-bold uppercase my-24">A selection of recent work from brand identity, <br />web design, and web development</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <ProjectCard />
                 <ProjectCard />
                 <ProjectCard />
