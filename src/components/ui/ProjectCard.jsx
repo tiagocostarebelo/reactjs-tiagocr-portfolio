@@ -19,7 +19,7 @@ const ProjectCard = () => {
                     </h3>
 
                     <span className="text-white/90 text-sm font-medium transition-all duration-500 ease-out group-hover:text-mustard group-hover:text-md">
-                        View Project →
+                        View Project
                     </span>
                 </div>
             </div>

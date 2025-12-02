@@ -6,8 +6,8 @@ import logoHrz from "../../assets/tcr_logo_hrz.svg";
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const baseClasses = 'text-md text-lg transition hover:text-mustard';
-    const activeClasses = 'text-md text-lg text-mustard font-semibold';
+    const baseClasses = 'text-gray-dark text-base transition hover:text-mustard';
+    const activeClasses = 'text-gray-dark text-base text-mustard font-semibold';
 
     return (
         <header className="sticky top-0 z-50 bg-white flex items-center justify-between py-6 px-6 md:px-12">
