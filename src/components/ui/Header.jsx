@@ -19,7 +19,7 @@ const Header = () => {
             <nav>
                 {/* DESKTOP NAV */}
                 <div className="hidden md:flex items-center gap-6">
-                    <div className="space-x-4 text-sm text-gray-600">
+                    <div className="space-x-4 text-sm">
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/projects">Projects</NavLink>
