@@ -4,10 +4,10 @@ import Button from '../ui/Button'
 const Hero = () => {
     return (
         <section className="bg-[url(assets/tcr_pattern_gray.svg)] bg-cover bg-black-rich text-white border">
-            <div className="w-full h-[80dvh] flex flex-col items-center justify-center text-center">
+            <div className="w-full h-[80dvh] flex flex-col items-left justify-center">
                 <h2 className="text-2xl md:text-3xl tracking-tight leading-tight font-bold uppercase">I design distinctive brands and<br /> build modern, fast websites.</h2>
                 <p className="text-lg mt-4">Brand identity + Web Development for small businesses, <br />creators and founders who want to stand out.</p>
-                <div className="flex space-x-8 mt-16">
+                <div className="flex space-x-16 mt-16">
                     <Button as="navlink" to="/projects" className="btn-primary">View My Work</Button>
                     <Button as="navlink" to="/contact" className="btn-secondary">Get in Touch</Button>
                 </div>

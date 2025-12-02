@@ -12,7 +12,7 @@ const ProjectCard = () => {
                         className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
                 </div>
-                <div className="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-1 duration-500 ease-out group-hover:scale-110">
+                <div className="absolute bottom-0 left-0 w-full py-12 px-4 flex flex-col gap-1 duration-500 ease-out group-hover:scale-110">
 
                     <h3 className="text-white text-xl font-semibold">
                         Project Name
