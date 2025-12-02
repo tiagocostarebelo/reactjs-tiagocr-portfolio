@@ -19,7 +19,7 @@ const About = () => {
                     </div>
                 </div>
                 {/* right column */}
-                <div className="order-1 md:order-2 h-full min-h-[400px] w-full relative group overflow-hidden rounded-2xl">
+                <div className="order-1 md:order-2 h-full min-h-[400px] w-full relative group overflow-hidden rounded-lg">
                     <img src={photo} alt="Tiago photo" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" />
                 </div>
 
