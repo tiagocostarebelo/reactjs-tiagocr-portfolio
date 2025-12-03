@@ -9,7 +9,7 @@ const services = [
     },
     {
         title: "Email Development",
-        description: "TBD"
+        description: "Modern, on-brand email templates coded for consistent rendering across devices and email clients. Clean layouts, and responsive design that make your campaigns look great everywhere."
     }
 ]
 

@@ -1,24 +1,36 @@
 import React from 'react'
 import logoHrz from '../../assets/tcr_logo_hrz.svg';
+import instaLogo from '../../assets/instagram.svg';
+import gitHubLogo from '../../assets/gitHub.svg';
 import { NavLink } from 'react-router';
+import Button from './Button';
 
 const Footer = () => {
     return (
-        <footer className="w-full h-auto flex flex-col gap-y-12 text-center py-24 px-6 md:px-12" >
-            <div className="flex flex-col gap-y-12 md:flex-row gap-y-0 items-start justify-between">
+        <footer className="w-full h-auto py-24 px-6 md:px-12" >
+            <div className="flex flex-col items-center gap-y-12 mb-12">
                 <div>
-                    <a href="/">
+                    <Button as="navlink" to="/">
                         <img className="w-40 md:w-50" src={logoHrz} alt="TiagoCR Logo" />
-                    </a>
+                    </Button>
                 </div>
-                <div className="flex flex-col text-left space-x-4 text-sm">
-                    <NavLink to="/" className="text-gray-dark">Home</NavLink>
-                    <NavLink to="/about" className="text-gray-dark">About</NavLink>
-                    <NavLink to="/projects" className="text-gray-dark">Projects</NavLink>
-                    <NavLink to="/contact" className="text-gray-dark">Contact</NavLink>
+
+                <div className="space-y-4">
+                    <div className="flex items-center gap-x-12 justify-center">
+                        <Button as="href" href="https://www.instagram.com/tiagocr.me/">
+                            <img src={instaLogo} alt="Instagram" className="w-[40px]" />
+                        </Button>
+                        <Button as="href" href="https://github.com/tiagocostarebelo">
+                            <img src={gitHubLogo} alt="GitHub" className="w-[40px] mb-[2px]" />
+                        </Button>
+                    </div>
+                    <div className="flex flex-col items-center justify-center">
+                        <Button as="href" href="/">Terms & Conditions</Button>
+                        <Button as="href" href="/">Privacy Policy</Button>
+                    </div>
                 </div>
             </div>
-            <p className="text-base text-dark-gray text-left">© Tiago Costa Rebelo - All rights reserved.</p>
+            <p className="text-base text-dark-gray text-center">Copyright © 2025 Tiago Costa Rebelo - All rights reserved.</p>
         </footer>
     )
 }

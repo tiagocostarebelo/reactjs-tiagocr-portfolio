@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import HomePage from "./pages/homePage";
 import AboutPage from "./pages/aboutPage";
 import ProjectsPage from "./pages/projectsPage";
+import ServicesPage from "./pages/servicesPage";
 import ContactPage from "./pages/contactPage";
 
 
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Route>
     </Routes >

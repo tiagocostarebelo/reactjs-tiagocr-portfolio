@@ -12,7 +12,7 @@ const Button = ({ as: Component = "button", to, href, children, className, as })
 
     if (href) {
         return (
-            <a href={href} className={className}>
+            <a href={href} className={className} target="_blank">
                 {children}
             </a>
         )
