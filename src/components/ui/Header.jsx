@@ -20,11 +20,11 @@ const Header = () => {
                 {/* DESKTOP NAV */}
                 <div className="hidden md:flex items-center gap-6">
                     <div className="space-x-4 text-sm">
-                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio">Portfolio</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/services">Services</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact">Contact</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/" onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about" onClick={() => window.scrollTo(0, 0)}>About</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio" onClick={() => window.scrollTo(0, 0)}>Portfolio</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/services" onClick={() => window.scrollTo(0, 0)}>Services</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact" onClick={() => window.scrollTo(0, 0)}>Contact</NavLink>
                     </div>
                 </div>
 
@@ -37,11 +37,11 @@ const Header = () => {
             </nav>
             {/* MOBILE NAV */}
             {menuOpen && <div className="absolute top-full right-0 w-full bg-white md:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
-                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
-                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
-                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio">Portfolio</NavLink>
-                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/services">Services</NavLink>
-                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact">Contact</NavLink>
+                <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
+                <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
+                <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio">Portfolio</NavLink>
+                <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/services">Services</NavLink>
+                <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact">Contact</NavLink>
             </div>}
         </header >
     )
