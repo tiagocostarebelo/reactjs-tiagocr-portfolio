@@ -13,7 +13,7 @@ const Contact = ({
             <p className="text-base">{text}</p>
 
             <div className="mt-12 md:mt-14">
-                <Button as="navlink" to="/contact" className="btn-secondary">{buttonLabel}</Button>
+                <Button as="link" to="/contact" className="btn-secondary">{buttonLabel}</Button>
             </div>
         </section>
     )

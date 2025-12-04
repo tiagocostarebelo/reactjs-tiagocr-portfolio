@@ -22,7 +22,7 @@ const Header = () => {
                     <div className="space-x-4 text-sm">
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
-                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/projects">Projects</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio">Portfolio</NavLink>
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/services">Services</NavLink>
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact">Contact</NavLink>
                     </div>
@@ -39,7 +39,7 @@ const Header = () => {
             {menuOpen && <div className="absolute top-full right-0 w-full bg-white md:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
                 <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
                 <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
-                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/projects">Projects</NavLink>
+                <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio">Portfolio</NavLink>
                 <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/services">Services</NavLink>
                 <NavLink onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/contact">Contact</NavLink>
             </div>}

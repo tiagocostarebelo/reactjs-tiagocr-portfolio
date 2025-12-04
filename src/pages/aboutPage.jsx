@@ -26,7 +26,7 @@ const AboutPage = () => {
                         <p className="text-base text-gray-dark">Whether it’s a logo, a website, or an app, I build with equal attention to aesthetics and functionality.</p>
 
                         <div>
-                            <Button as="navlink" to="/projects" className="btn-primary">View My Work</Button>
+                            <Button as="navlink" to="/portfolio" className="btn-primary">View My Work</Button>
                         </div>
                         <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight mt-8">Why hire me</h2>
                         <p className="text-base text-gray-dark">I am someone who understands design thinking and development. Someone who can take an idea from concept to execution without losing clarity or quality along the way.</p>

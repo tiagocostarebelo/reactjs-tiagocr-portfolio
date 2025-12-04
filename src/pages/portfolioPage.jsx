@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProjectsPage = () => {
+const PortfolioPage = () => {
     return (
         <>
             <h1>Work that combines identity, design, and development.</h1>
@@ -9,4 +9,4 @@ const ProjectsPage = () => {
     )
 }
 
-export default ProjectsPage;
+export default PortfolioPage;
