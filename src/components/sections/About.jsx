@@ -15,7 +15,7 @@ const About = () => {
                         <p className="text-base text-gray-dark">I work closely with clients to create simple, intentional experiences — whether that’s a brand identity, a marketing site, or a full-stack web app.</p>
                     </div>
                     <div className="mt-12 md:mt-14">
-                        <Button as="navlink" to="/about" className="btn-secondary">More about me</Button>
+                        <Button as="navlink" to="/about" className="btn-ghost">More about me</Button>
                     </div>
                 </div>
                 {/* right column */}

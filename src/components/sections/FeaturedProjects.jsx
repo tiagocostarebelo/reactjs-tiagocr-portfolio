@@ -12,7 +12,7 @@ const FeaturedProjects = () => {
                 <ProjectCard />
             </div>
             <div className="items-right">
-                <Button as="navlink" to="/projects" className="btn-ghost w-full md:w-auto">View full Portfolio</Button>
+                <Button as="navlink" to="/projects" className="btn-primary w-full md:w-auto">View full Portfolio</Button>
             </div>
         </section>
     )
