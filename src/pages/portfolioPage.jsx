@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react';
 import Button from '../components/ui/Button';
 import projectDetails from '../content/projects';
@@ -11,7 +10,7 @@ import SectionsHero from '../components/ui/SectionsHero';
 const PortfolioPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");
 
-    const featuredProject = projectDetails.length !== 0 ? projectDetails.find(proj => proj.isFeatured) ?? projectDetails[0] : [];
+    const featuredProject = projectDetails.length !== 0 ? projectDetails.find(proj => proj.featured && proj.type === "case-study") ?? projectDetails[0] : [];
 
     const allCategories = ["All", ...new Set(projectDetails.flatMap(project => project.category))];
     const filteredProjects = activeCategory === "All" ? projectDetails : projectDetails.filter(project => project.category.includes(activeCategory));
@@ -21,9 +20,6 @@ const PortfolioPage = () => {
         <>
             <SectionsHero
                 buttonLabel='' />
-
-
-
 
             {filteredProjects.length === 0 ?
                 (<section className="w-full h-auto flex flex-col text-center py-24 bg-gray-light">

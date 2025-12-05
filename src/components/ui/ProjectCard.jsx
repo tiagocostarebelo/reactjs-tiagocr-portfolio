@@ -4,7 +4,7 @@ import blnkCover from '../../assets/blnk_cover.webp'
 
 const ProjectCard = ({ project }) => {
     return (
-        <Link to={project.url} className="group block">
+        <Link to={`/portfolio/${project.slug}`} className="group block">
             <div className="relative overflow-hidden bg-white rounded-lg">
                 <div className="aspect-[16/16] overflow-hidden">
                     <img src={project.thumbnail}
@@ -19,7 +19,7 @@ const ProjectCard = ({ project }) => {
                     </h3>
 
                     <span className="text-white/90 text-sm font-medium transition-all duration-500 ease-out group-hover:text-mustard group-hover:text-md">
-                        View Case Study
+                        {project.type === "case-study" ? "View Case Study" : "View Work"}
                     </span>
                 </div>
             </div>

@@ -1,9 +1,8 @@
 import React from 'react'
 import Button from '../ui/Button'
 import ProjectCard from '../ui/ProjectCard'
-import projectDetails from '../../content/projects'
 
-const FeaturedProjects = () => {
+const FeaturedProjects = ({ projectDetails }) => {
     return (
         <section className="w-full h-auto flex flex-col text-center py-24">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight uppercase mb-24">A selection of recent work from brand identity, web design, and web development</h2>
