@@ -3,7 +3,7 @@ import Button from '../ui/Button'
 
 const Contact = ({
     heading = "Let's build something great!",
-    text = "Whether you need a new brand, a website, or support on a digital project. I’m always open to conversations.",
+    text = "Whether you need help with your brand, a website, or support on a digital project. I’m always open to conversations.",
     buttonLabel = "Get in Touch"
 }) => {
 

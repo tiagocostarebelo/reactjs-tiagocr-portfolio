@@ -53,7 +53,7 @@ const AboutPage = () => {
             </section>
             <Contact
                 heading="Let’s make great work together!"
-                text="Whether you need a brand, a website, or support on a digital project, I’m here to help bring clarity and direction to your idea."
+                text="Whether you need help with your brand, website, or support on a digital project, I’m here to help bring clarity and direction to your idea."
                 buttonLabel="Get in Touch"
             />
         </>
