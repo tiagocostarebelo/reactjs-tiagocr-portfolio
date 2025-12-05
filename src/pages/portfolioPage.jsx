@@ -4,9 +4,16 @@ import Button from '../components/ui/Button';
 import projectDetails from '../content/projects';
 import ProjectCard from '../components/ui/ProjectCard';
 import Contact from '../components/sections/Contact';
+import FeaturedProject from '../components/ui/FeaturedProject';
 
 const PortfolioPage = () => {
+    const [activeCategory, setActiveCategory] = useState("All");
+
     const featuredProject = projectDetails.find(proj => proj.isFeatured) ?? projectDetails[0];
+
+    const allCategories = ["All", ...new Set(projectDetails.flatMap(project => project.category))];
+    const filteredProjects = activeCategory === "All" ? projectDetails : projectDetails.filter(project => project.category.includes(activeCategory));
+
 
     return (
         <>
@@ -16,36 +23,41 @@ const PortfolioPage = () => {
                     <p className="text-base text-gray-dark md:w-[1200px]">A curated selection of brand identities, websites, and digital projects — crafted with clarity, intention, and care.</p>
                 </div>
             </section>
+            <FeaturedProject project={featuredProject} />
 
-            <section className="w-full h-auto py-24 bg-gray-light">
-                {/* outside container */}
-                <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-stretch">
-                    {/* left column */}
-                    <div className="flex flex-col justify-center order-2 md:order-2 text-left">
-                        <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">{featuredProject.title}</h2>
-                        <div className="space-y-6 leading-relaxed max-w-xl">
-                            <p className="text-base text-gray-dark">{featuredProject.shortDescription}</p>
-                        </div>
-                        <div className="mt-12 md:mt-14">
-                            <Button as="link" to={featuredProject.url} className="btn-primary">View Case Study</Button>
-                        </div>
-                    </div>
-                    {/* right column */}
-                    <div className="order-1 md:order-1 h-full min-h-[400px] w-full relative group overflow-hidden rounded-lg">
-                        <img src={featuredProject.thumbnail} alt={featuredProject.id} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" />
-                    </div>
-                </div>
-            </section>
 
             <section className="w-full h-auto flex flex-col text-center py-24">
+                <div className="hidden md:flex gap-2 justify-start mb-12">
+                    {allCategories.map(cat => (
+                        <button
+                            key={cat}
+                            onClick={() => setActiveCategory(cat)}
+                            className={`px-3 py-1 text-base cursor-pointer rounded-full transition ${activeCategory === cat
+                                ? "bg-mustard text-black "
+                                : "text-gray-600 border border-gray-300 hover:text-black"}`}>
+                            {cat}
+                        </button>
+                    ))}
+                </div>
+                <div className="md:hidden mb-8">
+                    <select
+                        value={activeCategory}
+                        onChange={(e) => setActiveCategory(e.target.value)}
+                        className="w-full border border-gray-300 rounded-lg p-3 bg-white">
+                        {allCategories.map(cat => (
+                            <option key={cat} value={cat}>{cat}</option>
+                        ))}
+                    </select>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                    {projectDetails
+                    {filteredProjects
                         .filter(proj => proj.id !== featuredProject.id)
                         .map(proj => <ProjectCard key={proj.id} project={proj} />)}
                 </div>
             </section>
             <Contact
-                heading="Let's work together!"
+                heading="Let's Talk"
                 text="Whether you need help with your brand, website, or support on a digital project, I’m here to help bring clarity and direction to your idea."
                 buttonLabel="Get in Touch"
             />

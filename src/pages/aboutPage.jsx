@@ -9,7 +9,6 @@ const AboutPage = () => {
             <section className="w-full h-auto py-24 bg-white space-y-12">
                 <h1 className="text-3xl font-bold uppercase tracking-tight leading-tight">Designer. Developer. Problem-solver.</h1>
                 <div className="space-y-6">
-                    <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">What I do</h2>
                     <p className="text-base text-gray-dark md:w-[1200px]">I’m a Designer turned Full Stack Developer with a focus on building clear, confident brands and modern digital experiences.</p>
                     <p className="text-base text-gray-dark md:w-[1200px]">My background in graphic design gives me a strong foundation in visual communication, while my development work brings structure, logic, and performance to everything I make.</p>
                 </div>
