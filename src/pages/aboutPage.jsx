@@ -2,17 +2,17 @@ import React from 'react'
 import tiagoPhoto from '../assets/tiago_.webp'
 import Button from '../components/ui/Button'
 import Contact from '../components/sections/Contact'
+import SectionsHero from '../components/ui/SectionsHero'
 
 const AboutPage = () => {
     return (
         <>
-            <section className="w-full h-auto py-24 bg-white space-y-12">
-                <h1 className="text-3xl font-bold uppercase tracking-tight leading-tight">Designer. Developer. Problem-solver.</h1>
-                <div className="space-y-6">
-                    <p className="text-base text-gray-dark md:w-[1200px]">I’m a Designer turned Full Stack Developer with a focus on building clear, confident brands and modern digital experiences.</p>
-                    <p className="text-base text-gray-dark md:w-[1200px]">My background in graphic design gives me a strong foundation in visual communication, while my development work brings structure, logic, and performance to everything I make.</p>
-                </div>
-            </section>
+            <SectionsHero
+                heading="Designer. Developer. Problem-solver."
+                text="I’m a Designer turned Full Stack Developer with a focus on building clear, confident brands and modern digital experiences."
+                text2="My background in graphic design gives me a strong foundation in visual communication, while my development work brings structure, logic, and performance to everything I make."
+                buttonLabel=''
+            />
             <section className="w-full h-auto py-24 bg-gray-light">
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-stretch">
                     <div className="order-2 md:order-1 h-full min-h-[600px] w-full relative group overflow-hidden">
