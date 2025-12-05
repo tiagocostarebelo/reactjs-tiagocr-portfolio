@@ -10,7 +10,7 @@ const Header = () => {
     const activeClasses = 'text-gray-dark text-base text-mustard font-semibold';
 
     return (
-        <header className="sticky top-0 z-50 bg-white flex items-center justify-between py-6 px-6 md:px-12">
+        <header className="sticky top-0 z-50 bg-white flex items-center justify-between">
             <div className="">
                 <a href="/">
                     <img className="w-40 md:w-50" src={logoHrz} alt="TiagoCR Logo" />
@@ -18,7 +18,7 @@ const Header = () => {
             </div >
             <nav>
                 {/* DESKTOP NAV */}
-                <div className="hidden md:flex items-center gap-6">
+                <div className="hidden lg:flex items-center gap-6">
                     <div className="space-x-4 text-sm">
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/" onClick={() => window.scrollTo(0, 0)}>Home</NavLink>
                         <NavLink className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about" onClick={() => window.scrollTo(0, 0)}>About</NavLink>
@@ -29,14 +29,14 @@ const Header = () => {
                 </div>
 
                 {/* HAMBURGUER TOGGLE */}
-                <div className="md:hidden flex items-center gap-4">
+                <div className="lg:hidden flex items-center gap-4">
                     <button onClick={() => setMenuOpen(!menuOpen)} className="text-primary text-xl cursor-pointer" title="Menu">
                         {menuOpen ? <FaTimes /> : <FaBars />}
                     </button>
                 </div>
             </nav>
             {/* MOBILE NAV */}
-            {menuOpen && <div className="absolute top-full right-0 w-full bg-white md:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
+            {menuOpen && <div className="absolute top-full right-0 w-full bg-white lg:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
                 <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
                 <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
                 <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio">Portfolio</NavLink>
