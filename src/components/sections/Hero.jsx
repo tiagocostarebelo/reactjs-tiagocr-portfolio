@@ -12,8 +12,6 @@ const Hero = () => {
                     <Button as="link" to="/contact" className="btn-secondary">Get in Touch</Button>
                 </div>
             </div>
-
-
         </section>
     )
 }

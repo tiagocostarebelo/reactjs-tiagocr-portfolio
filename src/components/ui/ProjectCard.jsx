@@ -3,8 +3,9 @@ import { Link } from 'react-router'
 import blnkCover from '../../assets/blnk_cover.webp'
 
 const ProjectCard = ({ project }) => {
+    console.log(project)
     return (
-        <Link to={`/portfolio/${project.slug}`} className="group block">
+        <Link to={`/portfolio/${project.slug}`} onClick={() => window.scrollTo(0, 0)} className="group block">
             <div className="relative overflow-hidden bg-white rounded-lg">
                 <div className="aspect-[16/16] overflow-hidden">
                     <img src={project.thumbnail}

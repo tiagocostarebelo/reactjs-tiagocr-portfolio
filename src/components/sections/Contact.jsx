@@ -4,11 +4,12 @@ import Button from '../ui/Button'
 const Contact = ({
     heading = "Let's build something great!",
     text = "Whether you need help with your brand, a website, or support on a digital project. I’m always open to conversations.",
-    buttonLabel = "Get in Touch"
+    buttonLabel = "Get in Touch",
+    bg = "bg-gray-light"
 }) => {
 
     return (
-        <section className="w-full h-auto py-24 bg-gray-light text-center">
+        <section className={`w-full h-auto py-24 ${bg} text-center`}>
             <h2 className="text-2xl md:text-3xl font-bold text-black-rich tracking-tight leading-tight uppercase mb-6">{heading}</h2>
             <p className="text-base text-gray-dark">{text}</p>
 
