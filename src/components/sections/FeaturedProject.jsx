@@ -13,7 +13,7 @@ const FeaturedProject = ({ project }) => {
                         <p className="text-base text-gray-dark">{project.shortDescription}</p>
                     </div>
                     <div className="mt-12 md:mt-14">
-                        <Button as="link" to={`/portfolio/${project.slug}`} className="btn-primary">View Case Study</Button>
+                        <Button as="link" to={`/portfolio/${project.slug}`} className="btn-primary">View Work</Button>
                     </div>
                 </div>
                 {/* right column */}

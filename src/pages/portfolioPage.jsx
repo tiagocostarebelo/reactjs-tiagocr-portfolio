@@ -10,7 +10,7 @@ import SectionsHero from '../components/sections/SectionsHero';
 const PortfolioPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");
 
-    const featuredProject = projectDetails.length !== 0 ? projectDetails.find(proj => proj.featured && proj.type === "case-study") ?? projectDetails[0] : [];
+    const featuredProject = projectDetails.length !== 0 ? projectDetails.find(proj => proj.featured) ?? projectDetails[0] : [];
 
     const allCategories = ["All", ...new Set(projectDetails.flatMap(project => project.category))];
     const filteredProjects = activeCategory === "All" ? projectDetails : projectDetails.filter(project => project.category.includes(activeCategory));
@@ -24,7 +24,7 @@ const PortfolioPage = () => {
             {filteredProjects.length === 0 ?
                 (<section className="w-full h-auto flex flex-col text-center py-24 bg-gray-light">
                     <h2 className="text-2xl md:text-3xl font-bold text-black-rich tracking-tight leading-tight uppercase mb-6">New work coming soon.</h2>
-                    <p className="text-base text-gray-dark">I’m currently curating and preparing my latest project case studies.</p>
+                    <p className="text-base text-gray-dark">I’m currently curating and preparing my latest works to be displayed.</p>
                     <p className="text-base text-gray-dark">Want to work together in the meantime?</p>
                     <div className="mt-12 md:mt-14">
                         <Button as="link" to="/contact" className="btn-secondary">Get in Touch!</Button>
