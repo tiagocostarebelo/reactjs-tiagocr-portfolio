@@ -3,7 +3,6 @@ const projectDetails = [
     {
         id: "brand-elevate",
         slug: "brand-elevate",
-        type: "case-study",
         title: "Brand Elevate",
         category: ["Brand Design", "Web Development"],
         featured: true,
@@ -38,24 +37,22 @@ const projectDetails = [
                 hero: "/images/portfolio/brand-elevate-hero.jpg",
                 sections: [
                     {
-                        title: "Logo Development",
                         images: [
                             "/images/portfolio/brand-elevate-logo-1.jpg",
                             "/images/portfolio/brand-elevate-logo-2.jpg",
                         ],
                     },
                     {
-                        title: "Visual Identity System",
                         images: [
                             "/images/portfolio/brand-elevate-identity-1.jpg",
                             "/images/portfolio/brand-elevate-identity-2.jpg",
-                        ],
-                    },
-                    {
-                        title: "Applications",
-                        images: [
+                            "/images/portfolio/brand-elevate-identity-3.jpg",
                             "/images/portfolio/brand-elevate-mockup-1.jpg",
                             "/images/portfolio/brand-elevate-mockup-2.jpg",
+                            "/images/portfolio/brand-elevate-mockup-3.jpg",
+                            "/images/portfolio/brand-elevate-mockup-4.jpg",
+                            "/images/portfolio/brand-elevate-mockup-5.jpg",
+                            "/images/portfolio/brand-elevate-mockup-6.jpg",
                         ],
                     },
                 ],
@@ -64,189 +61,403 @@ const projectDetails = [
     },
 
     {
-        id: "pulse-app",
-        slug: "pulse-app",
-        type: "case-study",
-        title: "Pulse App",
-        category: ["Full Stack Web Development"],
+        id: "crestline-coffee",
+        slug: "crestline-coffee",
+        title: "Crestline Coffee",
+        category: ["Brand Design"],
         featured: false,
         shortDescription:
-            "A productivity tool with authentication, real-time syncing, and a minimalist UI. Built using React, Node, PostgreSQL, and Supabase.",
-        thumbnail: "/images/portfolio/pulse-app-thumb.jpg",
+            "A warm, handcrafted identity system created for a specialty coffee brand focused on community and craft.",
+        thumbnail: "/images/portfolio/crestline-thumb.jpg",
+        year: 2023,
+
+        caseStudy: {
+            brief:
+                "Crestline Coffee needed a brand identity that captured their handcrafted process and welcoming café atmosphere.",
+            solution:
+                "I designed a character-driven emblem paired with earthy colors and textured elements to reflect warmth and craft.",
+            role: ["Brand Designer"],
+
+            goals: [
+                "Create a logo system that feels handcrafted and approachable",
+                "Develop a warm, textured visual style",
+                "Design packaging and signage elements",
+            ],
+
+            process: [
+                "Explored hand-drawn marks and vintage café aesthetics",
+                "Refined the emblem into a flexible, scalable system",
+                "Built out packaging concepts and collateral assets",
+            ],
+
+            outcome:
+                "The brand now has a cohesive identity that enhances recognition and translates well across packaging and signage.",
+
+            images: {
+                hero: "/images/portfolio/crestline-hero.jpg",
+                sections: [
+                    {
+                        images: [
+                            "/images/portfolio/crestline-1.jpg",
+                            "/images/portfolio/crestline-2.jpg"
+                        ]
+                    },
+                    {
+                        images: [
+                            "/images/portfolio/crestline-3.jpg",
+                            "/images/portfolio/crestline-4.jpg",
+                            "/images/portfolio/crestline-5.jpg",
+                            "/images/portfolio/crestline-6.jpg"
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+
+    {
+        id: "novalearn-lms",
+        slug: "novalearn-lms",
+        title: "NovaLearn LMS",
+        category: ["Full Stack Web Development"],
+        featured: true,
+        shortDescription:
+            "A complete learning management platform built with user roles, progress tracking, and multimedia lessons.",
+        thumbnail: "/images/portfolio/novalearn-thumb.jpg",
         year: 2025,
 
         caseStudy: {
             brief:
-                "Pulse needed a fast, clean productivity app with real-time task syncing and a frictionless user experience.",
+                "NovaLearn needed an LMS platform that delivered a clean UI and robust user role system for instructors and students.",
             solution:
-                "I designed and built a full-stack application with role-based auth, real-time updates, and a clean component-driven UI.",
+                "I built a modular system with authenticated dashboards, lesson management, and progress tracking.",
             role: ["Full Stack Developer", "UI Designer"],
 
             goals: [
-                "Enable seamless real-time task updates",
-                "Implement secure authentication and user roles",
-                "Create a clean, distraction-free interface",
+                "Create separate dashboards for teachers and students",
+                "Support video, quiz, and text-based lessons",
+                "Provide real-time progress tracking",
             ],
 
             process: [
-                "Wireframing core user flows",
-                "Designing a minimalist UI system",
-                "Structuring backend API with Express",
-                "Building real-time syncing using Supabase channels",
-            ],
-
-            features: [
-                "Account creation + secure login",
-                "Real-time task updates",
-                "Drag-and-drop task management",
-                "Responsive UI with Tailwind",
+                "Mapped user experience flows for teachers and students",
+                "Designed a modular component system",
+                "Implemented user roles and lesson builder tools",
+                "Built real-time progress tracking with Supabase",
             ],
 
             outcome:
-                "Pulse App became a fast, intuitive productivity tool used daily by small teams to stay organized.",
+                "The platform enables smooth course management for instructors and a clean, guided experience for learners.",
+
             images: {
-                hero: "/images/portfolio/pulse-hero.jpg",
+                hero: "/images/portfolio/novalearn-hero.jpg",
                 sections: [
                     {
-                        title: "UI Screens",
                         images: [
-                            "/images/portfolio/pulse-ui-1.jpg",
-                            "/images/portfolio/pulse-ui-2.jpg",
-                        ],
+                            "/images/portfolio/novalearn-1.jpg",
+                            "/images/portfolio/novalearn-2.jpg"
+                        ]
                     },
                     {
-                        title: "Architecture",
-                        images: ["/images/portfolio/pulse-architecture.jpg"],
-                    },
-                ],
-            },
-        },
+                        images: [
+                            "/images/portfolio/novalearn-3.jpg",
+                            "/images/portfolio/novalearn-4.jpg",
+                            "/images/portfolio/novalearn-5.jpg",
+                            "/images/portfolio/novalearn-6.jpg"
+                        ]
+                    }
+                ]
+            }
+        }
     },
 
     {
-        id: "atelier-botanica",
-        slug: "atelier-botanica",
-        type: "case-study",
-        title: "Atelier Botanica",
-        category: ["Brand Design", "Web Development"],
-        featured: true,
+        id: "horizon-finance",
+        slug: "horizon-finance",
+        title: "Horizon Finance Dashboard",
+        category: ["Web Development", "UI Design"],
+        featured: false,
         shortDescription:
-            "A refined identity and modern Shopify storefront designed for a botanical skincare brand.",
-        thumbnail: "/images/portfolio/atelier-botanica-thumb.jpg",
+            "A clean finance dashboard designed with modular widgets, charts, and real-time insights.",
+        thumbnail: "/images/portfolio/horizon-thumb.jpg",
         year: 2024,
 
         caseStudy: {
             brief:
-                "Atelier Botanica wanted a brand identity and online store that felt premium, natural, and conversion-focused.",
+                "Horizon needed a sleek, minimal dashboard interface to visualize financial performance across multiple accounts.",
             solution:
-                "I designed a soft, botanical-inspired identity and built a Shopify storefront optimized for browsing, credibility, and sales.",
-            role: ["Brand Designer", "Web Developer"],
+                "I designed and built a modular widget system with responsive charts and dark/light mode support.",
+            role: ["UI Designer", "Front-End Developer"],
 
             goals: [
-                "Develop a premium, nature-inspired identity",
-                "Improve product discoverability and conversions",
-                "Create a cohesive system across packaging and digital",
+                "Display financial data clearly across devices",
+                "Support customizable widgets",
+                "Create a modern UI with smooth microinteractions",
             ],
 
             process: [
-                "Brand exploration through moodboards and typography studies",
-                "Logo refinement and creation of botanical patterns",
-                "Shopify theme customization and UX optimization",
+                "Created wireframes focused on clarity and spacing",
+                "Designed a dark/light UI token system",
+                "Implemented responsive charting with Recharts",
             ],
 
             outcome:
-                "The brand achieved a cohesive premium look that increased customer trust and improved store performance.",
+                "The dashboard offers a clean, modern experience that improves readability and data navigation.",
+
             images: {
-                hero: "/images/portfolio/atelier-hero.jpg",
+                hero: "/images/portfolio/horizon-hero.jpg",
                 sections: [
                     {
-                        title: "Identity System",
                         images: [
-                            "/images/portfolio/atelier-identity-1.jpg",
-                            "/images/portfolio/atelier-identity-2.jpg",
-                        ],
+                            "/images/portfolio/horizon-1.jpg",
+                            "/images/portfolio/horizon-2.jpg"
+                        ]
                     },
                     {
-                        title: "Website Screens",
                         images: [
-                            "/images/portfolio/atelier-web-1.jpg",
-                            "/images/portfolio/atelier-web-2.jpg",
-                        ],
-                    },
-                ],
-            },
-        },
+                            "/images/portfolio/horizon-3.jpg",
+                            "/images/portfolio/horizon-4.jpg",
+                            "/images/portfolio/horizon-5.jpg"
+                        ]
+                    }
+                ]
+            }
+        }
     },
 
     {
-        id: "motionframe",
-        slug: "motionframe",
-        type: "simple",
-        title: "MotionFrame",
-        category: ["Web Development", "UI Design"],
+        id: "terraskin-naturals",
+        slug: "terraskin-naturals",
+        title: "TerraSkin Naturals",
+        category: ["Brand Design"],
         featured: true,
         shortDescription:
-            "A micro-interaction–heavy portfolio website with smooth transitions and animation-focused layouts.",
-        thumbnail: "/images/portfolio/motionframe-thumb.jpg",
-        images: [
-            "/images/portfolio/motionframe-1.jpg",
-            "/images/portfolio/motionframe-2.jpg",
-        ],
-        overview: {
-            role: ["UI Designer", "Front-End Developer"],
-            description:
-                "Designed and developed a dynamic portfolio concept focused on animation and seamless transitions.",
-        },
-        outcome:
-            "A polished, interaction-rich experience demonstrating motion principles and clean UI structure.",
+            "A soft, organic identity system for a natural skincare brand focusing on minimalism and trust.",
+        thumbnail: "/images/portfolio/terraskin-thumb.jpg",
+        year: 2023,
+
+        caseStudy: {
+            brief:
+                "TerraSkin wanted a brand identity that communicated purity, softness, and natural ingredients.",
+            solution:
+                "I developed a minimal, botanical-inspired identity with soft colors and organic layouts.",
+            role: ["Brand Designer"],
+
+            goals: [
+                "Create a soft, trustworthy brand identity",
+                "Develop a botanical visual language",
+                "Design packaging-ready assets",
+            ],
+
+            process: [
+                "Explored botanical illustration styles",
+                "Refined a modern serif logotype",
+                "Built marketing and packaging mockups",
+            ],
+
+            outcome:
+                "The brand feels premium, natural, and consistent across digital and packaging applications.",
+
+            images: {
+                hero: "/images/portfolio/terraskin-hero.jpg",
+                sections: [
+                    {
+                        images: [
+                            "/images/portfolio/terraskin-1.jpg",
+                            "/images/portfolio/terraskin-2.jpg"
+                        ]
+                    },
+                    {
+                        images: [
+                            "/images/portfolio/terraskin-3.jpg",
+                            "/images/portfolio/terraskin-4.jpg",
+                            "/images/portfolio/terraskin-5.jpg",
+                            "/images/portfolio/terraskin-6.jpg"
+                        ]
+                    }
+                ]
+            }
+        }
     },
 
     {
-        id: "nimbus-dashboard",
-        slug: "nimbus-dashboard",
-        type: "simple",
-        title: "Nimbus Dashboard",
-        category: ["Full Stack Web Development", "UI Design"],
+        id: "synthify-player",
+        slug: "synthify-player",
+        title: "Synthify Music Player",
+        category: ["Web Development"],
         featured: false,
         shortDescription:
-            "A modular dashboard UI with user roles, analytics, and customizable widgets.",
-        thumbnail: "/images/portfolio/nimbus-thumb.jpg",
-        images: [
-            "/images/portfolio/nimbus-1.jpg",
-            "/images/portfolio/nimbus-2.jpg",
-            "/images/portfolio/nimbus-3.jpg",
-        ],
-        overview: {
-            role: ["Full Stack Developer"],
-            description:
-                "A flexible dashboard system with authenticated user flows and customizable layouts.",
-        },
-        outcome:
-            "Delivered a system capable of scaling with new widgets, roles, and analytics.",
+            "A modern web-based music player with playlists, animations, and a vibrant UI.",
+        thumbnail: "/images/portfolio/synthify-thumb.jpg",
+        year: 2024,
+
+        caseStudy: {
+            brief:
+                "Synthify wanted a sleek, modern music player that felt vibrant and immersive.",
+            solution:
+                "I designed and built a React-based player with animated transitions, playlist creation, and responsive UI.",
+            role: ["Front-End Developer", "UI Designer"],
+
+            goals: [
+                "Create a vibrant, music-inspired UI",
+                "Support playlists and track interactions",
+                "Ensure smooth performance and animations",
+            ],
+
+            process: [
+                "Designed a neon-inspired interface",
+                "Built audio controls with custom hooks",
+                "Implemented page transitions with Framer Motion",
+            ],
+
+            outcome:
+                "The final player provides a smooth, immersive listening experience across devices.",
+
+            images: {
+                hero: "/images/portfolio/synthify-hero.jpg",
+                sections: [
+                    {
+                        images: [
+                            "/images/portfolio/synthify-1.jpg",
+                            "/images/portfolio/synthify-2.jpg"
+                        ]
+                    },
+                    {
+                        images: [
+                            "/images/portfolio/synthify-3.jpg",
+                            "/images/portfolio/synthify-4.jpg",
+                            "/images/portfolio/synthify-5.jpg"
+                        ]
+                    }
+                ]
+            }
+        }
     },
 
     {
-        id: "email-suite",
-        slug: "email-suite",
-        type: "simple",
-        title: "Email Design Suite",
-        category: ["Email Development"],
+        id: "flowfolio-templates",
+        slug: "flowfolio-templates",
+        title: "FlowFolio Templates",
+        category: ["Web Development", "UI Design"],
         featured: false,
         shortDescription:
-            "A modular set of responsive, accessible email templates built for marketing automation workflows.",
-        thumbnail: "/images/portfolio/email-suite-thumb.jpg",
-        images: [
-            "/images/portfolio/email-suite-1.jpg",
-            "/images/portfolio/email-suite-2.jpg",
-        ],
-        overview: {
-            role: ["Email Developer"],
-            description:
-                "Designed and coded a scalable email design system for repeatable campaign builds.",
-        },
-        outcome:
-            "Reduced email production time by 60% while improving consistency and accessibility.",
+            "A set of clean, modular portfolio templates built for creators and designers.",
+        thumbnail: "/images/portfolio/flowfolio-thumb.jpg",
+        year: 2023,
+
+        caseStudy: {
+            brief:
+                "FlowFolio needed a selection of customizable portfolio templates that were clean and flexible.",
+            solution:
+                "I designed a modular component-driven system supporting multiple layout presets and color themes.",
+            role: ["Front-End Developer", "UI Designer"],
+
+            goals: [
+                "Provide multiple layout styles",
+                "Allow quick customization",
+                "Maintain clean typography and spacing",
+            ],
+
+            process: [
+                "Designed a token-based UI system",
+                "Developed reusable components in React",
+                "Added theme switching for easy customization",
+            ],
+
+            outcome:
+                "The templates empower creators to build polished portfolios quickly and effectively.",
+
+            images: {
+                hero: "/images/portfolio/flowfolio-hero.jpg",
+                sections: [
+                    {
+                        images: [
+                            "/images/portfolio/flowfolio-1.jpg",
+                            "/images/portfolio/flowfolio-2.jpg"
+                        ]
+                    },
+                    {
+                        images: [
+                            "/images/portfolio/flowfolio-3.jpg",
+                            "/images/portfolio/flowfolio-4.jpg",
+                            "/images/portfolio/flowfolio-5.jpg",
+                            "/images/portfolio/flowfolio-6.jpg",
+                            "/images/portfolio/flowfolio-7.jpg",
+                            "/images/portfolio/flowfolio-8.jpg",
+                            "/images/portfolio/flowfolio-9.jpg",
+                            "/images/portfolio/flowfolio-10.jpg",
+                            "/images/portfolio/flowfolio-11.jpg"
+                        ]
+                    }
+                ]
+            }
+        }
     },
+
+    {
+        id: "arctic-peak",
+        slug: "arctic-peak",
+        title: "Arctic Peak Outdoors",
+        category: ["Brand Design"],
+        featured: false,
+        shortDescription:
+            "A rugged, bold identity system inspired by mountains, cold climates, and adventure culture.",
+        thumbnail: "/images/portfolio/arctic-thumb.jpg",
+        year: 2023,
+
+        caseStudy: {
+            brief:
+                "Arctic Peak needed a bold outdoor brand identity inspired by exploration, endurance, and cold terrain.",
+            solution:
+                "I designed a sharp geometric mark paired with a rugged type system and icy blue color palette.",
+            role: ["Brand Designer"],
+
+            goals: [
+                "Build a strong adventure-inspired logo",
+                "Create a rugged visual language",
+                "Design apparel-ready branding",
+            ],
+
+            process: [
+                "Explored mountain silhouette concepts",
+                "Developed a geometric condensed logotype",
+                "Created apparel mockups and outdoor packaging",
+            ],
+
+            outcome:
+                "The new identity positions Arctic Peak as a bold, reliable outdoor lifestyle brand.",
+
+            images: {
+                hero: "/images/portfolio/arctic-hero.jpg",
+                sections: [
+                    {
+                        images: [
+                            "/images/portfolio/arctic-1.jpg",
+                            "/images/portfolio/arctic-2.jpg"
+                        ]
+                    },
+                    {
+                        images: [
+                            "/images/portfolio/arctic-3.jpg",
+                            "/images/portfolio/arctic-4.jpg",
+                            "/images/portfolio/arctic-5.jpg",
+                            "/images/portfolio/arctic-6.jpg",
+                            "/images/portfolio/arctic-7.jpg",
+                            "/images/portfolio/arctic-8.jpg",
+                            "/images/portfolio/arctic-9.jpg",
+                            "/images/portfolio/arctic-10.jpg",
+                            "/images/portfolio/arctic-11.jpg",
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+
+
+
+
+
 ];
 
 export default projectDetails;

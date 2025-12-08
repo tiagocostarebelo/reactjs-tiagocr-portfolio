@@ -3,9 +3,9 @@ import Button from '../components/ui/Button';
 import projectDetails from '../content/projects';
 import ProjectCard from '../components/ui/ProjectCard';
 import Contact from '../components/sections/Contact';
-import FeaturedProject from '../components/ui/FeaturedProject';
+import FeaturedProject from '../components/sections/FeaturedProject';
 import CategoriesFilter from '../components/ui/CategoriesFilter';
-import SectionsHero from '../components/ui/SectionsHero';
+import SectionsHero from '../components/sections/SectionsHero';
 
 const PortfolioPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");

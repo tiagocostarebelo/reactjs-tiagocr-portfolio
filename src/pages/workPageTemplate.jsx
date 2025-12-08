@@ -1,10 +1,10 @@
-import Contact from "../sections/Contact";
+import Contact from "../components/sections/Contact"
 
-const CaseStudyTemplate = ({ project }) => {
+const WorkPageTemplate = ({ project }) => {
     return (
         <>
             <section className="bg-cover bg-black-rich text-white border" style={{ backgroundImage: project.caseStudy?.images?.hero ? `url(${project.caseStudy.images.hero})` : "none" }} >
-                <div className="w-full h-[50dvh] flex flex-col items-center justify-end">
+                <div className="w-full h-[60dvh] flex flex-col items-center justify-end">
                     <h1 className="text-3xl tracking-tight leading-tight font-bold uppercase">{project.title}</h1>
 
                     <div className="flex space-x-6 mt-16">
@@ -75,22 +75,42 @@ const CaseStudyTemplate = ({ project }) => {
             </section>
 
             {project.caseStudy?.images?.sections?.length >= 2 && <section className="w-full h-auto py-24 bg-white">
-                <div className="grid lg:grid-cols-2 lg:grid-rows-2 gap-12">
+                <div className="grid lg:grid-cols-4 lg:grid-rows-4 gap-6">
 
-                    <div className="order-1 h-full min-h-[600px] w-full relative group overflow-hidden border">
+                    <div className="order-1 lg:col-span-4 h-full min-h-[400px] w-full relative group overflow-hidden border">
                         <img src={project.caseStudy?.images?.sections[1]?.images[0]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
                     </div>
 
-                    <div className="order-1 h-full min-h-[600px] w-full relative group overflow-hidden border">
+                    <div className="order-2 lg:col-span-2 lg:row-start-2 h-full min-h-[400px] w-full relative group overflow-hidden border">
                         <img src={project.caseStudy?.images?.sections[1]?.images[1]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
                     </div>
 
-                    <div className="order-1 h-full min-h-[600px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[2]?.images[0]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+                    <div className="order-3 lg:col-start-3 lg:row-start-2 h-full min-h-[400px] w-full relative group overflow-hidden border">
+                        <img src={project.caseStudy?.images?.sections[1]?.images[2]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
                     </div>
 
-                    <div className="order-1 h-full min-h-[600px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[2]?.images[1]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+                    <div className="order-4 lg:col-start-4 lg:row-start-2 h-full min-h-[400px] w-full relative group overflow-hidden border">
+                        <img src={project.caseStudy?.images?.sections[1]?.images[3]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+                    </div>
+
+                    <div className="order-5 lg:row-start-3 h-full min-h-[400px] w-full relative group overflow-hidden border">
+                        <img src={project.caseStudy?.images?.sections[1]?.images[4]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+                    </div>
+
+                    <div className="order-6 lg:row-start-3 h-full min-h-[400px] w-full relative group overflow-hidden border">
+                        <img src={project.caseStudy?.images?.sections[1]?.images[5]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+                    </div>
+
+                    <div className="order-7 lg:col-span-2 lg:row-start-3 h-full min-h-[400px] w-full relative group overflow-hidden border">
+                        <img src={project.caseStudy?.images?.sections[1]?.images[6]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+                    </div>
+
+                    <div className="order-8 lg:col-span-2 lg:row-start-4 h-full min-h-[400px] w-full relative group overflow-hidden border">
+                        <img src={project.caseStudy?.images?.sections[1]?.images[7]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+                    </div>
+
+                    <div className="order-9 lg:col-span-2 lg:col-start-3 lg:row-start-4 h-full min-h-[400px] w-full relative group overflow-hidden border">
+                        <img src={project.caseStudy?.images?.sections[1]?.images[8]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
                     </div>
                 </div>
 
@@ -103,4 +123,4 @@ const CaseStudyTemplate = ({ project }) => {
     )
 }
 
-export default CaseStudyTemplate
+export default WorkPageTemplate

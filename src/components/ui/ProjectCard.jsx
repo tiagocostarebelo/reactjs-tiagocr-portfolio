@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
                     </h3>
 
                     <span className="text-white/90 text-sm font-medium transition-all duration-500 ease-out group-hover:text-mustard group-hover:text-md">
-                        {project.type === "case-study" ? "View Case Study" : "View Work"}
+                        View Work
                     </span>
                 </div>
             </div>

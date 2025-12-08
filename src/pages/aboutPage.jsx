@@ -2,7 +2,7 @@ import React from 'react'
 import tiagoPhoto from '../assets/tiago_.webp'
 import Button from '../components/ui/Button'
 import Contact from '../components/sections/Contact'
-import SectionsHero from '../components/ui/SectionsHero'
+import SectionsHero from '../components/sections/SectionsHero'
 
 const AboutPage = () => {
     return (
