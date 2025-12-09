@@ -3,6 +3,8 @@ import tiagoPhoto from '../assets/tiago_.webp'
 import Button from '../components/ui/Button'
 import Contact from '../components/sections/Contact'
 import SectionsHero from '../components/sections/SectionsHero'
+import ServiceCard from '../components/ui/ServiceCard'
+import values from '../content/values.js';
 
 const AboutPage = () => {
     return (
@@ -36,18 +38,9 @@ const AboutPage = () => {
             <section className="w-full h-auto py-24 bg-white">
                 <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">What I value</h2>
                 <div className="flex flex-col lg:flex-row gap-x-16">
-                    <div className="flex-1 my-8 group">
-                        <h3 className="text-2xl text-black-rich font-bold uppercase transition-transform duration-700 ease-out group-hover:scale-105">Clarity</h3>
-                        <p className="text-base text-gray-dark transition-transform duration-700 ease-out group-hover:scale-105">Design and code that feel clean, structured, intentional, and with purpose.</p>
-                    </div>
-                    <div className="flex-1 my-8 group">
-                        <h3 className="text-2xl text-black-rich font-bold uppercase transition-transform duration-700 ease-out group-hover:scale-105">Consistency</h3>
-                        <p className="text-base text-gray-dark transition-transform duration-700 ease-out group-hover:scale-105">Visual and technical systems that scale without breaking.</p>
-                    </div>
-                    <div className="flex-1 my-8 group">
-                        <h3 className="text-2xl text-black-rich font-bold uppercase transition-transform duration-700 ease-out group-hover:scale-105">Care</h3>
-                        <p className="text-base text-gray-dark transition-transform duration-700 ease-out group-hover:scale-105">Small details matter. I don’t do rushed, sloppy, or half-baked.</p>
-                    </div>
+                    {values.map(({ title, description }) => (
+                        <ServiceCard key={title} title={title} description={description} bgColor="bg-teal" />
+                    ))}
                 </div>
             </section>
             <Contact
