@@ -10,7 +10,9 @@ const HomePage = () => {
     return (
         <>
             <Hero />
-            <FeaturedProjects projectDetails={filteredFeatured} />
+            {projectDetails.length < 1 ? <></> :
+                <FeaturedProjects projectDetails={filteredFeatured} />
+            }
             <Services />
             <About />
             <Contact />

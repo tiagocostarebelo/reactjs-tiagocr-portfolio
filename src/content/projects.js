@@ -1,5 +1,4 @@
 const projectDetails = [
-
     {
         id: "brand-elevate",
         slug: "brand-elevate",
@@ -453,11 +452,6 @@ const projectDetails = [
             }
         }
     },
-
-
-
-
-
 ];
 
 export default projectDetails;
