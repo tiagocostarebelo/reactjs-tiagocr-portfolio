@@ -1,27 +1,18 @@
 import React from 'react'
+import SectionsHero from '../components/sections/SectionsHero';
+import ContactForm from '../components/ui/ContactForm';
 
 const ContactPage = () => {
     return (
         <>
-            <h1>Let’s talk.</h1>
-            <p>If you’d like to work together, start a project, or just ask a question — feel free to reach out. I respond to all messages personally.</p>
-            <form>
-                <h2>Send me a message</h2>
-                <label>Name</label>
-                <input />
-                <label>Email</label>
-                <input />
-                <label>What can I help you with?</label>
-                <select />
-                <label>Message</label>
-                <textarea></textarea>
-            </form>
-            <div>
-                <p>You can also find me on:</p>
-                <p>Instagram</p>
-                <p>Facebook</p>
-                <p>LinkedIn</p>
-            </div>
+            <SectionsHero
+                heading="Let's talk."
+                text="Whether you’re starting a new project or just want to discuss an idea, I’d love to hear from you."
+                text2="Tell me a bit about what you need and I’ll get back to you soon."
+                buttonLabel=''
+            />
+
+            <ContactForm />
         </>
     )
 }
