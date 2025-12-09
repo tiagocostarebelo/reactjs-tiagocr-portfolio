@@ -3,6 +3,7 @@ import SectionsHero from '../components/sections/SectionsHero';
 import ContactForm from '../components/ui/ContactForm';
 
 const ContactPage = () => {
+
     return (
         <>
             <SectionsHero

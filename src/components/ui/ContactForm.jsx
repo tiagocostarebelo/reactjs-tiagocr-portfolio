@@ -64,102 +64,105 @@ const ContactForm = () => {
 
     return (
         <section className="w-full h-auto py-24 bg-gray-light">
-            <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight text-center">Fill in the form</h2>
-            <div className="max-w-xl mx-auto">
-                <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
-                    className="flex flex-col gap-6 mt-12">
+            {/* Success & error messages */}
 
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="bot-field" />
+            {status.success ? <></> : <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight text-left">Fill in the form</h2>}
+            {status.success ? (
+                <p className="text-secondary text-lg mt-2">Thanks! I'll get back to you soon.</p>
+            ) : (
+                <div className="max-w-xl">
+                    <form
+                        name="contact"
+                        method="POST"
+                        data-netlify="true"
+                        netlify-honeypot="bot-field"
+                        onSubmit={handleSubmit}
+                        className="flex flex-col gap-6 mt-12">
 
-                    <label htmlFor="firstName">First Name
-                        <input
-                            type="text"
-                            value={formData.firstName}
-                            name="firstName"
-                            id="firstName"
-                            onChange={handleChange}
-                            className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                            required
-                        />
-                    </label>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="bot-field" />
 
-                    <label htmlFor="lastName">Last Name
-                        <input
-                            type="text"
-                            value={formData.lastName}
-                            name="lastName"
-                            id="lastName"
-                            onChange={handleChange}
-                            className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                            required
-                        />
-                    </label>
+                        <label htmlFor="firstName">First Name
+                            <input
+                                type="text"
+                                value={formData.firstName}
+                                name="firstName"
+                                id="firstName"
+                                onChange={handleChange}
+                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                                required
+                            />
+                        </label>
 
-                    <label htmlFor="email">Email
-                        <input
-                            type="email"
-                            value={formData.email}
-                            name="email"
-                            id="email"
-                            onChange={handleChange}
-                            className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                            required
-                        />
-                    </label>
+                        <label htmlFor="lastName">Last Name
+                            <input
+                                type="text"
+                                value={formData.lastName}
+                                name="lastName"
+                                id="lastName"
+                                onChange={handleChange}
+                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                                required
+                            />
+                        </label>
 
-                    <label htmlFor="projectType">Project Type
-                        <select
-                            type="text"
-                            value={formData.projectType}
-                            name="projectType"
-                            id="projectType"
-                            onChange={handleChange}
-                            defaultValue=""
-                            className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                            required
-                        >
-                            <option value=""></option>
-                            <option value="brandDesign">Brand Design</option>
-                            <option value="webDevelopment">Web Development</option>
-                            <option value="emailDevelopment">Email Development</option>
-                            <option value="other">Other</option>
+                        <label htmlFor="email">Email
+                            <input
+                                type="email"
+                                value={formData.email}
+                                name="email"
+                                id="email"
+                                onChange={handleChange}
+                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                                required
+                            />
+                        </label>
 
-                        </select>
-                    </label>
+                        <label htmlFor="projectType">Project Type
+                            <select
+                                type="text"
+                                value={formData.projectType}
+                                name="projectType"
+                                id="projectType"
+                                onChange={handleChange}
+                                defaultValue=""
+                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
 
-                    <label htmlFor="message">Leave your message
-                        <textarea
-                            type="text"
-                            id="message"
-                            value={formData.message}
-                            name="message"
-                            onChange={handleChange}
-                            rows={4} cols={40}
-                            className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                        />
-                    </label>
-                    <button
-                        type="submit"
-                        className="btn-secondary"
-                        disabled={status.loading}>
-                        {status.loading ? "Sending..." : "Send message"}
-                    </button>
+                                required
+                            >
+                                <option value=""></option>
+                                <option value="brandDesign">Brand Design</option>
+                                <option value="webDevelopment">Web Development</option>
+                                <option value="emailDevelopment">Email Development</option>
+                                <option value="other">Other</option>
 
-                    {/* Success & error messages */}
-                    {status.success && (
-                        <p className="text-green-600 mt-2">Thanks! I'll get back to you soon.</p>
-                    )}
+                            </select>
+                        </label>
+
+                        <label htmlFor="message">Leave your message
+                            <textarea
+                                type="text"
+                                id="message"
+                                value={formData.message}
+                                name="message"
+                                onChange={handleChange}
+                                rows={4} cols={40}
+                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                            />
+                        </label>
+                        <button
+                            type="submit"
+                            className="btn-secondary"
+                            disabled={status.loading}>
+                            {status.loading ? "Sending..." : "Submit"}
+                        </button>
+                    </form>
                     {status.error && (
                         <p className="text-red-600 mt-2">Something went wrong. Please try again.</p>
                     )}
-                </form>
-            </div>
+                </div>
+
+            )}
         </section>
     )
 }
