@@ -11,8 +11,8 @@ const AboutPage = () => {
         <>
             <SectionsHero
                 heading="Designer. Developer. Problem-solver."
-                text="I’m a Designer turned Full Stack Developer with a focus on building clear, confident brands and modern digital experiences."
-                text2="My background in graphic design gives me a strong foundation in visual communication, while my development work brings structure, logic, and performance to everything I make."
+                text="I’m a Designer turned Developer who enjoys building things that look good and make sense."
+                text2="My background in design helps me think visually, while development gives me the structure and tools to bring ideas to life."
                 buttonLabel=''
             />
             <section className="w-full h-auto py-24 bg-gray-light">
@@ -23,7 +23,7 @@ const AboutPage = () => {
                     <div className="flex flex-col space-y-6 justify-center order-1 md:order-2 text-left">
 
                         <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">How I work</h2>
-                        <p className="text-base text-gray-dark">I care about simplicity, intention, and craft. My process is grounded in understanding the problem first — then designing or coding solutions that feel clean, scalable, and user-friendly.</p>
+                        <p className="text-base text-gray-dark">I care about simplicity, intention, and craft. My process is grounded in understanding the problem first, then designing or coding solutions that feel clean, consistent, and user-friendly.</p>
                         <p className="text-base text-gray-dark">Whether it’s a logo, a website, or an app, I build with equal attention to aesthetics and functionality.</p>
 
                         <div>
@@ -35,11 +35,11 @@ const AboutPage = () => {
                     </div>
                 </div>
             </section >
-            <section className="w-full h-auto py-24 bg-white">
+            <section className="w-full h-auto text-center py-24 bg-white">
                 <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">What I value</h2>
-                <div className="flex flex-col lg:flex-row gap-x-16">
+                <div className="flex flex-col lg:flex-row gap-x-10">
                     {values.map(({ title, description }) => (
-                        <ServiceCard key={title} title={title} description={description} bgColor="bg-teal" />
+                        <ServiceCard key={title} title={title} description={description} borderColor='border-mustard' />
                     ))}
                 </div>
             </section>

@@ -68,7 +68,10 @@ const ContactForm = () => {
 
             {status.success ? <></> : <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight text-left">Fill in the form</h2>}
             {status.success ? (
-                <p className="text-secondary text-lg mt-2">Thanks! I'll get back to you soon.</p>
+                <>
+                    <h3 className="font-bold text-2xl mt-2">Thanks for reaching out!</h3>
+                    <p className="text-base mt-1">I’ve received your message. I’ll reply as soon as I can.</p>
+                </>
             ) : (
                 <div className="max-w-xl">
                     <form

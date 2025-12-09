@@ -5,7 +5,7 @@ const services = [
     },
     {
         title: "Web Development",
-        description: "Thoughtful interfaces and fast, responsive websites using modern tools like React, Tailwind, and page animations. Designed to look great and perform even better."
+        description: "Thoughtful user interfaces and responsive websites using modern tools like React, Tailwind, and page animations. Designed and built to look great and perform better."
     },
     {
         title: "Email Development",
