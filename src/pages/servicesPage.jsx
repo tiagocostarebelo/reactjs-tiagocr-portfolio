@@ -26,7 +26,7 @@ const ServicesPage = () => {
                 ctaVariant="btn-secondary"
                 imgSrc="/images/brand.jpg"
                 altText="Brand Design"
-                reverse="true"
+                reverse={true}
             />
 
             <MediaTextSection
@@ -43,7 +43,7 @@ const ServicesPage = () => {
                 ctaVariant="btn-secondary"
                 imgSrc="/images/webdev.jpg"
                 altText="Web Development"
-                reverse="false"
+                reverse={false}
             />
 
             <MediaTextSection
@@ -59,7 +59,7 @@ const ServicesPage = () => {
                 ctaVariant="btn-secondary"
                 imgSrc="/images/emaildev.jpg"
                 altText="Email Development"
-                reverse="true"
+                reverse={true}
             />
             <Contact
                 heading="Let’s talk about your project!"

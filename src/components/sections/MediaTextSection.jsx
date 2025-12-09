@@ -13,8 +13,8 @@ const MediaTextSection = ({
     reverse = false
 }) => {
 
-    const textOrder = reverse ? "order-1 md:order-2" : "order-2 md:order-1";
-    const imageOrder = reverse ? "order-2 md:order-1" : "order-1 md:order-2";
+    const textOrder = reverse ? "order-1 md:order-2" : "order-1 md:order-1";
+    const imageOrder = reverse ? "order-2 md:order-1" : "order-2 md:order-2";
     // const textAlign = reverse ? "text-right" : "text-left";
 
     return (
