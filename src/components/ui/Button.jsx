@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router'
 
-const Button = ({ as: Component = "button", to, href, children, className, as }) => {
+const Button = ({ as: Component = "button", to, href, children, className }) => {
     if (Component === "navlink") {
         return (
             <NavLink to={to} className={className} onClick={() => window.scrollTo(0, 0)}>
