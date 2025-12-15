@@ -78,12 +78,8 @@ const ContactForm = () => {
                         name="contact"
                         method="POST"
                         data-netlify="true"
-                        netlify-honeypot="bot-field"
                         onSubmit={handleSubmit}
                         className="flex flex-col gap-6 mt-12">
-
-                        <input type="hidden" name="form-name" value="contact" />
-                        <input type="hidden" name="bot-field" />
 
                         <label htmlFor="firstName">First Name
                             <input
