@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
 import projects from "../content/projects";
 import NotFound from "./NotFound";
-import WorkPageTemplate from "./WorkPageTemplate";
+import WorkPageTemplate from "./workPageTemplate";
 
 const ProjectPage = () => {
     const { slug } = useParams();
