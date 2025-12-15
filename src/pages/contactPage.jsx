@@ -12,6 +12,21 @@ const ContactPage = () => {
                 text2="Tell me a bit about what you need and I’ll get back to you soon."
                 buttonLabel=''
             />
+            {/* Netlify form detection (hidden, static) */}
+            <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                hidden
+            >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="firstName" />
+                <input type="hidden" name="lastName" />
+                <input type="hidden" name="email" />
+                <input type="hidden" name="projectType" />
+                <input type="hidden" name="message" />
+            </form>
 
             <ContactForm />
         </>
