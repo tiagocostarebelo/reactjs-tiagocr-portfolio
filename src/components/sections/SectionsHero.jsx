@@ -3,7 +3,7 @@ import Button from '../ui/Button'
 
 const SectionsHero = ({
     heading = "Work that combines identity, design, and development",
-    text = "A curated selection of brand identities, websites, and digital projects — crafted with clarity, intention, and care.",
+    text = "A curated selection of brand identities, websites, and digital projects, crafted with clarity, intention, and care.",
     text2 = "",
     buttonLabel = "Get in Touch"
 }) => {

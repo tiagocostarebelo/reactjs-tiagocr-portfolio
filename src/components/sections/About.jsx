@@ -12,7 +12,7 @@ const About = () => {
                     <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">A designer-dev with a focus on clarity and craft</h2>
                     <div className="space-y-6 leading-relaxed max-w-xl">
                         <p className="text-base text-gray-dark">I’m a Designer turned Developer who combines brand thinking with clean, modular code. I care about usability, consistency, and the small details that make something feel right.</p>
-                        <p className="text-base text-gray-dark">I work closely with clients to create simple, intentional experiences — whether that’s a brand identity, a marketing site, or a full-stack web app.</p>
+                        <p className="text-base text-gray-dark">I work closely with clients to create simple, intentional experiences, whether that’s a brand identity, a marketing site, or a full-stack web app.</p>
                     </div>
                     <div className="mt-12 md:mt-14">
                         <Button as="link" to="/about" className="btn-ghost">More about me</Button>
