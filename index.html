@@ -14,6 +14,15 @@
 </head>
 
 <body>
+  <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="firstName" />
+    <input type="hidden" name="lastName" />
+    <input type="hidden" name="email" />
+    <input type="hidden" name="projectType" />
+    <input type="hidden" name="message" />
+  </form>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
