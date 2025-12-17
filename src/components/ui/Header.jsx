@@ -1,16 +1,25 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router';
 import { FaTimes, FaBars } from 'react-icons/fa';
 import logoHrz from "../../assets/tcr_logo_hrz.svg";
 
 const Header = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const baseClasses = 'text-gray-dark text-base transition hover:text-mustard';
     const activeClasses = 'text-gray-dark text-base text-mustard font-semibold';
 
     return (
-        <header className="sticky top-0 z-50 bg-white flex items-center justify-between">
+        <header className={`fixed top-0 w-full z-50 z-50 transition-all duration-500 bg-transparent flex items-center justify-between ${isScrolled ? 'bg-white/60 backdrop-blur-md shadow-sm' : 'bg-white/60'}`}>
             <div className="">
                 <a href="/">
                     <img className="w-40 md:w-50" src={logoHrz} alt="TiagoCR Logo" />

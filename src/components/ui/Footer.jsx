@@ -25,8 +25,8 @@ const Footer = () => {
                         </Button>
                     </div>
                     <div className="flex flex-col items-center justify-center">
-                        <Button as="href" href="/privacy-policy">Privacy Policy</Button>
-                        <Button as="href" href="/terms-and-conditions">Terms & Conditions</Button>
+                        <Button as="link" to="/privacy-policy">Privacy Policy</Button>
+                        <Button as="link" to="/terms-and-conditions">Terms & Conditions</Button>
                     </div>
                 </div>
             </div>
