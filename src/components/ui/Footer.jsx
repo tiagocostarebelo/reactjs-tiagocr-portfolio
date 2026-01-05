@@ -30,7 +30,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <p className="text-base text-dark-gray text-center">Copyright © 2025 Tiago Costa Rebelo - All rights reserved.</p>
+            <p className="text-base text-dark-gray text-center">Copyright © {new Date().getFullYear()} Tiago Costa Rebelo - All rights reserved.</p>
         </footer>
     )
 }
