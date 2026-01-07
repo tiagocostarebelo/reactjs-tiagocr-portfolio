@@ -11,7 +11,7 @@ const AboutPage = () => {
         <>
             <SectionsHero
                 heading="Designer. Developer. Problem-solver."
-                text="I’m a Designer turned Developer who enjoys building things that look good and make sense."
+                text="I’m a Designer turned Developer who enjoys building things that look good and make sense. I’ve worked professionally as a designer for several years, including roles at a magazine in Portugal and a design and marketing agency in Angola, alongside freelance projects across branding and web."
                 text2="My background in design helps me think visually, while development gives me the structure and tools to bring ideas to life."
                 buttonLabel=''
             />

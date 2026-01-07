@@ -1,7 +1,7 @@
 const services = [
     {
         title: "Brand Design",
-        description: "Distinctive logos and visual identity systems built with clarity and personality. From strategy to final assets, everything is crafted to feel intentional and adaptable."
+        description: "Logo design and visual identity systems built with clarity and personality, whether you need a simple mark or a complete brand foundation. From strategy to final assets, everything is crafted to feel intentional and adaptable."
     },
     {
         title: "Web Development",
