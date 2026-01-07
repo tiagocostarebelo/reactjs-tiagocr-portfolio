@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../ui/Button'
+import FadeIn from '../animation/FadeIn'
 
 const Contact = ({
     heading = "Let's build something great!",
@@ -10,11 +11,15 @@ const Contact = ({
 
     return (
         <section className={`w-full h-auto py-24 ${bg} text-center`}>
-            <h2 className="text-2xl md:text-3xl font-bold text-black-rich tracking-tight leading-tight uppercase mb-6">{heading}</h2>
-            <p className="text-base text-gray-dark">{text}</p>
+            <FadeIn>
+                <h2 className="text-2xl md:text-3xl font-bold text-black-rich tracking-tight leading-tight uppercase mb-6">{heading}</h2>
+                <p className="text-base text-gray-dark">{text}</p>
+            </FadeIn>
 
             <div className="mt-12 md:mt-14">
-                <Button as="link" to="/contact" className="btn-secondary">{buttonLabel}</Button>
+                <FadeIn delay={180}>
+                    <Button as="link" to="/contact" className="btn-secondary">{buttonLabel}</Button>
+                </FadeIn>
             </div>
         </section>
     )

@@ -10,7 +10,7 @@ const HomePage = () => {
     return (
         <>
             <Hero />
-            {projectDetails.length < 1 ? <></> :
+            {projectDetails.length > 0 &&
                 <FeaturedProjects projectDetails={filteredFeatured} />
             }
             <Services />
