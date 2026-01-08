@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FadeIn from "../animation/FadeIn";
 
 const ContactForm = () => {
 
@@ -66,105 +67,111 @@ const ContactForm = () => {
         <section className="w-full h-auto py-24 bg-gray-light">
             {/* Success & error messages */}
 
-            {status.success ? <></> : <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight text-left">Fill in the form</h2>}
+            {status.success ? null :
+                <FadeIn>
+                    <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight text-left">Fill in the form</h2>
+                </FadeIn>
+            }
             {status.success ? (
-                <>
-                    <h3 className="font-bold text-2xl mt-2">Thanks for reaching out!</h3>
-                    <p className="text-base mt-1">I’ve received your message. I’ll reply as soon as I can.</p>
-                </>
+                <FadeIn>
+                    <div>
+                        <h3 className="font-bold text-2xl mt-2">Thanks for reaching out!</h3>
+                        <p className="text-base mt-1">I’ve received your message. I’ll reply as soon as I can.</p>
+                    </div>
+                </FadeIn>
             ) : (
-                <div className="max-w-xl">
-                    <form
-                        name="contact"
-                        method="POST"
-                        data-netlify="true"
-                        netlify-honeypot="bot-field"
-                        onSubmit={handleSubmit}
-                        className="flex flex-col gap-6 mt-12">
+                <FadeIn delay={120}>
+                    <div className="max-w-xl">
+                        <form
+                            name="contact"
+                            method="POST"
+                            data-netlify="true"
+                            netlify-honeypot="bot-field"
+                            onSubmit={handleSubmit}
+                            className="flex flex-col gap-6 mt-12">
 
-                        <input type="hidden" name="form-name" value="contact" />
-                        <input type="hidden" name="bot-field" />
+                            <input type="hidden" name="form-name" value="contact" />
+                            <input type="hidden" name="bot-field" />
 
-                        <label htmlFor="firstName">First Name
-                            <input
-                                type="text"
-                                value={formData.firstName}
-                                name="firstName"
-                                id="firstName"
-                                onChange={handleChange}
-                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                                required
-                            />
-                        </label>
+                            <label htmlFor="firstName">First Name
+                                <input
+                                    type="text"
+                                    value={formData.firstName}
+                                    name="firstName"
+                                    id="firstName"
+                                    onChange={handleChange}
+                                    className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                                    required
+                                />
+                            </label>
 
-                        <label htmlFor="lastName">Last Name
-                            <input
-                                type="text"
-                                value={formData.lastName}
-                                name="lastName"
-                                id="lastName"
-                                onChange={handleChange}
-                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                                required
-                            />
-                        </label>
+                            <label htmlFor="lastName">Last Name
+                                <input
+                                    type="text"
+                                    value={formData.lastName}
+                                    name="lastName"
+                                    id="lastName"
+                                    onChange={handleChange}
+                                    className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                                    required
+                                />
+                            </label>
 
-                        <label htmlFor="email">Email
-                            <input
-                                type="email"
-                                value={formData.email}
-                                name="email"
-                                id="email"
-                                onChange={handleChange}
-                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                                required
-                            />
-                        </label>
+                            <label htmlFor="email">Email
+                                <input
+                                    type="email"
+                                    value={formData.email}
+                                    name="email"
+                                    id="email"
+                                    onChange={handleChange}
+                                    className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                                    required
+                                />
+                            </label>
 
-                        <label htmlFor="projectType">Project Type
-                            <select
-                                type="text"
-                                value={formData.projectType}
-                                name="projectType"
-                                id="projectType"
-                                onChange={handleChange}
-                                defaultValue=""
-                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                            <label htmlFor="projectType">Project Type
+                                <select
+                                    type="text"
+                                    value={formData.projectType}
+                                    name="projectType"
+                                    id="projectType"
+                                    onChange={handleChange}
+                                    className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
 
-                                required
-                            >
-                                <option value=""></option>
-                                <option value="brandDesign">Brand Design</option>
-                                <option value="webDevelopment">Web Development</option>
-                                <option value="emailDevelopment">Email Development</option>
-                                <option value="other">Other</option>
+                                    required
+                                >
+                                    <option value="" disabled>Select one...</option>
+                                    <option value="brandDesign">Brand Design</option>
+                                    <option value="webDevelopment">Web Development</option>
+                                    <option value="emailDevelopment">Email Development</option>
+                                    <option value="other">Other</option>
 
-                            </select>
-                        </label>
+                                </select>
+                            </label>
 
-                        <label htmlFor="message">Leave your message
-                            <textarea
-                                type="text"
-                                id="message"
-                                value={formData.message}
-                                name="message"
-                                onChange={handleChange}
-                                rows={4} cols={40}
-                                className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
-                            />
-                        </label>
-                        <button
-                            type="submit"
-                            className="btn-secondary"
-                            disabled={status.loading}>
-                            {status.loading ? "Sending..." : "Submit"}
-                        </button>
-                    </form>
-                    {status.error && (
-                        <p className="text-red-600 mt-2">Something went wrong. Please try again.</p>
-                    )}
-                </div>
-
+                            <label htmlFor="message">Leave your message
+                                <textarea
+                                    type="text"
+                                    id="message"
+                                    value={formData.message}
+                                    name="message"
+                                    onChange={handleChange}
+                                    rows={4} cols={40}
+                                    className="border border-gray-300 bg-white rounded-lg px-4 py-3 w-full"
+                                />
+                            </label>
+                            <button
+                                type="submit"
+                                className="btn-secondary"
+                                disabled={status.loading}>
+                                {status.loading ? "Sending..." : "Submit"}
+                            </button>
+                        </form>
+                        {status.error && (
+                            <p className="text-red-600 mt-2">Something went wrong. Please try again.</p>
+                        )}
+                    </div>
+                </FadeIn>
             )}
         </section>
     )
