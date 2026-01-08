@@ -9,7 +9,7 @@ const Services = () => {
             <FadeIn>
                 <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight uppercase mb-12 text-left">I help businesses elevate their brands with strong visuals and modern web experiences.</h2>
             </FadeIn>
-            <div className="flex flex-col lg:flex-row gap-x-10">
+            <div className="w-full grid gap-10 grid-cols-1 md:grid-cols-2 2xl:grid-cols-3">
                 {services.map(({ title, description }, index) => (
                     <FadeIn key={title} delay={index * 120} className="flex-1">
                         <ServiceCard title={title} description={description} borderColor='border-teal' />
