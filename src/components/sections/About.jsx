@@ -17,12 +17,12 @@ const About = () => {
                         <FadeIn delay={120}>
                             <p className="text-base text-gray-dark">I’m a Designer turned Developer who combines brand thinking with clean, modular code. I care about usability, consistency, and the small details that make something feel right.</p>
                         </FadeIn>
-                        <FadeIn delay={240}>
+                        <FadeIn delay={180}>
                             <p className="text-base text-gray-dark">I work closely with clients to create simple, intentional experiences, whether that’s a brand identity, a marketing site, or a full-stack web app.</p>
                         </FadeIn>
                     </div>
                     <div className="mt-12 md:mt-14">
-                        <FadeIn delay={360}>
+                        <FadeIn delay={240}>
                             <Button as="link" to="/about" className="btn-ghost">More about me</Button>
                         </FadeIn>
                     </div>
