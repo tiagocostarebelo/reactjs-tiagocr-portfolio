@@ -10,7 +10,6 @@ const ProjectPage = () => {
     const project = projects.find((p) => p.slug === slug);
 
     useEffect(() => {
-        // You can format the slug to be more readable
         const formattedTitle = slug
             .split('-')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
