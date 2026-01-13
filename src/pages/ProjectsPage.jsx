@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router";
 import projects from "../content/projects";
 import NotFound from "./NotFound";
@@ -8,12 +9,21 @@ const ProjectPage = () => {
 
     const project = projects.find((p) => p.slug === slug);
 
+    useEffect(() => {
+        // You can format the slug to be more readable
+        const formattedTitle = slug
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
+
+        document.title = `TiagoCR | ${formattedTitle}`;
+    }, [slug]);
+
     if (!project) {
         return (<NotFound />
         );
     }
 
-    // Case Study
 
     return <WorkPageTemplate project={project} />;
 

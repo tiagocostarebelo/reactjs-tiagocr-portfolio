@@ -1,4 +1,5 @@
-import { Route, Routes } from "react-router";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router";
 import Layout from "./layout/Layout";
 import HomePage from "./pages/homePage";
 import AboutPage from "./pages/aboutPage";
@@ -12,7 +13,21 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 
 
 function App() {
+  const location = useLocation();
 
+  useEffect(() => {
+    const titles = {
+      '/': "TiagoCR | Home",
+      '/about': "TiagoCR | About",
+      '/portfolio': "TiagoCR | Portfolio",
+      '/portfolio/:slug': "TiagoCR | ",
+      '/services': "TiagoCR | Services",
+      '/contact': "TiagoCR | Contact",
+      '/privacy-policy': "TiagoCR | Privacy Policy",
+      '/terms-and-conditions': "TiagoCR | Terms and Conditions"
+    }
+    document.title = titles[location.pathname] || 'TiagoCR | Portfolio';
+  }, [location])
 
   return (
 

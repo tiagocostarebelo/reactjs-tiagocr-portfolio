@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../ui/Button'
 import FadeIn from '../animation/FadeIn'
 import PatternBg from '../ui/PatternBg'
-import PatternSvg from '../../assets/tcr_pattern_gray.svg?react'
+import PatternSvg from '../../assets/bg_pattern.svg?react'
 
 const Hero = () => {
 
