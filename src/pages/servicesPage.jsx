@@ -1,7 +1,8 @@
 import React from 'react'
 import SectionsHero from '../components/sections/SectionsHero'
 import MediaTextSection from '../components/sections/MediaTextSection'
-import Contact from '../components/sections/Contact';
+import Contact from '../components/sections/Contact'
+import tcrBoard from "../assets/tcr_tiled_deck.webp"
 
 const ServicesPage = () => {
     return (
@@ -24,7 +25,7 @@ const ServicesPage = () => {
                 ctaText="Get in Touch"
                 ctaLink="/contact"
                 ctaVariant="btn-secondary"
-                imgSrc="/images/brand.jpg"
+                imgSrc={tcrBoard}
                 altText="Brand Design"
                 reverse={true}
             />
