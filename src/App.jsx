@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router";
+import { getPageTitle, getMetaDescription } from "./utils/seo";
 import Layout from "./layout/Layout";
 import HomePage from "./pages/homePage";
 import AboutPage from "./pages/aboutPage";
@@ -16,18 +17,20 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    const titles = {
-      '/': "TiagoCR | Home",
-      '/about': "TiagoCR | About",
-      '/portfolio': "TiagoCR | Portfolio",
-      '/portfolio/:slug': "TiagoCR | ",
-      '/services': "TiagoCR | Services",
-      '/contact': "TiagoCR | Contact",
-      '/privacy-policy': "TiagoCR | Privacy Policy",
-      '/terms-and-conditions': "TiagoCR | Terms and Conditions"
+    // Title
+    document.title = getPageTitle(location.pathname);
+
+    // Meta description
+    let meta = document.querySelector('meta[name="description"]');
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
     }
-    document.title = titles[location.pathname] || 'TiagoCR | Portfolio';
-  }, [location])
+
+    meta.setAttribute("content", getMetaDescription(location.pathname));
+  }, [location.pathname]);
 
   return (
 
