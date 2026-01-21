@@ -3,13 +3,13 @@ import projectDetails from "../content/projects";
 export function getPageTitle(pathname) {
     // Static routes first
     const staticTitles = {
-        "/": "Brand Designer & Web Developer | TiagoCR",
-        "/about": "About | TiagoCR",
-        "/portfolio": "Portfolio | TiagoCR",
-        "/services": "Services | TiagoCR",
-        "/contact": "Contact | TiagoCR",
-        "/privacy-policy": "Privacy Policy | TiagoCR",
-        "/terms-and-conditions": "Terms and Conditions | TiagoCR",
+        "/": "TiagoCR | Brand Designer & Web Developer",
+        "/about": "TiagoCR | About",
+        "/portfolio": "TiagoCR | Portfolio",
+        "/services": "TiagoCR | Services",
+        "/contact": "TiagoCR | Contact",
+        "/privacy-policy": "TiagoCR | Privacy Policy",
+        "/terms-and-conditions": "TiagoCR | Terms and Conditions",
     };
 
     if (staticTitles[pathname]) return staticTitles[pathname];
@@ -21,15 +21,15 @@ export function getPageTitle(pathname) {
 
         if (project) {
             const category = project.category?.[0] ?? "Project";
-            return `${project.title} – ${category} | TiagoCR`;
+            return `TiagoCR | ${project.title}`;
         }
 
         // Slug not found (still a valid URL pattern)
-        return `Project | TiagoCR`;
+        return `TiagoCR | Project`;
     }
 
     // Fallbacks
-    return "Page Not Found | TiagoCR";
+    return "TiagoCR | Page Not Found";
 }
 
 export function getMetaDescription(pathname) {
