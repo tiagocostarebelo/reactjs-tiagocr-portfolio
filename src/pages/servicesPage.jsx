@@ -59,7 +59,7 @@ const ServicesPage = () => {
                 ctaText="Get in Touch"
                 ctaLink="/contact"
                 ctaVariant="btn-secondary"
-                imgSrc="/images/emaildev.jpg"
+                imgSrc=""
                 altText="Email Development"
                 reverse={true}
             />

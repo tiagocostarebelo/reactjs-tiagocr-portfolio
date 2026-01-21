@@ -22,8 +22,11 @@ const MediaTextSection = ({
             <div className="container mx-auto px-6">
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-stretch">
                     <FadeIn className={`${imageOrder} md:mt-2 relative group overflow-hidden rounded-2xl border border-black/10 shadow-xl`}>
-                        <img src={imgSrc} alt={altText} className="h-full w-full object-cover aspect-[4/3] md:aspect-[16/11] transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        {!imgSrc ? null : (
+                            <img src={imgSrc} alt={altText} className="h-full w-full object-cover aspect-[4/3] md:aspect-[16/11] transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                        )}
                     </FadeIn>
+
                     <div className={`${textOrder} flex flex-col space-y-6 justify-center text-left`}>
                         <FadeIn delay={120}>
                             <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase tracking-tight leading-tight">{title}</h2>
