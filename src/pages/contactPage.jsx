@@ -14,6 +14,7 @@ const ContactPage = () => {
             />
             {/* Netlify form detection (hidden, static) */}
             <form
+                aria-hidden="true"
                 name="contact"
                 method="POST"
                 data-netlify="true"
