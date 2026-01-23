@@ -4,6 +4,7 @@ import MediaTextSection from '../components/sections/MediaTextSection'
 import Contact from '../components/sections/Contact'
 import brandDesignImg from "../assets/tcr_tiled_deck.webp"
 import webDevImg from "../assets/web_dev_tiledeck.webp"
+import emailDevImg from "../assets/emailDev_tile_deck.webp"
 
 const ServicesPage = () => {
     return (
@@ -35,9 +36,9 @@ const ServicesPage = () => {
                 title="Web Development"
                 subheading="Clean, modern websites built to perform."
                 paragraphs={[
-                    "I design and develop responsive, fast, modern websites using React, Tailwind, and a component-driven approach. Every build is clean, scalable, and focused on usability.",
-                    "My background in design means I care deeply about layout, structure, and visual consistency. Your website won’t just work well, it will look and feel right.",
-                    "Whether it's a landing page, a marketing site, or a full web app, I build interfaces that are simple to navigate, accessible, and easy to maintain.",
+                    "I design and build fast, responsive websites with a component-driven approach, choosing the right stack for your goals, from lightweight front-ends to modern React builds.",
+                    "My design know-how means I care deeply about layout, structure, and visual consistency. Your website won’t just work well. It’ll look and feel right.",
+                    "From landing pages to full web apps, I build interfaces that are intuitive, accessible, and easy to maintain over time.",
                 ]}
                 bgColor="bg-white"
                 ctaText="Get in Touch"
@@ -52,14 +53,14 @@ const ServicesPage = () => {
                 title="Email Development"
                 subheading="Responsive, reliable, campaign-ready emails."
                 paragraphs={[
-                    "I design and code responsive, accessibility-focused email templates that render beautifully across all major clients, including Outlook, Gmail, and Apple Mail.",
-                    "Using clean, bulletproof HTML and modular layouts, I create emails that are easy to update, reuse, and integrate into your marketing workflow.",
-                    "If you need consistent campaign templates, branded newsletters, or high-converting launches, I can help you ship with confidence.",
+                    "My email development experience lets me build accessibility-focused templates that render consistently across major clients, including Outlook, Gmail, and Apple Mail.",
+                    "I use clean, bulletproof HTML and modular, reusable sections, so your team can update content quickly without breaking layout.",
+                    "If you need reliable campaign templates, branded newsletters, or a scalable email design system, I’ll help you ship faster with confidence.",
                 ]}
                 ctaText="Get in Touch"
                 ctaLink="/contact"
                 ctaVariant="btn-secondary"
-                imgSrc=""
+                imgSrc={emailDevImg}
                 altText="Email Development"
                 reverse={true}
             />
