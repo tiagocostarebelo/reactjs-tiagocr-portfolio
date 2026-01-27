@@ -1,126 +1,242 @@
-import Contact from "../components/sections/Contact"
+import React from "react";
+import MediaRenderer from "../components/ui/MediaRenderer";
+import Contact from "../components/sections/Contact";
 
 const WorkPageTemplate = ({ project }) => {
-    return (
-        <>
-            <section className="bg-cover bg-black-rich text-white border" style={{ backgroundImage: project.caseStudy?.images?.hero ? `url(${project.caseStudy.images.hero})` : "none" }} >
-                <div className="w-full h-[60dvh] flex flex-col items-center justify-end">
-                    <h1 className="text-3xl tracking-tight leading-tight font-bold uppercase">{project.title}</h1>
+    const isWebProject =
+        project.category?.includes("Web Development") ||
+        project.category?.includes("Email Development");
 
-                    <div className="flex space-x-6 mt-16">
-                        {project.category.map((cat) => (
-                            <span key={cat}
-                                className="text-sm text-gray-dark px-3 py-1 bg-gray-light rounded-lg">{cat}</span>
-                        ))}
+    const caseStudy = project.caseStudy || {};
+    const hero = caseStudy?.images?.hero;
+    const gallerySections = caseStudy?.images?.sections || [];
+
+    return (
+        <div className="min-h-screen font-body ">
+            {/* HERO (dark) */}
+            <header className="relative flex h-[90vh] flex-col justify-end overflow-hidden bg-black-rich text-white">
+                {hero ? (
+                    <div className="absolute inset-0 z-0">
+                        <img
+                            src={hero}
+                            alt={project.title}
+                            className={[
+                                "h-full w-full opacity-70",
+                                isWebProject ? "object-contain" : "object-cover",
+                            ].join(" ")}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black-rich via-black-rich/40 to-transparent" />
+                    </div>
+                ) : null}
+
+                <div className="relative z-10 w-full pb-16">
+                    <div className="mx-auto w-full ">
+                        <div className="mb-6 flex flex-wrap gap-3">
+                            {(project.category || []).map((cat) => (
+                                <span
+                                    key={cat}
+                                    className="rounded-full border border-mustard/30 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-mustard backdrop-blur-md"
+                                >
+                                    {cat}
+                                </span>
+                            ))}
+
+                            {project.year ? (
+                                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-widest text-white/70 backdrop-blur-sm">
+                                    Est. {project.year}
+                                </span>
+                            ) : null}
+                        </div>
+
+                        <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-7xl">
+                            {project.title}
+                        </h1>
+
+                        {project.shortDescription ? (
+                            <p className="mt-6 max-w-2xl border-l-2 border-mustard pl-6 text-base leading-relaxed text-white/80 md:text-lg">
+                                {project.shortDescription}
+                            </p>
+                        ) : null}
                     </div>
                 </div>
-            </section>
+            </header>
 
-            {project.shortDescription && <section className="w-full h-auto py-24 bg-gray-light space-y-12">
-                <p className="text-xl text-gray-dark text-center">{project.shortDescription}</p>
-            </section>}
+            {/* BODY*/}
+            <main className="bg-white text-black-rich">
+                {/* INTRO GRID */}
+                <section className="w-full h-auto py-24 border-b border-gray-light bg-white">
+                    <div className="mx-auto w-full ">
+                        <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
+                            {/* LEFT */}
+                            <div className="lg:col-span-7 space-y-12">
+                                <div>
+                                    <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-mustard">
+                                        01. The Brief
+                                    </h2>
 
-            <section className="w-full h-auto py-24 bg-white">
-                <div className="grid md:grid-cols-2 md:grid-rows-2 gap-12 items-stretch">
+                                    <p className="text-base font-light leading-snug text-black-rich md:text-xl">
+                                        {caseStudy.brief}
+                                    </p>
+                                </div>
 
-                    {project.caseStudy?.images?.sections?.length > 0 && <div className="order-2 md:order-1 h-full min-h-[600px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[0]?.images[0]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>}
+                                <div className="grid grid-cols-1 gap-10 pt-2 sm:grid-cols-2">
+                                    <div>
+                                        <h3 className="mb-4 text-[10px] font-bold uppercase tracking-widest text-gray-dark">
+                                            Roles
+                                        </h3>
 
-                    <div className="flex flex-col space-y-6 justify-center order-1 md:order-1 text-left">
-                        <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">The Brief</h2>
-                        <p className="text-base text-gray-dark">{project.caseStudy?.brief}</p>
+                                        <ul className="space-y-2">
+                                            {(caseStudy.role || []).map((r) => (
+                                                <li key={r} className="text-sm text-gray-dark">
+                                                    {r}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
 
+                                    {project.liveUrl ? (
+                                        <div>
+                                            <h3 className="mb-4 text-[10px] font-bold uppercase tracking-widest text-gray-dark">
+                                                Link
+                                            </h3>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight mt-8">The Solution</h2>
-                        <p className="text-base text-gray-dark">{project.caseStudy?.solution}</p>
+                                            <a
+                                                href={project.liveUrl}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="group inline-flex items-center gap-2 text-sm font-semibold text-black-rich transition-colors hover:text-mustard"
+                                            >
+                                                Visit Live Site
+                                                <svg
+                                                    className="h-4 w-4 transform transition-transform group-hover:-translate-y-1 group-hover:translate-x-1"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    aria-hidden="true"
+                                                >
+                                                    <path
+                                                        strokeLinecap="round"
+                                                        strokeLinejoin="round"
+                                                        strokeWidth={2}
+                                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    ) : null}
+                                </div>
+                            </div>
 
-                        <h3 className="text-lg font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight mt-8">My roles</h3>
-                        <div>
-                            {project.caseStudy?.role?.map((el, index) => (
-                                <p key={index} className="text-base text-gray-dark">{el}</p>
-                            ))}
+                            {/* RIGHT */}
+                            <div className="lg:col-span-5 flex flex-col justify-center">
+                                <div className="rounded-2xl bg-gray-light p-8 md:p-10">
+                                    <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-mustard">
+                                        02. The Solution
+                                    </h2>
+
+                                    <p className="text-sm italic text-gray-dark md:text-base">
+                                        “{caseStudy.solution}”
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </section>
 
-                    {project.caseStudy?.images?.sections?.length > 0 && <div className="order-3 md:order-3 h-full min-h-[600px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[0]?.images[1]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>}
-                </div>
+                {/* GALLERY*/}
+                {gallerySections.map((section, sIdx) => (
+                    <section key={sIdx} className="w-full h-auto py-16 bg-gray-light">
+                        <div className="mx-auto w-full ">
+                            <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
+                                {(section.images || []).map((item, iIdx) => {
+                                    const isItemObject = typeof item === "object" && item !== null;
+                                    const layout = isItemObject ? item.layout : "full";
 
-            </section >
+                                    let colSpan = "md:col-span-12";
+                                    if (layout === "half") colSpan = "md:col-span-6";
+                                    if (layout === "third") colSpan = "md:col-span-4";
 
-            <section className="w-full h-auto py-24 bg-gray-light space-y-12">
-                <div className="grid md:grid-cols-2 md:grid-rows-1 gap-12 items-stretch">
-                    <div className="flex flex-col space-y-6 justify-center order-1 md:order-1 text-left">
-                        <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">Goals</h2>
-                        <ul className="space-y-4 list-disc list-inside">
-                            {project.caseStudy?.goals?.map((goal, index) => (
-                                <li key={index} className="text-base text-gray-dark">{goal}</li>
-                            ))}
-                        </ul>
+                                    if (isWebProject && !isItemObject) colSpan = "md:col-span-12";
 
+                                    return (
+                                        <div key={iIdx} className={`${colSpan} flex flex-col`}>
+                                            <MediaRenderer
+                                                media={item}
+                                                className="w-full rounded-lg shadow-sm"
+                                            />
+                                        </div>
+                                    );
+                                })}
+                            </div>
+                        </div>
+                    </section>
+                ))}
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight mt-8">My Process</h2>
-                        <ul className="space-y-4 list-disc list-inside">
-                            {project.caseStudy?.process?.map((step, index) => (
-                                <li key={index} className="text-base text-gray-dark">{step}</li>
-                            ))}
-                        </ul>
+                {/* GOALS / PROCESS / OUTCOME */}
+                <section className="w-full h-auto py-24 border-y border-gray-light bg-white">
+                    <div className="mx-auto w-full ">
+                        <div className="grid gap-16 md:grid-cols-2 md:gap-20">
+                            {/* GOALS */}
+                            <div>
+                                <h2 className="mb-10 text-xs font-bold uppercase tracking-[0.3em] text-mustard">
+                                    Goals
+                                </h2>
 
-                        <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight mt-8">Outcome</h2>
-                        <p className="text-base text-gray-dark md:max-w-[700px]">{project.caseStudy?.outcome}</p>
+                                <div className="space-y-10">
+                                    {(caseStudy.goals || []).map((goal, i) => (
+                                        <div key={i} className="grid grid-cols-[40px_1fr] gap-6">
+                                            <span className="font-display text-2xl font-bold text-black-rich/15 hover:text-mustard transition-all duration-500">
+                                                {String(i + 1).padStart(2, "0")}
+                                            </span>
+                                            <p className="pt-1 text-sm leading-relaxed text-gray-dark md:text-base">
+                                                {goal}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* PROCESS */}
+                            <div>
+                                <h2 className="mb-10 text-xs font-bold uppercase tracking-[0.3em] text-mustard">
+                                    Process
+                                </h2>
+
+                                <div className="space-y-10">
+                                    {(caseStudy.process || []).map((step, i) => (
+                                        <div key={i} className="grid grid-cols-[40px_1fr] gap-6">
+                                            <span className="font-display text-2xl font-bold text-black-rich/15 hover:text-black-rich transition-all duration-500">
+                                                {String(i + 1).padStart(2, "0")}
+                                            </span>
+                                            <p className="pt-1 text-sm leading-relaxed text-gray-dark md:text-base">
+                                                {step}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* OUTCOME */}
+                        <div className="mt-20 max-w-3xl">
+                            <h2 className="mb-8 text-xs font-bold uppercase tracking-[0.3em] text-mustard">
+                                Outcome
+                            </h2>
+
+                            <p className="font-display text-2xl font-medium leading-tight text-black-rich md:text-4xl">
+                                {caseStudy.outcome}
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </main>
 
-            {project.caseStudy?.images?.sections?.length >= 2 && <section className="w-full h-auto py-24 bg-white">
-                <div className="grid lg:grid-cols-4 lg:grid-rows-4 gap-6">
-
-                    <div className="order-1 lg:col-span-4 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[0]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-2 lg:col-span-2 lg:row-start-2 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[1]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-3 lg:col-start-3 lg:row-start-2 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[2]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-4 lg:col-start-4 lg:row-start-2 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[3]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-5 lg:row-start-3 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[4]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-6 lg:row-start-3 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[5]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-7 lg:col-span-2 lg:row-start-3 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[6]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-8 lg:col-span-2 lg:row-start-4 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[7]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-
-                    <div className="order-9 lg:col-span-2 lg:col-start-3 lg:row-start-4 h-full min-h-[400px] w-full relative group overflow-hidden border">
-                        <img src={project.caseStudy?.images?.sections[1]?.images[8]} alt={project.title} className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
-                    </div>
-                </div>
-
-            </section >}
             <Contact
-                heading="Have a project in mind?"
-                text="If you’d like to work together on branding, web, or a digital product, I’d love to hear from you."
+                heading="Ready to elevate your project?"
+                text="Whether it's a high-performance web platform, a unique visual identity, or a strategic digital campaign, I'm here to bring your vision to life."
             />
-        </>
-    )
-}
+        </div>
+    );
+};
 
-export default WorkPageTemplate
+export default WorkPageTemplate;
