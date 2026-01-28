@@ -1,90 +1,54 @@
-import React from "react";
+const VIDEO_EXTS = ["mp4", "webm", "ogg", "mov", "m4v"];
+const IMAGE_EXTS = ["jpg", "jpeg", "png", "webp", "gif", "svg", "avif"];
+
+function getExtension(url) {
+    try {
+        const u = new URL(url);
+        const parts = u.pathname.split(".");
+        return (parts[parts.length - 1] || "").toLowerCase();
+    } catch {
+        const clean = String(url).split("?")[0].split("#")[0];
+        const parts = clean.split(".");
+        return (parts[parts.length - 1] || "").toLowerCase();
+    }
+}
+
+function isVideoUrl(url) {
+    const ext = getExtension(url);
+    return VIDEO_EXTS.includes(ext);
+}
+
+function isImageUrl(url) {
+    const ext = getExtension(url);
+    return IMAGE_EXTS.includes(ext);
+}
 
 const MediaRenderer = ({ media, className = "" }) => {
-    // media can be:
-    // - string URL
-    // - object: { url, layout, aspectRatio, caption, alt, title }
     const isMediaItem = (m) => typeof m === "object" && m !== null;
 
     const url = isMediaItem(media) ? media.url : media;
     const aspectRatio = isMediaItem(media) ? media.aspectRatio : "auto";
+    const poster = isMediaItem(media) ? media.poster : undefined;
+    const caption = isMediaItem(media) ? media.caption : null;
+    const altText = isMediaItem(media) && media.alt ? media.alt : "Project visual";
+    const title = isMediaItem(media) && media.title ? media.title : "Project video";
 
     if (!url) return null;
+    const video = isVideoUrl(url);
 
-    const lower = String(url).toLowerCase();
-
-    const isDirectVideo = [".mp4", ".webm", ".ogg", ".mov"].some((ext) =>
-        lower.endsWith(ext)
-    );
-
-    const isYouTube = lower.includes("youtube.com") || lower.includes("youtu.be");
-    const isVimeo = lower.includes("vimeo.com");
-    const isVideo = isDirectVideo || isYouTube || isVimeo;
-
-    const getYouTubeId = (u) => {
-        try {
-            if (u.includes("youtu.be/"))
-                return u.split("youtu.be/")[1]?.split(/[?&]/)[0] ?? "";
-            if (u.includes("watch?v="))
-                return u.split("watch?v=")[1]?.split("&")[0] ?? "";
-            return "";
-        } catch {
-            return "";
-        }
-    };
-
-    const getVimeoId = (u) => {
-        try {
-            const part = u.split("vimeo.com/")[1] ?? "";
-            return part.split(/[?&/]/)[0] ?? "";
-        } catch {
-            return "";
-        }
-    };
-
-    const getEmbedUrl = (u) => {
-        if (isYouTube) {
-            const id = getYouTubeId(u);
-            if (!id) return u;
-
-            // YouTube loop requires playlist=<id>
-            const params = new URLSearchParams({
-                autoplay: "0",
-                mute: "1",
-                loop: "1",
-                playlist: id,
-                rel: "0",
-                modestbranding: "1",
-            });
-
-            return `https://www.youtube.com/embed/${id}?${params.toString()}`;
-        }
-
-        if (isVimeo) {
-            const id = getVimeoId(u);
-            if (!id) return u;
-
-            const params = new URLSearchParams({
-                autoplay: "0",
-                muted: "1",
-                loop: "1",
-                title: "0",
-                byline: "0",
-                portrait: "0",
-            });
-
-            return `https://player.vimeo.com/video/${id}?${params.toString()}`;
-        }
-
-        return u;
-    };
+    const resolvedAspect =
+        aspectRatio !== "auto"
+            ? aspectRatio
+            : video
+                ? "video"
+                : "auto";
 
     const ratioClass =
-        aspectRatio === "video"
+        resolvedAspect === "video"
             ? "aspect-video"
-            : aspectRatio === "portrait"
+            : resolvedAspect === "portrait"
                 ? "aspect-[3/4]"
-                : aspectRatio === "square"
+                : resolvedAspect === "square"
                     ? "aspect-square"
                     : "";
 
@@ -93,40 +57,26 @@ const MediaRenderer = ({ media, className = "" }) => {
         "border border-white/10 bg-white/5",
         ratioClass,
         className,
-    ].join(" ");
-
-    const altText =
-        isMediaItem(media) && media.alt ? media.alt : "Project visual";
-
-    const caption = isMediaItem(media) ? media.caption : null;
-    const iframeTitle =
-        isMediaItem(media) && media.title ? media.title : "Project video";
+    ]
+        .filter(Boolean)
+        .join(" ");
 
     return (
         <figure className={containerClasses}>
-            {isVideo ? (
-                <div className="absolute inset-0 h-full w-full">
-                    {isDirectVideo ? (
-                        <video
-                            src={url}
-                            autoPlay
-                            muted
-                            loop
-                            playsInline
-                            preload="metadata"
-                            className="h-full w-full object-cover"
-                        />
-                    ) : (
-                        <iframe
-                            src={getEmbedUrl(url)}
-                            className="h-full w-full border-0"
-                            loading="lazy"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            title={iframeTitle}
-                        />
-                    )}
+            {video ? (
+                <div className="inset-0 h-full w-full">
+                    <video
+                        src={url}
+                        className="h-full w-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        poster={poster}
+                        aria-label={title}
+                        onError={(e) => console.error("Video failed to load:", url, e)}
+                    />
                 </div>
             ) : (
                 <img
@@ -134,6 +84,7 @@ const MediaRenderer = ({ media, className = "" }) => {
                     alt={altText}
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                     loading="lazy"
+                    onError={(e) => console.error("Image failed to load:", url, e)}
                 />
             )}
 

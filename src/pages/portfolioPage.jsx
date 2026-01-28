@@ -41,9 +41,7 @@ const PortfolioPage = () => {
                             />
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                                {filteredProjects
-                                    .filter(proj => proj.id !== featuredProject.id)
-                                    .map(proj => <ProjectCard key={proj.id} project={proj} />)}
+                                {filteredProjects.map(proj => <ProjectCard key={proj.id} project={proj} />)}
                             </div>
                         </section>
                         <Contact

@@ -37,7 +37,7 @@ const projectDetails = [
                     {
                         // Main Gallery
                         images: [
-                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-23_221529_kw0fne.png", layout: 'full', caption: 'Product listing page showing the clean, romantic grid.' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-23_221529_kw0fne.png", layout: 'full', caption: 'Product listing page showing the clean, romantic grid' },
                             { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-23_221518_alwisg.png", layout: 'half' },
                             { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-23_221505_yu8xwh.png", layout: 'half' },
                             { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-23_221541_rpujbs.png", layout: 'full' },
@@ -48,6 +48,60 @@ const projectDetails = [
             }
         }
     },
+
+    {
+        id: "moodser",
+        slug: "moodser",
+        title: "Moodser",
+        category: ["Web Development"],
+        featured: true,
+        shortDescription: "A lightweight moodboard composer for designers and creatives to quickly collect images, colors, and notes on a single canvas and export as a PNG.",
+        thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174400_qjsuke.png",
+        liveUrl: "https://moodser.netlify.app",
+        year: 2026,
+        caseStudy: {
+            brief: "Moodser started from a personal frustration with the traditional moodboarding process. Creating a moodboard often means saving images locally, opening heavy design tools, importing assets, and navigating complex interfaces before any real visual thinking begins. The goal was to design a faster, more focused alternative for the early stages of a creative project.",
+            solution: "Moodser is a browser-based moodboard composer built around a single canvas. Users can add images via URL, drop color swatches, write short text notes, freely arrange elements, and export the result as a PNG, all without accounts, setup, or unnecessary UI.",
+            role: ["Web Developer"],
+            goals: [
+                "Reduce friction in the early moodboarding process",
+                "Create a focused, minimal interface that encourages visual thinking",
+                "Use the project as a hands-on way to deepen React and TypeScript skills"
+            ],
+            process: [
+                "Defined the core problem and intentionally limited the scope to an MVP",
+                "Designed the interaction model around a single, freeform canvas",
+                "Built the app using React, TypeScript, and a reducer-driven state architecture",
+                "Iterated on drag, resize, selection, responsiveness, and export features through testing and refinement"
+            ],
+            outcome: "Moodser was successfully launched as a fully functional v1 product. It delivers a fast, intuitive moodboarding experience and serves as both a useful creative tool and a strong portfolio project demonstrating frontend architecture, interaction design, and design-led development thinking.",
+            images: {
+                hero: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174400_qjsuke.png",
+                sections: [
+                    {
+                        // Introduction Media
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/video/upload/Moodser_-_Video_intro_utcupt.mp4", }
+                        ]
+                    },
+                    {
+                        // Main Gallery
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174431_f90jfb.png", layout: 'full', caption: 'Product features list' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174459_ebiqta.png", layout: 'half' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174509_xnnvma.png", layout: 'full' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_180553_shaq4r.png", layout: 'full' },
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+
+
+
+
+
 
 
 

@@ -128,7 +128,7 @@ const WorkPageTemplate = ({ project }) => {
                             </div>
 
                             {/* RIGHT */}
-                            <div className="lg:col-span-5 flex flex-col justify-center">
+                            <div className="lg:col-span-5 flex flex-col">
                                 <div className="rounded-2xl bg-gray-light p-8 md:p-10">
                                     <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-mustard">
                                         02. The Solution
