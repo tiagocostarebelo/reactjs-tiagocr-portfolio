@@ -88,9 +88,9 @@ const projectDetails = [
                         // Main Gallery
                         images: [
                             { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174431_f90jfb.png", layout: 'full', caption: 'Product features list' },
-                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174459_ebiqta.png", layout: 'half' },
                             { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174509_xnnvma.png", layout: 'full' },
-                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_180553_shaq4r.png", layout: 'full' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174459_ebiqta.png", layout: 'half' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-16_220314_el7euu.png", layout: 'half' },
                         ]
                     }
                 ]
