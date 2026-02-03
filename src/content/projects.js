@@ -60,7 +60,7 @@ const projectDetails = [
         liveUrl: "https://moodser.netlify.app",
         year: 2026,
         caseStudy: {
-            brief: "Moodser started from a personal frustration with the traditional moodboarding process. Creating a moodboard often means saving images locally, opening heavy design tools, importing assets, and navigating complex interfaces before any real visual thinking begins. The goal was to design a faster, more focused alternative for the early stages of a creative project.",
+            brief: "Moodser started from a personal idea to try and simplify the moodboarding creation process. Instead of saving images locally, opening design tools, importing assets, and navigating interfaces before any real visual thinking begins. The goal was to design a faster, more focused alternative for the early stages of a creative project.",
             solution: "Moodser is a browser-based moodboard composer built around a single canvas. Users can add images via URL, drop color swatches, write short text notes, freely arrange elements, and export the result as a PNG, all without accounts, setup, or unnecessary UI.",
             role: ["Web Developer"],
             goals: [

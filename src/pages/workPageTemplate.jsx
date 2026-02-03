@@ -12,54 +12,56 @@ const WorkPageTemplate = ({ project }) => {
     const gallerySections = caseStudy?.images?.sections || [];
 
     return (
-        <div className="min-h-screen font-body ">
+        <div className="min-h-screen font-body">
             {/* HERO (dark) */}
-            <header className="relative flex h-[90vh] flex-col justify-end overflow-hidden bg-black-rich text-white">
-                {hero ? (
-                    <div className="absolute inset-0 z-0">
-                        <img
-                            src={hero}
-                            alt={project.title}
-                            className={[
-                                "h-full w-full opacity-70",
-                                isWebProject ? "object-contain" : "object-cover",
-                            ].join(" ")}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black-rich via-black-rich/40 to-transparent" />
-                    </div>
-                ) : null}
+            <div className="pt-25">
+                <header className="relative flex h-[90vh] flex-col justify-end overflow-hidden bg-black-rich text-white">
+                    {hero ? (
+                        <div className="absolute inset-0 z-0">
+                            <img
+                                src={hero}
+                                alt={project.title}
+                                className={[
+                                    "h-full w-full opacity-70",
+                                    isWebProject ? "object-contain" : "object-cover",
+                                ].join(" ")}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black-rich via-black-rich/40 to-transparent" />
+                        </div>
+                    ) : null}
 
-                <div className="relative z-10 w-full pb-16">
-                    <div className="mx-auto w-full ">
-                        <div className="mb-6 flex flex-wrap gap-3">
-                            {(project.category || []).map((cat) => (
-                                <span
-                                    key={cat}
-                                    className="rounded-full border border-mustard/30 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-mustard backdrop-blur-md"
-                                >
-                                    {cat}
-                                </span>
-                            ))}
+                    <div className="relative z-10 w-full pb-16">
+                        <div className="mx-auto w-full ">
+                            <div className="mb-6 flex flex-wrap gap-3">
+                                {(project.category || []).map((cat) => (
+                                    <span
+                                        key={cat}
+                                        className="rounded-full border border-mustard/30 bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-mustard backdrop-blur-md"
+                                    >
+                                        {cat}
+                                    </span>
+                                ))}
 
-                            {project.year ? (
-                                <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-widest text-white/70 backdrop-blur-sm">
-                                    Est. {project.year}
-                                </span>
+                                {project.year ? (
+                                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-widest text-white/70 backdrop-blur-sm">
+                                        Est. {project.year}
+                                    </span>
+                                ) : null}
+                            </div>
+
+                            <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-7xl">
+                                {project.title}
+                            </h1>
+
+                            {project.shortDescription ? (
+                                <p className="mt-6 max-w-2xl border-l-2 border-mustard pl-6 text-base leading-relaxed text-white/80 md:text-lg">
+                                    {project.shortDescription}
+                                </p>
                             ) : null}
                         </div>
-
-                        <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-7xl">
-                            {project.title}
-                        </h1>
-
-                        {project.shortDescription ? (
-                            <p className="mt-6 max-w-2xl border-l-2 border-mustard pl-6 text-base leading-relaxed text-white/80 md:text-lg">
-                                {project.shortDescription}
-                            </p>
-                        ) : null}
                     </div>
-                </div>
-            </header>
+                </header>
+            </div>
 
             {/* BODY*/}
             <main className="bg-white text-black-rich">
