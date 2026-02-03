@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import projects from "../content/projects";
 import NotFound from "./NotFound";
 import WorkPageTemplate from "./workPageTemplate";
+import { setCanonical } from "../utils/seo";
 
 const ProjectPage = () => {
     const { slug } = useParams();
@@ -16,6 +17,7 @@ const ProjectPage = () => {
             .join(' ');
 
         document.title = `TiagoCR | ${formattedTitle}`;
+        setCanonical(`https://tiagocr.me/portfolio/${slug}`);
     }, [slug]);
 
     if (!project) {
