@@ -166,6 +166,8 @@ const ContactForm = () => {
                                 disabled={status.loading}>
                                 {status.loading ? "Sending..." : "Submit"}
                             </button>
+                            <p className="text-xs text-gray-dark">By submitting this form, you agree that your information will be used to respond to your enquiry. Your data will not be shared.
+                            </p>
                         </form>
                         {status.error && (
                             <p className="text-red-600 mt-2">Something went wrong. Please try again.</p>
