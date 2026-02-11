@@ -1,8 +1,13 @@
-import React from 'react'
+import { useEffect } from "react";
 import SectionsHero from '../components/sections/SectionsHero';
 import ContactForm from '../components/ui/ContactForm';
+import { setCanonical } from "../utils/seo";
+
 
 const ContactPage = () => {
+    useEffect(() => {
+        setCanonical("/contact");
+    }, []);
 
     return (
         <>

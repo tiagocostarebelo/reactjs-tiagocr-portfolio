@@ -1,6 +1,11 @@
-import React from 'react'
+import { useEffect } from "react";
+import { setCanonical } from "../utils/seo";
 
 const TermsAndConditions = () => {
+    useEffect(() => {
+        setCanonical("/terms-and-conditions");
+    }, []);
+
     return (
         <main className="max-w-4xl mx-auto px-6 py-24">
             <style>

@@ -1,12 +1,17 @@
-import React from 'react'
+import { useEffect } from "react"
 import SectionsHero from '../components/sections/SectionsHero'
 import MediaTextSection from '../components/sections/MediaTextSection'
 import Contact from '../components/sections/Contact'
 import brandDesignImg from "../assets/tcr_tiled_deck.webp"
 import webDevImg from "../assets/web_dev_tiledeck.webp"
 import emailDevImg from "../assets/emailDev_tile_deck.webp"
+import { setCanonical } from "../utils/seo";
 
 const ServicesPage = () => {
+    useEffect(() => {
+        setCanonical("/services");
+    }, []);
+
     return (
         <>
             <SectionsHero

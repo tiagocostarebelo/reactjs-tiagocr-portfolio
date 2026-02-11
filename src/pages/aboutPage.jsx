@@ -1,13 +1,17 @@
-import React from 'react'
-import tiagoPhoto from '../assets/tiago_.webp'
-import Button from '../components/ui/Button'
-import Contact from '../components/sections/Contact'
-import SectionsHero from '../components/sections/SectionsHero'
-import ServiceCard from '../components/ui/ServiceCard'
+import { useEffect } from "react";
+import tiagoPhoto from '../assets/tiago_.webp';
+import Button from '../components/ui/Button';
+import Contact from '../components/sections/Contact';
+import SectionsHero from '../components/sections/SectionsHero';
+import ServiceCard from '../components/ui/ServiceCard';
 import values from '../content/values.js';
-import FadeIn from '../components/animation/FadeIn.jsx'
+import FadeIn from '../components/animation/FadeIn.jsx';
+import { setCanonical } from "../utils/seo";
 
 const AboutPage = () => {
+    useEffect(() => {
+        setCanonical("/about");
+    }, []);
     return (
         <>
             <SectionsHero

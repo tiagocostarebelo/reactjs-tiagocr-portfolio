@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../components/ui/Button';
 import projectDetails from '../content/projects';
 import ProjectCard from '../components/ui/ProjectCard';
@@ -6,6 +6,7 @@ import Contact from '../components/sections/Contact';
 import FeaturedProject from '../components/ui/FeaturedProject';
 import CategoriesFilter from '../components/ui/CategoriesFilter';
 import SectionsHero from '../components/sections/SectionsHero';
+import { setCanonical } from "../utils/seo";
 
 const PortfolioPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");
@@ -14,6 +15,11 @@ const PortfolioPage = () => {
 
     const allCategories = ["All", ...new Set(projectDetails.flatMap(project => project.category))];
     const filteredProjects = activeCategory === "All" ? projectDetails : projectDetails.filter(project => project.category.includes(activeCategory));
+
+    useEffect(() => {
+
+        setCanonical(`/portfolio`);
+    }, []);
 
 
     return (

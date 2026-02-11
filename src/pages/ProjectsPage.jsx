@@ -17,7 +17,7 @@ const ProjectPage = () => {
             .join(' ');
 
         document.title = `TiagoCR | ${formattedTitle}`;
-        setCanonical(`https://tiagocr.me/portfolio/${slug}`);
+        setCanonical(`/portfolio/${slug}`);
     }, [slug]);
 
     if (!project) {

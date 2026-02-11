@@ -76,7 +76,10 @@ export function getMetaDescription(pathname) {
     return "Brand designer and web developer creating thoughtful digital experiences.";
 }
 
-export function setCanonical(url) {
+export function setCanonical(path) {
+    const baseUrl = "https://tiagocr.me";
+    const url = path === "/" ? baseUrl + "/" : `${baseUrl}${path}`;
+
     let link = document.querySelector("link[rel='canonical']");
 
     if (!link) {

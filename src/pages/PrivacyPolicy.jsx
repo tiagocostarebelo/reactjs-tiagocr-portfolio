@@ -1,10 +1,15 @@
-
+import { useEffect } from "react";
+import { setCanonical } from "../utils/seo";
 
 const PrivacyPolicy = () => {
-    return (
-        <div className="prose max-w-4xl mx-auto py-24 px-6">
-            <div dangerouslySetInnerHTML={{
-                __html: `<style>
+        useEffect(() => {
+                setCanonical("/privacy-policy");
+        }, []);
+
+        return (
+                <div className="prose max-w-4xl mx-auto py-24 px-6">
+                        <div dangerouslySetInnerHTML={{
+                                __html: `<style>
   [data-custom-class='body'], [data-custom-class='body'] * {
           background: transparent !important;
         }
@@ -60,11 +65,11 @@ word-break: break-word !important;
     </style>
       </div>
       `
-            }}>
+                        }}>
 
-            </div>
-        </div>
-    )
+                        </div>
+                </div>
+        )
 }
 
 export default PrivacyPolicy
