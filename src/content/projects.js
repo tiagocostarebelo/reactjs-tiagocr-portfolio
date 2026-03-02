@@ -62,7 +62,7 @@ const projectDetails = [
         caseStudy: {
             brief: "Moodser started from a personal idea to try and simplify the moodboarding creation process. Instead of saving images locally, opening design tools, importing assets, and navigating interfaces before any real visual thinking begins. The goal was to design a faster, more focused alternative for the early stages of a creative project.",
             solution: "Moodser is a browser-based moodboard composer built around a single canvas. Users can add images via URL, drop color swatches, write short text notes, freely arrange elements, and export the result as a PNG, all without accounts, setup, or unnecessary UI.",
-            role: ["Web Developer"],
+            role: ["Web Developer", "UI Designer"],
             goals: [
                 "Reduce friction in the early moodboarding process",
                 "Create a focused, minimal interface that encourages visual thinking",
