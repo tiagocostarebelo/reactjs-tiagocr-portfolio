@@ -2,7 +2,7 @@ import React from 'react'
 import logoHrz from '../../assets/tcr_logo_hrz.svg';
 import instaLogo from '../../assets/instagram.svg';
 import gitHubLogo from '../../assets/gitHub.svg';
-import { NavLink } from 'react-router';
+import behanceLogo from "../../assets/behance_icon.svg";
 import Button from './Button';
 
 const Footer = () => {
@@ -22,6 +22,9 @@ const Footer = () => {
                         </Button>
                         <Button as="href" href="https://github.com/tiagocostarebelo">
                             <img src={gitHubLogo} alt="GitHub" className="w-[40px] mb-[2px]" />
+                        </Button>
+                        <Button as="href" href="https://www.behance.net/tiagocostarebelo">
+                            <img src={behanceLogo} alt="Behance" className="w-[50px] mb-[2px]" />
                         </Button>
                     </div>
                     <div className="flex flex-col items-center justify-center">
