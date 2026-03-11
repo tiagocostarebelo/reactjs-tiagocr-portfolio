@@ -98,13 +98,55 @@ const projectDetails = [
         }
     },
 
-
-
-
-
-
-
-
+    {
+        id: "good-nuts",
+        slug: "good-nuts",
+        title: "Good Nuts",
+        category: ["Brand Design", "Packaging Design"],
+        featured: true,
+        shortDescription: "A cheeky and bold brand identity for a nut butter brand, combining expressive typography, vibrant colours, playful copy, and a packaging system designed to stand proudly on the kitchen counter.",
+        thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226075/good_nuts-splash_aq5cbl.webp",
+        liveUrl: "",
+        year: 2026,
+        caseStudy: {
+            brief: "Good Nuts is a nut butter brand built around the idea that conscious products don’t have to feel serious or sterile. The brief was to create a brand identity that balances sustainability with personality — something cheeky, bold and memorable. Instead of looking like a typical health food product, Good Nuts should feel fun, confident and display-worthy: a jar people proudly leave on their kitchen counter rather than hide in the pantry.",
+            solution: "The final identity combines expressive lettering inspired by nut shapes, a vibrant but grounded colour palette, playful tone of voice, and a flexible packaging system across multiple flavours. The brand was extended into campaign visuals and supporting applications to build a world that feels energetic, memorable, and display-worthy.",
+            role: ["Brand Designer"],
+            goals: [
+                "Create a cheeky and bold identity that feels distinctive in the food category",
+                "Design a packaging system that works across multiple nut butter flavours",
+                "Translate the brief into a cohesive brand world with clear personality and strong shelf presence"
+            ],
+            process: [
+                "Analysed the brief and defined the key brand attributes: cheeky, bold, and sustainable",
+                "Explored moodboards, colour directions, and early logo concepts rooted in nut shapes and playful typography",
+                "Refined the wordmark by integrating almond, hazelnut, and peanut references directly into the letterforms",
+                "Built a packaging system across multiple flavours, then extended the brand into posters, mockups, tote bag, and billboard applications"
+            ],
+            outcome: "The result is a distinctive brand identity built around expressive typography, nut-inspired letterforms and a vibrant colour system. The packaging was designed as a flexible system that works across multiple flavours while maintaining strong shelf recognition. Supporting visuals and brand applications extend the playful tone of voice and reinforce the idea of a product that feels proud, visible and shareable in everyday kitchens. The project demonstrates a complete brand concept from identity through packaging and real-world applications.",
+            images: {
+                hero: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226075/good_nuts-splash_aq5cbl.webp",
+                sections: [
+                    {
+                        // Introduction Media
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226075/good_nuts-hero_w2x6fj.webp" }
+                        ]
+                    },
+                    {
+                        // Main Gallery
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226077/good_nuts-brand_qfygzi.webp", layout: "half", caption: "Brand identity and packaging overview" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226075/good-nuts_nuts-twirl_sb9bki.webp", layout: "half" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226075/good-nuts_peanut-swirl_qwvnq0.webp", layout: "half" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226076/good-nuts_tote_bag_r2fdoz.webp", layout: "half" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226077/good-nuts_billboard_oqvrvt.webp", layout: "half" },
+                        ]
+                    }
+                ]
+            }
+        }
+    },
 
 ];
 
