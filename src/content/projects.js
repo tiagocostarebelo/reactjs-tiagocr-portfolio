@@ -109,7 +109,7 @@ const projectDetails = [
         liveUrl: "",
         year: 2026,
         caseStudy: {
-            brief: "Good Nuts is a nut butter brand built around the idea that conscious products don’t have to feel serious or sterile. The brief was to create a brand identity that balances sustainability with personality — something cheeky, bold and memorable. Instead of looking like a typical health food product, Good Nuts should feel fun, confident and display-worthy: a jar people proudly leave on their kitchen counter rather than hide in the pantry.",
+            brief: "Good Nuts is a nut butter brand built around the idea that conscious products don’t have to feel serious or sterile. The brief was to create a brand identity that balances sustainability with personality, something cheeky, bold and memorable. Instead of looking like a typical health food product, Good Nuts should feel fun, confident and display-worthy: a jar people proudly leave on their kitchen counter rather than hide in the pantry.",
             solution: "The final identity combines expressive lettering inspired by nut shapes, a vibrant but grounded colour palette, playful tone of voice, and a flexible packaging system across multiple flavours. The brand was extended into campaign visuals and supporting applications to build a world that feels energetic, memorable, and display-worthy.",
             role: ["Brand Designer"],
             goals: [
