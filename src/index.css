@@ -201,7 +201,8 @@
 }
 
 /* Scanline grain */
-#hero::before {
+#hero::before,
+.header::before {
     content: '';
     position: absolute;
     inset: 0;
