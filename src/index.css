@@ -91,10 +91,18 @@
     }
 
     .btn-ghost {
-        @apply inline-flex items-center justify-center font-body font-light px-6 py-3 rounded-md border border-gray-light text-gray-light cursor-pointer transition-all duration-200;
+        @apply inline-flex items-center justify-center font-body font-light px-6 py-3 rounded-md border border-gray-dark text-gray-dark cursor-pointer transition-all duration-200;
     }
 
     .btn-ghost:hover {
+        @apply border-teal text-teal;
+    }
+
+    .btn-ghost-light {
+        @apply inline-flex items-center justify-center font-body font-light px-6 py-3 rounded-md border border-gray-light text-gray-light cursor-pointer transition-all duration-200;
+    }
+
+    .btn-ghost-light:hover {
         @apply border-teal text-teal;
     }
 
@@ -192,13 +200,6 @@
     }
 }
 
-/* Full-bleed SVG background container */
-.pattern-bg {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-}
 
 /* Scanline grain */
 #hero::before,
@@ -219,4 +220,26 @@
     display: block;
     color: transparent;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+}
+
+
+.gap-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.gap-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--color-mustard);
+    opacity: 0.05;
+    transition: width 0.4s ease;
+}
+
+.gap-item:hover::before {
+    width: 100%;
 }

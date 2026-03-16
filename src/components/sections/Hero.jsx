@@ -20,7 +20,7 @@ const Hero = () => {
             >
                 CRAFT
             </span>
-            <FadeIn delay={100}>
+            <FadeIn delay={120}>
                 <div className="relative z-10 w-[50px] h-[4px] bg-mustard mb-8 rounded"></div>
                 <h1 className="relative z-10 font-display font-black text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter uppercase mb-8">BRAND DESIGNER<br /> <span id="headline-outline">&amp; WEB DEVELOPER</span></h1>
             </FadeIn>
@@ -28,17 +28,17 @@ const Hero = () => {
 
             <div className="relative z-10 grid md:grid-cols-2 gap-12 items-end pb-20">
                 <div>
-                    <FadeIn delay={120}>
+                    <FadeIn delay={160}>
                         <h2 className="text-white text-base md:text-lg  lg:text-xl tracking-tight leading-relaxed font-medium uppercase mb-3">Brand identities and websites that reflect the real quality of your business.</h2>
                         <p className="text-white/70 text-sm font-thin mt-4">I work with founder-led service businesses that need a stronger visual presence, building brands and websites that feel clearer, more credible, and more aligned with the standard of the work behind them.</p>
                     </FadeIn>
                 </div>
                 <div className="flex flex-col md:items-end lg:justify-end space-y-6 transition-all duration-500">
-                    <FadeIn delay={240} >
+                    <FadeIn delay={200} >
                         <Button as="link" to="/contact" className="btn-primary">Start a Project</Button>
                     </FadeIn>
-                    <FadeIn delay={300}>
-                        <Button as="link" to="/portfolio" className="btn-ghost">View Selected Work</Button>
+                    <FadeIn delay={200}>
+                        <Button as="link" to="/portfolio" className="btn-ghost-light">View Selected Work</Button>
                     </FadeIn>
 
                 </div>

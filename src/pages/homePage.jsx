@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Hero from '../components/sections/Hero';
+import Gap from '../components/sections/Gap';
 import FeaturedProjects from '../components/sections/FeaturedProjects';
 import Services from '../components/sections/Services';
 import About from '../components/sections/About';
@@ -16,6 +17,7 @@ const HomePage = () => {
     return (
         <>
             <Hero />
+            <Gap />
             {projectDetails.length > 0 &&
                 <FeaturedProjects projectDetails={filteredFeatured} />
             }
