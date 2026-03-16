@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router';
 import { FaTimes, FaBars } from 'react-icons/fa';
-import logoHrz from "../../assets/tcr_logo_hrz.svg";
+import logoWhiteHrz from "../../assets/tcr_white_hr.svg";
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -15,14 +15,14 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const baseClasses = 'text-gray-dark text-base transition hover:text-mustard';
-    const activeClasses = 'text-gray-dark text-base text-mustard font-semibold';
+    const baseClasses = 'text-gray-light text-base transition hover:text-mustard';
+    const activeClasses = 'text-gray-light text-base text-mustard font-semibold';
 
     return (
-        <header className={`fixed top-0 w-full z-50 z-50 transition-all duration-500 bg-transparent flex items-center justify-between ${isScrolled ? 'bg-white/60 backdrop-blur-md shadow-sm' : 'bg-white/60'}`}>
+        <header className='fixed top-0 w-full z-50 z-50 transition-all duration-500 bg-black-rich flex items-center justify-between shadow-sm'>
             <div className="">
                 <a href="/">
-                    <img className="w-40 md:w-50" src={logoHrz} alt="TiagoCR Logo" />
+                    <img className="w-40 md:w-50" src={logoWhiteHrz} alt="TiagoCR Logo" />
                 </a>
             </div >
             <nav>
@@ -40,12 +40,12 @@ const Header = () => {
                 {/* HAMBURGUER TOGGLE */}
                 <div className="lg:hidden flex items-center gap-4">
                     <button onClick={() => setMenuOpen(!menuOpen)} className="text-primary text-xl cursor-pointer" title="Menu">
-                        {menuOpen ? <FaTimes /> : <FaBars />}
+                        {menuOpen ? <FaTimes className="text-white" /> : <FaBars className="text-white" />}
                     </button>
                 </div>
             </nav>
             {/* MOBILE NAV */}
-            {menuOpen && <div className="absolute top-full right-0 w-full bg-white lg:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
+            {menuOpen && <div className="absolute top-full right-0 w-full bg-black-rich lg:hidden flex flex-col items-center px-6 py-4 space-y-5 shadow-md transition">
                 <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/">Home</NavLink>
                 <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/about">About</NavLink>
                 <NavLink onClick={() => { setMenuOpen(false); window.scrollTo(0, 0) }} className={({ isActive }) => isActive ? activeClasses : baseClasses} to="/portfolio">Portfolio</NavLink>
