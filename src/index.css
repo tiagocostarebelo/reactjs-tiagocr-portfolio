@@ -33,13 +33,15 @@
     --font-script: "Mr Dafoe", cursive;
 
     /* FONT SIZES */
-    --text-xs: clamp(0.75rem, 0.70rem + 0.2vw, 0.8rem);
-    --text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 0.95rem);
-    --text-base: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
-    --text-lg: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
-    --text-xl: clamp(1.5rem, 1.3rem + 0.7vw, 2rem);
-    --text-2xl: clamp(2rem, 1.7rem + 1vw, 2.75rem);
-    --text-3xl: clamp(2.5rem, 2.2rem + 1.5vw, 3.5rem);
+    --text-xs: clamp(0.75rem, 1vw, 0.8rem);
+    --text-sm: clamp(0.875rem, 1.3vw, 0.95rem);
+    --text-base: clamp(1rem, 1.3vw, 1.125rem);
+    --text-lg: clamp(1.25rem, 1.5vw, 1.5rem);
+    --text-xl: clamp(1.5rem, 1.7vw, 2rem);
+    --text-2xl: clamp(2rem, 2vw, 2.75rem);
+    --text-3xl: clamp(2.5rem, 2.5vw, 4rem);
+    --text-4xl: clamp(3.5rem, 5.5vw, 5.5rem);
+    --text-5xl: clamp(4.5rem, 9vw, 7.5rem);
 
     /* SPACING */
     --space-1: 0.25rem;
@@ -89,7 +91,7 @@
     }
 
     .btn-ghost {
-        @apply inline-flex items-center justify-center font-body font-medium px-6 py-3 rounded-md border border-gray-dark text-black-rich cursor-pointer transition-all duration-200;
+        @apply inline-flex items-center justify-center font-body font-light px-6 py-3 rounded-md border border-gray-light text-gray-light cursor-pointer transition-all duration-200;
     }
 
     .btn-ghost:hover {
@@ -196,4 +198,24 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
+}
+
+/* Scanline grain */
+#hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.012) 2px,
+            rgba(255, 255, 255, 0.012) 4px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+#headline-outline {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
 }

@@ -19,7 +19,7 @@ const Header = () => {
     const activeClasses = 'text-gray-light text-base text-mustard font-semibold';
 
     return (
-        <header className='fixed top-0 w-full z-50 z-50 transition-all duration-500 bg-black-rich flex items-center justify-between shadow-sm'>
+        <header className={`fixed top-0 w-full z-50 bg-black-rich transition-all duration-500 flex items-center justify-between ${isScrolled ? 'bg-black-rich shadow-sm' : 'shadow-sm'}`}>
             <div className="">
                 <a href="/">
                     <img className="w-40 md:w-50" src={logoWhiteHrz} alt="TiagoCR Logo" />
