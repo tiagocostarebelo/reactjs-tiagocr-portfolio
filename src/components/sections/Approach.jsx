@@ -10,9 +10,7 @@ const Approach = () => {
                         <p className="font-body text-xs tracking-[0.22em] uppercase text-white/40 mb-8">
                             How I Work
                         </p>
-                        <h2
-                            className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-white mb-4 lg:mb-0"
-                        >
+                        <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-white mb-4 lg:mb-0">
                             A More Aligned <br />Approach
                         </h2>
                     </FadeIn>

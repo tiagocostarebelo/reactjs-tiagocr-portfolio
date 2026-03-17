@@ -18,12 +18,16 @@ const FeaturedProjects = ({ projectDetails }) => {
     }
 
     return (
-        <section className="w-full h-auto flex flex-col text-center py-24">
-            <FadeIn>
-                <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight uppercase mb-24">
-                    A selection of recent work from brand identity, web design, and web development
+        <section className="bg-white py-24">
+
+            <div className="mb-14">
+                <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-8">
+                    Selected Work
+                </p>
+                <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich max-w-5xl">
+                    A Selection of Recent Work From Brand Identity, Web Design, and Web Development
                 </h2>
-            </FadeIn>
+            </div>
 
             <div className={getGridClasses()}>
                 {projectDetails.map((proj, index) =>
@@ -34,7 +38,7 @@ const FeaturedProjects = ({ projectDetails }) => {
             </div>
 
             <div className="flex justify-end">
-                <Button as="link" to="/portfolio" className="btn-primary w-full md:w-auto">
+                <Button as="link" to="/portfolio" className="btn-ghost w-full md:w-auto">
                     View full Portfolio
                 </Button>
             </div>
@@ -43,3 +47,4 @@ const FeaturedProjects = ({ projectDetails }) => {
 }
 
 export default FeaturedProjects
+
