@@ -106,6 +106,14 @@
         @apply border-teal text-teal;
     }
 
+    .btn-black-rich {
+        @apply inline-flex items-center justify-center font-body font-semibold px-6 py-3 rounded-md bg-black-rich text-white cursor-pointer transition-all duration-200;
+    }
+
+    .btn-black-rich:hover {
+        @apply bg-gray-dark;
+    }
+
     /* IMAGE FRAME */
     .image-frame {
         @apply bg-white p-4 rounded-lg shadow-sm transition-transform duration-300 ease-out will-change-transform;
