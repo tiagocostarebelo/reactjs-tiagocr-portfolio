@@ -18,28 +18,36 @@ const FeaturedProjects = ({ projectDetails }) => {
     }
 
     return (
-        <section className="w-full h-auto flex flex-col text-center py-24">
-            <FadeIn>
-                <h2 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight uppercase mb-24">
-                    A selection of recent work from brand identity, web design, and web development
-                </h2>
-            </FadeIn>
+        <section className="bg-white py-24">
+            <div className="mb-14">
+                <FadeIn delay={120}>
+                    <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-8">
+                        Selected Work
+                    </p>
+                    <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich max-w-5xl">
+                        Projects Built to Close the Gap Between How These Businesses Perform and How They Present.
+                    </h2>
+                </FadeIn>
+            </div>
 
             <div className={getGridClasses()}>
                 {projectDetails.map((proj, index) =>
-                    <FadeIn key={proj.id} delay={index * 120} className="h-full">
+                    <FadeIn key={proj.id} delay={index * 160} className="h-full">
                         <ProjectCard project={proj} compact={projectCount < 3} />
                     </FadeIn>
                 )}
             </div>
 
             <div className="flex justify-end">
-                <Button as="link" to="/portfolio" className="btn-primary w-full md:w-auto">
-                    View full Portfolio
-                </Button>
+                <FadeIn delay={200}>
+                    <Button as="link" to="/portfolio" className="btn-ghost w-full md:w-auto">
+                        View full Portfolio
+                    </Button>
+                </FadeIn>
             </div>
         </section>
     )
 }
 
 export default FeaturedProjects
+

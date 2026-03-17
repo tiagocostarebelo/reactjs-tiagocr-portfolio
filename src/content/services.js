@@ -1,16 +1,22 @@
 const services = [
     {
-        title: "Brand Design",
-        description: "Logo design and visual identity systems built with clarity and personality, whether it's a simple mark or a complete brand. From start to finish, everything is crafted to feel intentional and adaptable."
+        num: '01',
+        title: 'Brand Identity',
+        body: 'Distinctive identity systems for businesses that need more clarity, consistency, and confidence in how they show up.',
+        tag: 'Identity',
     },
     {
-        title: "Web Development",
-        description: "Thoughtful user interfaces and responsive websites using modern tools like React, Tailwind, and page animations. Designed and built to look great and perform better."
+        num: '02',
+        title: 'Web Design & Development',
+        body: 'Websites designed and built to present the business clearly, build trust faster, and support stronger enquiries.',
+        tag: 'Digital',
     },
     {
-        title: "Email Development",
-        description: "Modern, on-brand email templates coded for consistent rendering across devices and email clients. Clean layouts, and responsive design that make your campaigns look great everywhere."
-    }
+        num: '03',
+        title: 'Brand & Website',
+        body: 'A joined-up transformation for businesses that need their visual identity and digital presence to work as one coherent system.',
+        tag: 'Combined',
+    },
 ]
 
 export default services;

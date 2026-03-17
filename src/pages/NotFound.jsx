@@ -14,8 +14,8 @@ const NotFound = () => {
                 </h1>
 
                 <p className="text-base text-gray-dark mb-3">
-                    The page you’re looking for doesn’t exist or may have been moved.<br />
-                    No problem, just follow the links bellow and you'll be safe.
+                    The page you're looking for doesn't exist or may have been moved.<br />
+                    Head back home or take a look at the work.
                 </p>
 
                 <div className="flex flex-col sm:flex-row justify-center gap-6">
