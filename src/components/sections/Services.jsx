@@ -12,7 +12,7 @@ const Services = () => {
                             What I Do
                         </p>
                         <h2
-                            className="font-display font-bold text-2xl lg:text-3xl uppercase tracking-tight leading-none text-black-rich"
+                            className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich"
                         >
                             How I Can Help
                         </h2>
@@ -40,7 +40,7 @@ const Services = () => {
                         </span>
                         <div>
                             <h3
-                                className="font-display font-bold text-xl lg:text-2xl uppercase tracking-wide text-black-rich leading-none mb-2.5 pl-2"
+                                className="font-display font-bold text-lg md:text-2xl lg:text-3xl uppercase tracking-wide text-black-rich leading-none mb-2.5 pl-2"
                             >
                                 {title}
                             </h3>

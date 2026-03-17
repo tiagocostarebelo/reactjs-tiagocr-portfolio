@@ -11,7 +11,7 @@ const About = () => {
                     <p className="font-body text-xs tracking-[0.22em] uppercase text-teal mb-8">
                         About
                     </p>
-                    <h2 className="font-display font-bold text-2xl lg:text-3xl uppercase tracking-tight leading-none text-white mb-8">
+                    <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-white mb-8">
                         A Designer-Dev with a focus on clarity and craft
                     </h2>
                 </FadeIn>

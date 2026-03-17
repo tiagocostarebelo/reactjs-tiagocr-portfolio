@@ -9,7 +9,7 @@ const Gap = () => {
                     <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-8">
                         The Gap
                     </p>
-                    <h2 className="font-display font-bold text-2xl lg:text-3xl uppercase tracking-tight leading-none text-black-rich mb-8">
+                    <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich mb-8">
                         Your Business Has Grown.<br />
                         Your Brand &amp; Website Should Too.
                     </h2>
@@ -33,7 +33,7 @@ const Gap = () => {
                     <FadeIn
                         key={num}
                         delay={i * 180}
-                        className="gap-item flex gap-4 border-b border-gray-light/80 py-12 items-start gap-0"
+                        className="gap-item flex gap-2 md:gap-4 border-b border-gray-light/80 py-12 items-start gap-0"
                     >
                         <span
                             className="font-display font-black text-4xl text-mustard leading-none"
@@ -42,7 +42,7 @@ const Gap = () => {
                         </span>
                         <div className="pt-1">
                             <h3
-                                className="font-display font-bold text-lg md:text-xl uppercase tracking-wide text-black-rich mb-3"
+                                className="font-display font-bold text-lg md:text-2xl lg:text-3xl uppercase tracking-wide text-black-rich mb-3"
                             >
                                 {title}
                             </h3>

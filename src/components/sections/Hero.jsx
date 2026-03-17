@@ -28,8 +28,8 @@ const Hero = () => {
             <div className="relative z-10 grid md:grid-cols-2 gap-12 items-end pb-20">
                 <div>
                     <FadeIn delay={160}>
-                        <h2 className="text-white text-base md:text-lg  lg:text-xl tracking-tight leading-relaxed font-medium uppercase mb-3">Brand identities and websites that reflect the real quality of your business.</h2>
-                        <p className="text-white/70 text-sm font-thin mt-4">I work with founder-led service businesses that need a stronger visual presence, building brands and websites that feel clearer, more credible, and more aligned with the standard of the work behind them.</p>
+                        <h4 className="text-white text-base md:text-lg lg:text-xl tracking-tight leading-none font-medium uppercase mb-3">Brand identities and websites that reflect the real quality of your business.</h4>
+                        <p className="text-white/70 text-sm leading-loose font-thin mt-4">I work with founder-led service businesses that need a stronger visual presence, building brands and websites that feel clearer, more credible, and more aligned with the standard of the work behind them.</p>
                     </FadeIn>
                 </div>
                 <div className="flex flex-col md:items-end lg:justify-end space-y-6 transition-all duration-500">
