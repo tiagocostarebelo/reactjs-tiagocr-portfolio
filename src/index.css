@@ -222,7 +222,30 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
 }
 
+/* ─── SERVICE ROW — teal left-border on hover ───────────── */
+.service-row {
+    position: relative;
+    overflow: hidden;
+}
 
+.service-row::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--color-teal);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.service-row:hover::after {
+    transform: scaleY(1);
+}
+
+/* ─── GAP ITEM — subtle yellow hover wash ───────────── */
 .gap-item {
     position: relative;
     overflow: hidden;

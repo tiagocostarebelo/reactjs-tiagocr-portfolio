@@ -9,7 +9,7 @@ const Gap = () => {
                     <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-8">
                         The Gap
                     </p>
-                    <h2 className="font-display font-bold text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich mb-8">
+                    <h2 className="font-display font-bold text-2xl lg:text-3xl uppercase tracking-tight leading-none text-black-rich mb-8">
                         Your Business Has Grown.<br />
                         Your Brand &amp; Website Should Too.
                     </h2>

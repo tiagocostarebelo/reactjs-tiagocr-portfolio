@@ -19,10 +19,10 @@ const HomePage = () => {
             <Hero />
             <Gap />
             <About />
+            <Services />
             {projectDetails.length > 0 &&
                 <FeaturedProjects projectDetails={filteredFeatured} />
             }
-            <Services />
             <Contact />
         </>
     )
