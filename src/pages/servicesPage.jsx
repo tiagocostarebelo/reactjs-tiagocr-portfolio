@@ -2,7 +2,7 @@ import { flagship, supporting, addon } from '../content/servicesOffers';
 import FadeIn from '../components/animation/FadeIn';
 import Button from '../components/ui/Button';
 
-/* ── Page Hero ──────────────────────────────────────────────── */
+
 const Services = () => {
     return (
         <>
@@ -126,7 +126,7 @@ const Services = () => {
                             Supporting Offers
                         </p>
                         <h2
-                            className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich mb-8">
+                            className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich ">
                             If the Gap Is<br />in One Place
                         </h2>
                     </FadeIn>

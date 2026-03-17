@@ -1,73 +1,193 @@
 import { useEffect } from "react";
-import tiagoPhoto from '../assets/tiago_.webp';
-import Button from '../components/ui/Button';
-import Contact from '../components/sections/Contact';
-import SectionsHero from '../components/sections/SectionsHero';
-import ServiceCard from '../components/ui/ServiceCard';
-import values from '../content/values.js';
-import FadeIn from '../components/animation/FadeIn.jsx';
 import { setCanonical } from "../utils/seo";
+import { story, why, process } from '../content/about';
+import photo from '../assets/me_2.jpg'
+import Button from '../components/ui/Button';
+import FadeIn from '../components/animation/FadeIn.jsx';
 
 const AboutPage = () => {
     useEffect(() => {
         setCanonical("/about");
     }, []);
+
     return (
         <>
-            <SectionsHero
-                heading="Designer. Developer. Problem-solver."
-                text="I’m a Designer turned Developer who enjoys building things that look good and make sense. I’ve worked professionally as a designer for several years, including roles at a magazine in Portugal and a design and marketing agency in Angola, alongside freelance projects across branding and web."
-                text2="My background in design helps me think visually, while development gives me the structure and tools to bring ideas to life."
-                buttonLabel=''
-            />
-            <section className="w-full h-auto py-24 bg-gray-light">
-                <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-stretch">
-                    <FadeIn className="order-2 md:order-1 h-full min-h-[600px] w-full relative group overflow-hidden">
-                        <img src={tiagoPhoto} alt="" className="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-125" />
+            <section
+                id="hero"
+                className="relative bg-black-rich min-h-[68vh] flex flex-col justify-end overflow-hidden pt-24"
+            >
+                <span
+                    aria-hidden="true"
+                    className="absolute right-[-20px] top-1/2 -translate-y-[52%] font-display font-bold uppercase leading-none pointer-events-none select-none z-0 text-transparent"
+                    style={{
+                        fontSize: 'clamp(140px, 20vw, 300px)',
+                        letterSpacing: '-0.02em',
+                        WebkitTextStroke: '1px rgba(255,255,255,0.04)',
+                        whiteSpace: 'nowrap',
+                    }}
+                >
+                    TRUST
+                </span>
+
+                <div className="relative z-10 max-w-4xl">
+                    <div className="w-11 h-0.5 bg-mustard mb-8" />
+                    <FadeIn delay={80}>
+                        <p className="font-body text-xs tracking-[0.22em] uppercase text-white/25 mb-6">
+                            About
+                        </p>
                     </FadeIn>
-                    <div className="flex flex-col space-y-6 justify-center order-1 md:order-2 text-left">
-                        <FadeIn delay={120}>
-                            <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">How I work</h2>
-                            <p className="text-base text-gray-dark">I care about simplicity, intention, and craft. My process is grounded in understanding the problem first, then designing or coding solutions that feel clean, consistent, and user-friendly.</p>
-                            <p className="text-base text-gray-dark">Whether it’s a logo, a website, or an app, I build with equal attention to aesthetics and functionality.</p>
-                        </FadeIn>
+                    <FadeIn delay={120}>
+                        <h1
+                            className="relative z-10 font-display font-black text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter uppercase mb-8">
+                            Design by Instinct.
+                            <span
+                                id="headline-outline">
+                                Development by Choice.
+                            </span>
+                        </h1>
+                    </FadeIn>
+                    <FadeIn delay={160}>
+                        <p className="font-light text-sm text-white/40 leading-loose max-w-lg">
+                            Not two separate skills bolted together. One person who thinks in both,
+                            and uses both to build something that holds together.
+                        </p>
+                    </FadeIn>
+                </div>
+            </section>
 
-                        <FadeIn delay={240}>
-                            <div>
-                                <Button as="navlink" to="/portfolio" className="btn-primary">View My Work</Button>
-                            </div>
-                        </FadeIn>
-
-
-                        <FadeIn delay={360}>
-                            <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight mt-8">Why hire me</h2>
-                            <p className="text-base text-gray-dark">I am someone who understands design thinking and development. Someone who can take an idea from concept to execution without losing clarity or quality along the way.</p>
-                        </FadeIn>
-                        <FadeIn delay={480}>
-                            <p className="text-base text-gray-dark"> My goal is always the same: help people make things that stand out and work beautifully.</p>
+            <section id="about" className="w-full bg-black-rich grid md:grid-cols-2 gap-0 min-h-[600px] py-0 px-0">
+                {/* CONTENT */}
+                <div className="order-2 md:order-1 flex flex-col justify-center py-24 pl-6 md:pl-16 lg:pl-34 pr-6 md:pr-8 lg:pr-26">
+                    <FadeIn delay={120}>
+                        <p className="font-body text-xs tracking-[0.22em] uppercase text-teal mb-8">
+                            About
+                        </p>
+                        <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-white mb-8">
+                            One Person. <br /> Brand and Website, Built Together.
+                        </h2>
+                    </FadeIn>
+                    <FadeIn delay={140}>
+                        <p className="font-light text-sm text-white/60 leading-loose mb-5">
+                            I'm Tiago Costa Rebelo, a Brand Designer and Web Developer working directly with founder-led service businesses. No account managers, no handoffs, no briefing three different people and hoping it coheres at the end. One person holds the full picture, from identity to website, and builds it as one system.
+                        </p>
+                    </FadeIn>
+                    <FadeIn delay={160}>
+                        <p className="font-light text-sm text-white/60 leading-loose mb-5">
+                            Most businesses treat brand and website as separate problems to be solved separately. I treat them as one. The result is more consistent, more intentional, and built to reflect the real quality of what you've built, not assembled from disconnected parts.
+                        </p>
+                    </FadeIn>
+                    <div className="mt-6">
+                        <FadeIn delay={220}>
+                            <Button as="link" to="/about" className="btn-ghost-light w-full">More about me</Button>
                         </FadeIn>
                     </div>
                 </div>
-            </section >
-            <section className="w-full h-auto text-center py-24 bg-white">
-                <FadeIn>
-                    <h2 className="text-2xl md:text-3xl font-bold text-black-rich uppercase mb-6 tracking-tight leading-tight">What I value</h2>
-                </FadeIn>
-                <div className="w-full grid gap-10 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                    {values.map(({ title, description }, index) => (
-                        <FadeIn key={title} delay={index * 120} >
-                            <div className="w-full h-full">
-                                <ServiceCard title={title} description={description} borderColor='border-mustard' />
-                            </div>
+                {/* PHOTO */}
+                <div className="relative overflow-hidden order-1 md:order-2">
+                    <div className="absolute top-10 left-0 w-0.5 h-16 bg-teal z-10" />
+                    <FadeIn delay={220} className="w-full h-full min-h-[560px] flex items-end p-10">
+                        <img src={photo} alt="Tiago photo" className="absolute inset-0 w-full h-full object-cover grayscale-50 transition-all duration-700 ease-in-out hover:grayscale-0" />
+                    </FadeIn>
+                </div>
+            </section>
+
+
+            <section
+                className="bg-white py-24"
+            >
+                <div className="grid lg:grid-cols-2 gap-16 items-start max-w-5xl">
+                    {why.paragraphs.map((para, i) => (
+                        <FadeIn key={i} delay={i * 120}>
+                            <p
+                                className="font-light leading-loose text-gray-dark/65"
+                                style={{
+                                    fontSize: i === 0 ? 'var(--text-lg)' : 'var(--text-sm)',
+                                    fontWeight: i === 0 ? 400 : 300,
+                                }}
+                            >
+                                {para}
+                            </p>
                         </FadeIn>
                     ))}
                 </div>
             </section>
-            <Contact
-                heading="Let’s make great work together!"
-                text="Whether you need help with your brand, website, or support on a digital project, I’m here to help bring clarity and direction to your idea."
-                buttonLabel="Get in Touch"
-            />
+
+            <section
+                className="bg-gray-light py-24"
+            >
+                {/* Header */}
+                <div className="grid lg:grid-cols-2 gap-12 items-end mb-20">
+                    <FadeIn delay={80}>
+                        <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-6">
+                            {process.label}
+                        </p>
+                        <h2
+                            className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich">
+                            {process.headline[0]}<br />{process.headline[1]}
+                        </h2>
+                    </FadeIn>
+                </div>
+
+                {/* Steps — same service-row pattern, consistent with homepage */}
+                <div className="border-t border-gray-dark/10">
+                    {process.steps.map(({ num, title, body, note }, i) => (
+                        <FadeIn
+                            key={num}
+                            delay={i * 100}
+                            className="service-row grid lg:grid-cols-[52px_1fr] items-start gap-10 py-11 border-b border-gray-dark/10 hover:bg-white/60 transition-all duration-500"
+                        >
+                            <span className="font-body text-xs tracking-[0.15em] text-gray-dark/30 pt-1 pl-2 lg:pl-4">
+                                {num}
+                            </span>
+                            <div>
+                                <h3
+                                    className="font-display font-bold text-lg md:text-2xl lg:text-3xl uppercase tracking-wide text-black-rich leading-none mb-3 pl-2"
+                                    style={{ fontSize: 'clamp(20px, 2.2vw, 32px)', letterSpacing: '-0.01em' }}
+                                >
+                                    {title}
+                                </h3>
+                                <p className="font-light text-sm text-gray-dark/55 leading-relaxed max-w-xl pl-2">
+                                    {body}
+                                </p>
+                                {note && (
+                                    <p className="font-light text-xs text-teal mt-2 pl-2 tracking-wide">
+                                        {note}
+                                    </p>
+                                )}
+                            </div>
+                        </FadeIn>
+                    ))}
+                </div>
+
+                {/* Timeline note */}
+                <FadeIn delay={200}>
+                    <p className="font-light text-xs text-gray-dark/40 leading-loose mt-12 max-w-lg">
+                        {process.timeline}
+                    </p>
+                </FadeIn>
+            </section>
+
+            <section
+                className="bg-mustard grid lg:grid-cols-[1fr_auto] gap-16 items-center py-24">
+                <FadeIn>
+                    <h2
+                        className="font-display font-bold uppercase text-black-rich"
+                        style={{
+                            fontSize: 'clamp(40px, 5.5vw, 84px)',
+                            letterSpacing: '-0.03em',
+                            lineHeight: 0.93,
+                        }}
+                    >
+                        Ready to Close<br />the Gap?
+                    </h2>
+                </FadeIn>
+                <FadeIn delay={120}>
+                    <Button as="link" to="/contact" className="btn-black-rich">
+                        Start a Project
+                    </Button>
+                </FadeIn>
+            </section>
+
         </>
     )
 }

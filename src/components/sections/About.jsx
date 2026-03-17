@@ -17,7 +17,7 @@ const About = () => {
                 </FadeIn>
                 <FadeIn delay={140}>
                     <p className="font-light text-sm text-white/60 leading-loose mb-5">
-                        'm Tiago Costa Rebelo, a Brand Designer and Web Developer working directly with founder-led service businesses. No account managers, no handoffs, no briefing three different people and hoping it coheres at the end. One person holds the full picture, from identity to website, and builds it as one system.
+                        I'm Tiago Costa Rebelo, a Brand Designer and Web Developer working directly with founder-led service businesses. No account managers, no handoffs, no briefing three different people and hoping it coheres at the end. One person holds the full picture, from identity to website, and builds it as one system.
                     </p>
                 </FadeIn>
                 <FadeIn delay={160}>
@@ -34,8 +34,8 @@ const About = () => {
             {/* PHOTO */}
             <div className="relative overflow-hidden order-1 md:order-2">
                 <div className="absolute top-10 left-0 w-0.5 h-16 bg-teal z-10" />
-                <FadeIn delay={220} className="w-full h-full min-h-[560px] bg-gradient-to-br from-[#1a1a19] via-[#2a2a28] to-[#1a1a19] flex items-end p-10">
-                    <img src={photo} alt="Tiago photo" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" />
+                <FadeIn delay={220} className="w-full h-full min-h-[560px] flex items-end p-10">
+                    <img src={photo} alt="Tiago photo" className="absolute inset-0 w-full h-full object-cover grayscale-50 transition-all duration-700 ease-in-out hover:grayscale-0" />
                 </FadeIn>
             </div>
         </section>
