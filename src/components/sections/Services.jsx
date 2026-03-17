@@ -8,7 +8,7 @@ const Services = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-end mb-20">
                 <div>
                     <FadeIn delay={120}>
-                        <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-6">
+                        <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-8">
                             What I Do
                         </p>
                         <h2
