@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
 import { flagship, supporting, addon } from '../content/servicesOffers';
 import FadeIn from '../components/animation/FadeIn';
 import Button from '../components/ui/Button';
+import { setCanonical } from '../utils/seo';
 
 
 const Services = () => {
+    useEffect(() => {
+
+        setCanonical(`/services`);
+    }, []);
+
     return (
         <>
             <section

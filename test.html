@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — TiagoCR | Brand Designer & Web Developer</title>
+    <title>Portfolio — TiagoCR | Brand Designer & Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -103,47 +103,6 @@
         /* ─────────────────────────────────────────────────────────
        BUTTONS
     ───────────────────────────────────────────────────────── */
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-body);
-            font-weight: 600;
-            font-size: var(--text-sm);
-            padding: 13px 28px;
-            border-radius: var(--radius-md);
-            background: var(--color-mustard);
-            color: var(--color-black-rich);
-            border: none;
-            cursor: pointer;
-            transition: filter 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            filter: brightness(0.9);
-        }
-
-        .btn-ghost-light {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-body);
-            font-weight: 500;
-            font-size: var(--text-sm);
-            padding: 13px 28px;
-            border-radius: var(--radius-md);
-            background: transparent;
-            color: var(--color-white);
-            border: 1.5px solid rgba(255, 255, 255, 0.2);
-            cursor: pointer;
-            transition: border-color 0.2s ease, color 0.2s ease;
-        }
-
-        .btn-ghost-light:hover {
-            border-color: var(--color-teal);
-            color: var(--color-teal);
-        }
-
         .btn-dark {
             display: inline-flex;
             align-items: center;
@@ -162,33 +121,6 @@
 
         .btn-dark:hover {
             background: var(--color-gray-dark);
-        }
-
-        /* ─────────────────────────────────────────────────────────
-       UTILITIES
-    ───────────────────────────────────────────────────────── */
-        .section-label {
-            font-family: var(--font-body);
-            font-size: var(--text-xs);
-            font-weight: 500;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            color: rgba(42, 42, 42, 0.4);
-        }
-
-        .section-label--light {
-            color: rgba(255, 255, 255, 0.25);
-        }
-
-        .section-label--teal {
-            color: var(--color-teal);
-        }
-
-        .section-pad {
-            padding-top: var(--space-24);
-            padding-bottom: var(--space-24);
-            padding-left: var(--pad-x);
-            padding-right: var(--pad-x);
         }
 
         /* ─────────────────────────────────────────────────────────
@@ -211,10 +143,6 @@
 
         .reveal-delay-2 {
             transition-delay: 0.2s;
-        }
-
-        .reveal-delay-3 {
-            transition-delay: 0.3s;
         }
 
         /* ─────────────────────────────────────────────────────────
@@ -335,8 +263,17 @@
             max-width: 900px;
         }
 
-        .page-hero-content .section-label--light {
+        .page-hero-content .section-label {
             margin-bottom: var(--space-6);
+        }
+
+        .section-label {
+            font-family: var(--font-body);
+            font-size: var(--text-xs);
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.25);
         }
 
         .page-hero-content h1 {
@@ -365,224 +302,151 @@
         }
 
         /* ─────────────────────────────────────────────────────────
-       STORY — two column, mirrors homepage about section exactly
+       PORTFOLIO GRID
+       Full-width featured card, then two-column below.
+       3px gap between cards for tight editorial feel.
     ───────────────────────────────────────────────────────── */
-        .story {
-            background: var(--color-black-rich);
+        .portfolio-grid {
+            background: var(--color-white);
+            padding: var(--space-24) var(--pad-x);
+        }
+
+        .pf-featured {
+            margin-bottom: 3px;
+        }
+
+        .pf-pair {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 600px;
+            gap: 3px;
         }
 
-        .story-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: var(--space-24) var(--space-16) var(--space-24) var(--pad-x);
-        }
-
-        .story-content .section-label--teal {
-            margin-bottom: var(--space-8);
-        }
-
-        .story-content h2 {
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-size: clamp(32px, 4vw, 60px);
-            letter-spacing: -0.03em;
-            line-height: 0.95;
-            text-transform: uppercase;
-            color: var(--color-white);
-            margin-bottom: var(--space-8);
-        }
-
-        .story-content p {
-            font-size: var(--text-sm);
-            font-weight: 300;
-            color: rgba(255, 255, 255, 0.45);
-            line-height: 1.8;
-            margin-bottom: var(--space-6);
-        }
-
-        .story-content p:last-of-type {
-            margin-bottom: var(--space-8);
-        }
-
-        .story-photo {
+        /* ── Project card ── */
+        .pf-card {
             position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+            background: #111;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        /* Featured card aspect */
+        .pf-card--featured .pf-card-img {
+            aspect-ratio: 16 / 9;
+        }
+
+        /* Standard card aspect */
+        .pf-card--standard .pf-card-img {
+            aspect-ratio: 4 / 3;
+        }
+
+        .pf-card-img {
+            width: 100%;
             overflow: hidden;
         }
 
-        .story-photo::before {
-            content: '';
-            position: absolute;
-            top: var(--space-8);
-            left: 0;
-            width: 2px;
-            height: 56px;
-            background: var(--color-teal);
-            z-index: 1;
-        }
-
-        .story-photo img {
+        .pf-card-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 20%;
             display: block;
-            filter: grayscale(20%);
-            transition: filter 0.5s ease;
+            transition: transform 0.7s ease;
         }
 
-        .story-photo:hover img {
-            filter: grayscale(0%);
+        .pf-card:hover .pf-card-img img {
+            transform: scale(1.05);
         }
 
-        .story-photo-placeholder {
-            width: 100%;
-            height: 100%;
-            min-height: 560px;
-            background: linear-gradient(135deg, #1a1a29 0%, #252535 60%, #1a1a29 100%);
-        }
-
-        /* ─────────────────────────────────────────────────────────
-       WHY — white bg, two-column text block
-       First paragraph larger — anchors the key argument
-    ───────────────────────────────────────────────────────── */
-        .why {
-            background: var(--color-white);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-16);
-            align-items: start;
-            max-width: 1000px;
-        }
-
-        .why-grid p:first-child {
-            font-size: var(--text-lg);
-            font-weight: 400;
-            color: rgba(42, 42, 42, 0.75);
-            line-height: 1.7;
-        }
-
-        .why-grid p:last-child {
-            font-size: var(--text-sm);
-            font-weight: 300;
-            color: rgba(42, 42, 42, 0.65);
-            line-height: 1.85;
-        }
-
-        /* ─────────────────────────────────────────────────────────
-       PROCESS — gray-light bg, service-row pattern
-    ───────────────────────────────────────────────────────── */
-        .process {
-            background: var(--color-gray-light);
-        }
-
-        .process-header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-12);
-            align-items: flex-end;
-            margin-bottom: var(--space-16);
-        }
-
-        .process-header .section-label {
-            margin-bottom: var(--space-6);
-        }
-
-        .process-header h2 {
-            font-family: var(--font-display);
-            font-weight: 700;
-            font-size: clamp(40px, 5vw, 72px);
-            letter-spacing: -0.03em;
-            line-height: 0.95;
-            text-transform: uppercase;
-            color: var(--color-black-rich);
-        }
-
-        .process-rows {
-            border-top: 1px solid rgba(42, 42, 42, 0.1);
-        }
-
-        .process-row {
-            position: relative;
-            overflow: hidden;
-            display: grid;
-            grid-template-columns: 52px 1fr;
-            gap: var(--space-12);
-            padding: var(--space-12) 0;
-            border-bottom: 1px solid rgba(42, 42, 42, 0.1);
-            align-items: start;
-            transition: background 0.3s ease;
-        }
-
-        .process-row:hover {
-            background: rgba(255, 255, 255, 0.6);
-        }
-
-        .process-row::after {
-            content: '';
+        /* Gradient overlay */
+        .pf-card-overlay {
             position: absolute;
-            left: 0;
-            top: 0;
+            inset: 0;
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.85) 0%,
+                    rgba(0, 0, 0, 0.2) 50%,
+                    transparent 100%);
+            transition: background 0.4s ease;
+        }
+
+        .pf-card:hover .pf-card-overlay {
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.92) 0%,
+                    rgba(0, 0, 0, 0.3) 60%,
+                    transparent 100%);
+        }
+
+        /* Card footer */
+        .pf-card-footer {
+            position: absolute;
             bottom: 0;
-            width: 3px;
-            background: var(--color-teal);
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: transform 0.3s ease;
+            left: 0;
+            width: 100%;
+            padding: var(--space-8);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .process-row:hover::after {
-            transform: scaleY(1);
-        }
-
-        .process-num {
+        .pf-card-cat {
             font-family: var(--font-body);
             font-size: var(--text-xs);
+            font-weight: 500;
             letter-spacing: 0.15em;
-            color: rgba(42, 42, 42, 0.3);
-            padding-top: 4px;
+            text-transform: uppercase;
+            color: var(--color-teal);
         }
 
-        .process-body h3 {
+        .pf-card-title {
             font-family: var(--font-display);
-            font-size: clamp(20px, 2.2vw, 32px);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: -0.01em;
             line-height: 1;
-            color: var(--color-black-rich);
-            margin-bottom: var(--space-3);
+            color: var(--color-white);
         }
 
-        .process-body p {
-            font-size: var(--text-sm);
-            font-weight: 300;
-            color: rgba(42, 42, 42, 0.55);
-            line-height: 1.7;
-            max-width: 520px;
+        .pf-card--featured .pf-card-title {
+            font-size: var(--text-xl);
         }
 
-        .process-body .process-note {
+        .pf-card--standard .pf-card-title {
+            font-size: var(--text-lg);
+        }
+
+        .pf-card-link {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            margin-top: 2px;
+        }
+
+        .pf-card-link span {
+            font-family: var(--font-body);
             font-size: var(--text-xs);
-            font-weight: 400;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            transition: color 0.3s ease;
+        }
+
+        .pf-card:hover .pf-card-link span {
             color: var(--color-teal);
-            margin-top: var(--space-2);
-            letter-spacing: 0.03em;
         }
 
-        .process-timeline {
-            margin-top: var(--space-12);
-            font-size: var(--text-xs);
-            font-weight: 300;
-            color: rgba(42, 42, 42, 0.4);
-            line-height: 1.8;
-            max-width: 480px;
+        /* Animated arrow */
+        .pf-card-arrow {
+            display: inline-block;
+            height: 1px;
+            background: var(--color-teal);
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        .pf-card:hover .pf-card-arrow {
+            width: 22px;
         }
 
         /* ─────────────────────────────────────────────────────────
@@ -691,28 +555,17 @@
        RESPONSIVE
     ───────────────────────────────────────────────────────── */
         @media (max-width: 768px) {
-            .story {
+            .pf-pair {
                 grid-template-columns: 1fr;
-            }
-
-            .story-photo {
-                min-height: 360px;
-            }
-
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .process-header {
-                grid-template-columns: 1fr;
-            }
-
-            .process-row {
-                grid-template-columns: 32px 1fr;
             }
 
             .cta-band {
                 grid-template-columns: 1fr;
+            }
+
+            /* Square-ish cards feel better stacked on mobile */
+            .pf-card--standard .pf-card-img {
+                aspect-ratio: 4 / 3;
             }
         }
     </style>
@@ -731,8 +584,8 @@
         </a>
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/about" class="active">About</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/portfolio" class="active">Portfolio</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
@@ -740,129 +593,91 @@
 
     <!-- ══ PAGE HERO ════════════════════════════════════════════ -->
     <section class="page-hero" id="hero">
-        <div class="page-hero-watermark" aria-hidden="true">CRAFT</div>
+        <div class="page-hero-watermark" aria-hidden="true">WORK</div>
         <div class="page-hero-rule"></div>
         <div class="page-hero-content">
-            <p class="section-label section-label--light reveal">About</p>
+            <p class="section-label reveal">Selected Work</p>
             <h1 class="reveal">
-                Design by Instinct.
-                <span class="outline">Development by Choice.</span>
+                Work That Closes
+                <span class="outline">the Gap.</span>
             </h1>
             <p class="reveal reveal-delay-1">
-                Not two separate skills bolted together. One person who thinks in both —
-                and uses both to build something that holds together.
+                Brand identity, web design, and development — built to reflect the real
+                quality of the businesses behind them.
             </p>
         </div>
     </section>
 
-    <!-- ══ STORY ════════════════════════════════════════════════ -->
-    <div class="story" id="about">
-        <div class="story-content">
-            <p class="section-label section-label--teal reveal">About</p>
-            <h2 class="reveal">Built on Craft.<br>Pushed Into Code.</h2>
-            <p class="reveal">I grew up drawing. My father was an architect — I spent years watching him turn ideas into
-                structure, and it shaped how I think about everything I make. I went through formal design education,
-                worked in print, worked in agencies, and spent years doing brand and identity work across different
-                markets.</p>
-            <p class="reveal reveal-delay-1">Development came later — and it came deliberately. The web kept pulling at
-                me. I wanted to build what I designed, to understand how it worked, not hand it off and hope it
-                translated. So I taught myself. Enrolled in a front-end development programme. Took a role at a martech
-                consultancy where I worked at the intersection of design thinking and code.</p>
-            <p class="reveal reveal-delay-2">Now I work as both — not because it happened by accident, but because the
-                combination is where the most useful work lives.</p>
-            <a href="/contact" class="btn-ghost-light reveal reveal-delay-3">Start a Project</a>
-        </div>
-        <div class="story-photo reveal">
-            <!--
-      Replace with your photo:
-      <img src="/assets/tiago-photo.jpg" alt="Tiago Costa Rebelo">
-    -->
-            <div class="story-photo-placeholder"></div>
-        </div>
-    </div>
+    <!-- ══ PORTFOLIO GRID ═══════════════════════════════════════ -->
+    <section class="portfolio-grid">
 
-    <!-- ══ WHY ══════════════════════════════════════════════════ -->
-    <section class="why section-pad" id="why">
-        <div class="why-grid">
-            <p class="reveal">Most brand projects are handed to one person. Most website projects to another. The two
-                deliverables rarely speak the same language — and the business ends up with a presence that feels
-                assembled from parts rather than built as one thing.</p>
-            <p class="reveal reveal-delay-1">Working with one person who holds both disciplines means the identity and
-                the website are shaped by the same thinking, from the start. No translation layer. No briefing someone
-                new halfway through. One point of contact, one coherent outcome.</p>
+        <!-- Featured — Anonymous Lover -->
+        <div class="pf-featured reveal">
+            <a href="/portfolio/anonymous-lover" class="pf-card pf-card--featured">
+                <div class="pf-card-img">
+                    <img src="https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-23_221145_g5z2h6.png"
+                        alt="Anonymous Lover" />
+                </div>
+                <div class="pf-card-overlay"></div>
+                <div class="pf-card-footer">
+                    <span class="pf-card-cat">Web Development &amp; UI Design</span>
+                    <p class="pf-card-title">Anonymous Lover</p>
+                    <div class="pf-card-link">
+                        <span>View Work</span>
+                        <span class="pf-card-arrow"></span>
+                    </div>
+                </div>
+            </a>
         </div>
-    </section>
 
-    <!-- ══ PROCESS ══════════════════════════════════════════════ -->
-    <section class="process section-pad" id="process">
-        <div class="process-header">
+        <!-- Two-column pair -->
+        <div class="pf-pair">
+
+            <!-- Moodser -->
             <div class="reveal">
-                <p class="section-label">Process</p>
-                <h2>A Clear Process.<br>No Surprises.</h2>
-            </div>
-        </div>
-
-        <div class="process-rows">
-
-            <div class="process-row reveal">
-                <span class="process-num">01</span>
-                <div class="process-body">
-                    <h3>Discovery</h3>
-                    <p>You fill in a brief. We book a discovery call. I get to understand the business, the audience,
-                        and what needs to change. If it's a good fit, I send a proposal.</p>
-                </div>
-            </div>
-
-            <div class="process-row reveal reveal-delay-1">
-                <span class="process-num">02</span>
-                <div class="process-body">
-                    <h3>Creative Direction</h3>
-                    <p>Before any design work, we align on direction — imagery, colour territory, typography, tone. You
-                        see where the project is heading before it's built. This is where we avoid expensive wrong
-                        turns.</p>
-                </div>
+                <a href="/portfolio/moodser" class="pf-card pf-card--standard">
+                    <div class="pf-card-img">
+                        <img src="https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174400_qjsuke.png"
+                            alt="Moodser" />
+                    </div>
+                    <div class="pf-card-overlay"></div>
+                    <div class="pf-card-footer">
+                        <span class="pf-card-cat">Web Development &amp; UI Design</span>
+                        <p class="pf-card-title">Moodser</p>
+                        <div class="pf-card-link">
+                            <span>View Work</span>
+                            <span class="pf-card-arrow"></span>
+                        </div>
+                    </div>
+                </a>
             </div>
 
-            <div class="process-row reveal reveal-delay-2">
-                <span class="process-num">03</span>
-                <div class="process-body">
-                    <h3>Identity Development</h3>
-                    <p>With a direction agreed, I develop the identity concepts. Logo, colour system, typography,
-                        supporting elements. We review together, refine, and confirm the final direction.</p>
-                </div>
-            </div>
-
-            <div class="process-row reveal reveal-delay-3">
-                <span class="process-num">04</span>
-                <div class="process-body">
-                    <h3>Brand Guidelines</h3>
-                    <p>The full identity is documented — built for consistency across digital and print, and easy for
-                        you or anyone else to use correctly.</p>
-                </div>
-            </div>
-
-            <div class="process-row reveal">
-                <span class="process-num">05</span>
-                <div class="process-body">
-                    <h3>Website</h3>
-                    <p>Design and development follow the brand system. The website is built to match the identity, not
-                        adapt to it after the fact. We review at key stages and you have clear visibility throughout.
-                    </p>
-                    <p class="process-note">Included in Brand + Website projects.</p>
-                </div>
+            <!-- Good Nuts -->
+            <div class="reveal reveal-delay-1">
+                <a href="/portfolio/good-nuts" class="pf-card pf-card--standard">
+                    <div class="pf-card-img">
+                        <img src="https://res.cloudinary.com/dfnqamudd/image/upload/v1773226075/good_nuts-splash_aq5cbl.webp"
+                            alt="Good Nuts" />
+                    </div>
+                    <div class="pf-card-overlay"></div>
+                    <div class="pf-card-footer">
+                        <span class="pf-card-cat">Brand Design &amp; Packaging</span>
+                        <p class="pf-card-title">Good Nuts</p>
+                        <div class="pf-card-link">
+                            <span>View Work</span>
+                            <span class="pf-card-arrow"></span>
+                        </div>
+                    </div>
+                </a>
             </div>
 
         </div>
 
-        <p class="process-timeline reveal">
-            Brand Identity: approximately 4 weeks. &nbsp;Brand + Website: approximately 6–8 weeks. &nbsp;Every project
-            is scoped individually.
-        </p>
     </section>
 
     <!-- ══ CTA BAND ══════════════════════════════════════════════ -->
-    <section class="cta-band" id="contact">
-        <h2 class="reveal">Ready to Close<br>the Gap?</h2>
+    <section class="cta-band">
+        <h2 class="reveal">Seen Enough?<br>Let's Build Yours.</h2>
         <div class="reveal reveal-delay-1">
             <a href="/contact" class="btn-dark">Start a Project</a>
         </div>

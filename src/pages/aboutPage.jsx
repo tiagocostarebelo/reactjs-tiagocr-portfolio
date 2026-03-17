@@ -60,27 +60,27 @@ const AboutPage = () => {
                 <div className="order-2 md:order-1 flex flex-col justify-center py-24 pl-6 md:pl-16 lg:pl-34 pr-6 md:pr-8 lg:pr-26">
                     <FadeIn delay={120}>
                         <p className="font-body text-xs tracking-[0.22em] uppercase text-teal mb-8">
-                            About
+                            {story.label}
                         </p>
                         <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-white mb-8">
-                            One Person. <br /> Brand and Website, Built Together.
+                            {story.headline[0]} <br /> {story.headline[1]}
                         </h2>
                     </FadeIn>
                     <FadeIn delay={140}>
                         <p className="font-light text-sm text-white/60 leading-loose mb-5">
-                            I'm Tiago Costa Rebelo, a Brand Designer and Web Developer working directly with founder-led service businesses. No account managers, no handoffs, no briefing three different people and hoping it coheres at the end. One person holds the full picture, from identity to website, and builds it as one system.
+                            {story.paragraphs[0]}
                         </p>
                     </FadeIn>
                     <FadeIn delay={160}>
                         <p className="font-light text-sm text-white/60 leading-loose mb-5">
-                            Most businesses treat brand and website as separate problems to be solved separately. I treat them as one. The result is more consistent, more intentional, and built to reflect the real quality of what you've built, not assembled from disconnected parts.
+                            {story.paragraphs[1]}
                         </p>
                     </FadeIn>
-                    <div className="mt-6">
-                        <FadeIn delay={220}>
-                            <Button as="link" to="/about" className="btn-ghost-light w-full">More about me</Button>
-                        </FadeIn>
-                    </div>
+                    <FadeIn delay={180}>
+                        <p className="font-light text-sm text-white/60 leading-loose mb-5">
+                            {story.paragraphs[2]}
+                        </p>
+                    </FadeIn>
                 </div>
                 {/* PHOTO */}
                 <div className="relative overflow-hidden order-1 md:order-2">
@@ -141,7 +141,7 @@ const AboutPage = () => {
                             </span>
                             <div>
                                 <h3
-                                    className="font-display font-bold text-lg md:text-2xl lg:text-3xl uppercase tracking-wide text-black-rich leading-none mb-3 pl-2"
+                                    className="font-display font-bold text-lg md:text-2xl lg:text-3xl uppercase tracking-wide leading-none text-black-rich mb-3 pl-2"
                                     style={{ fontSize: 'clamp(20px, 2.2vw, 32px)', letterSpacing: '-0.01em' }}
                                 >
                                     {title}

@@ -1,6 +1,6 @@
-import React from "react";
 import MediaRenderer from "../components/ui/MediaRenderer";
-import Contact from "../components/sections/Contact";
+import FadeIn from "../components/animation/FadeIn";
+import Button from "../components/ui/Button";
 
 const WorkPageTemplate = ({ project }) => {
     const isWebProject =
@@ -13,8 +13,8 @@ const WorkPageTemplate = ({ project }) => {
 
     return (
         <div className="min-h-screen font-body">
-            {/* HERO (dark) */}
-            <div className="pt-25">
+            {/* HERO */}
+            <div className="md:pt-24">
                 <header className="relative flex h-[90vh] flex-col justify-end overflow-hidden bg-black-rich text-white">
                     {hero ? (
                         <div className="absolute inset-0 z-0">
@@ -31,7 +31,7 @@ const WorkPageTemplate = ({ project }) => {
                     ) : null}
 
                     <div className="relative z-10 w-full pb-16">
-                        <div className="mx-auto w-full ">
+                        <div className="mx-auto w-full">
                             <div className="mb-6 flex flex-wrap gap-3">
                                 {(project.category || []).map((cat) => (
                                     <span
@@ -41,7 +41,6 @@ const WorkPageTemplate = ({ project }) => {
                                         {cat}
                                     </span>
                                 ))}
-
                                 {project.year ? (
                                     <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-widest text-white/70 backdrop-blur-sm">
                                         Est. {project.year}
@@ -49,12 +48,12 @@ const WorkPageTemplate = ({ project }) => {
                                 ) : null}
                             </div>
 
-                            <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-7xl">
+                            <h1 className="font-display font-black text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter uppercase">
                                 {project.title}
                             </h1>
 
                             {project.shortDescription ? (
-                                <p className="mt-6 max-w-2xl border-l-2 border-mustard pl-6 text-base leading-relaxed text-white/80 md:text-lg">
+                                <p className="mt-6 max-w-2xl border-l-2 border-mustard pl-6 font-light text-sm text-white/80 leading-loose md:text-lg">
                                     {project.shortDescription}
                                 </p>
                             ) : null}
@@ -76,7 +75,7 @@ const WorkPageTemplate = ({ project }) => {
                                         01. The Brief
                                     </h2>
 
-                                    <p className="text-base font-light leading-snug text-black-rich md:text-xl">
+                                    <p className="text-base font-light leading-relaxed text-black-rich md:text-xl">
                                         {caseStudy.brief}
                                     </p>
                                 </div>
@@ -89,7 +88,7 @@ const WorkPageTemplate = ({ project }) => {
 
                                         <ul className="space-y-2">
                                             {(caseStudy.role || []).map((r) => (
-                                                <li key={r} className="text-sm text-gray-dark">
+                                                <li key={r} className="text-sm font-light leading-relaxed text-gray-dark">
                                                     {r}
                                                 </li>
                                             ))}
@@ -131,12 +130,12 @@ const WorkPageTemplate = ({ project }) => {
 
                             {/* RIGHT */}
                             <div className="lg:col-span-5 flex flex-col">
-                                <div className="rounded-2xl bg-gray-light p-8 md:p-10">
+                                <div className="rounded-lg bg-gray-light p-8 md:p-10">
                                     <h2 className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-mustard">
                                         02. The Solution
                                     </h2>
 
-                                    <p className="text-sm italic text-gray-dark md:text-base">
+                                    <p className="text-sm font-light leading-relaxed italic text-gray-dark md:text-base">
                                         “{caseStudy.solution}”
                                     </p>
                                 </div>
@@ -147,7 +146,7 @@ const WorkPageTemplate = ({ project }) => {
 
                 {/* GALLERY*/}
                 {gallerySections.map((section, sIdx) => (
-                    <section key={sIdx} className="w-full h-auto py-16 bg-gray-light">
+                    <section key={sIdx} className="w-full h-auto py-24 bg-gray-light">
                         <div className="mx-auto w-full ">
                             <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:gap-10">
                                 {(section.images || []).map((item, iIdx) => {
@@ -190,7 +189,7 @@ const WorkPageTemplate = ({ project }) => {
                                             <span className="font-display text-2xl font-bold text-black-rich/15 hover:text-mustard transition-all duration-500">
                                                 {String(i + 1).padStart(2, "0")}
                                             </span>
-                                            <p className="pt-1 text-sm leading-relaxed text-gray-dark md:text-base">
+                                            <p className="pt-1 text-sm font-light leading-relaxed text-gray-dark md:text-base">
                                                 {goal}
                                             </p>
                                         </div>
@@ -225,7 +224,7 @@ const WorkPageTemplate = ({ project }) => {
                                 Outcome
                             </h2>
 
-                            <p className="font-display text-2xl font-medium leading-tight text-black-rich md:text-4xl">
+                            <p className="font-body text-lg font-light leading-relaxed text-gray-dark">
                                 {caseStudy.outcome}
                             </p>
                         </div>
@@ -233,10 +232,22 @@ const WorkPageTemplate = ({ project }) => {
                 </section>
             </main>
 
-            <Contact
-                heading="Ready to elevate your project?"
-                text="Whether it's a high-performance web platform, a unique visual identity, or a strategic digital campaign, I'm here to bring your vision to life."
-            />
+            <section
+                className="bg-mustard grid lg:grid-cols-[1fr_auto] gap-16 items-center py-24">
+                <FadeIn>
+                    <h2
+                        className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich"
+
+                    >
+                        Ready to Close<br />the Gap?
+                    </h2>
+                </FadeIn>
+                <FadeIn delay={120}>
+                    <Button as="link" to="/contact" className="btn-black-rich">
+                        Start a Project
+                    </Button>
+                </FadeIn>
+            </section>
         </div>
     );
 };
