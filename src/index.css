@@ -130,7 +130,7 @@
 
     /* CARD */
     .card {
-        @apply bg-white p-8 rounded-lg shadow-sm transition-all duration-300 ease-out;
+        @apply bg-white p-8 rounded-lg shadow-sm transition-all duration-200 ease-out;
     }
 
     .card:hover {
@@ -139,11 +139,11 @@
 
     /* Dark variant of card — for dark-bg sections */
     .card-dark {
-        @apply p-8 rounded-lg border border-white/8 transition-all duration-300 ease-out;
+        @apply p-8 rounded-lg border border-white/8 transition-all duration-200 ease-out;
     }
 
     .card-dark:hover {
-        @apply bg-white/8 -translate-y-0.5;
+        @apply bg-white/8;
     }
 }
 

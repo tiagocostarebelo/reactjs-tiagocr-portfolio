@@ -16,13 +16,10 @@ const Gap = () => {
                 </FadeIn>
                 <FadeIn delay={160}>
                     <p className="font-light text-sm text-gray-dark/60 leading-loose max-w-2xl">
-                        A weak visual presence does more than look outdated. It can make a good
-                        business feel less established, less clear, and less credible than it
-                        really is. That gap affects how confidently you promote your work, how
-                        potential clients perceive your value, and how well your business supports
-                        its next stage of growth. I help close that gap through thoughtful brand
-                        and website work that brings everything into alignment, so the business
-                        looks as credible as the work behind it.
+                        A weak visual presence does more than look outdated. It makes a good business feel
+                        less established, less credible, and less valuable than it is, and that gap has real
+                        costs. I close it through aligned brand and website work, built to match the standard
+                        of the business behind it.
                     </p>
                 </FadeIn>
             </div>

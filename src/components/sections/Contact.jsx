@@ -17,7 +17,7 @@ const Contact = ({
             </FadeIn>
 
             <div className="flex-shrink-0">
-                <FadeIn delay={180}>
+                <FadeIn delay={160}>
                     <Button as="link" to="/contact" className="btn-black-rich">{buttonLabel}</Button>
                 </FadeIn>
             </div>

@@ -12,21 +12,17 @@ const About = () => {
                         About
                     </p>
                     <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-white mb-8">
-                        A Designer-Dev with a focus on clarity and craft
+                        One Person. <br /> Brand and Website, Built Together.
                     </h2>
                 </FadeIn>
                 <FadeIn delay={140}>
                     <p className="font-light text-sm text-white/60 leading-loose mb-5">
-                        I'm Tiago Costa Rebelo, a Brand Designer &amp; Web Developer helping
-                        service-based businesses build a stronger, more credible online presence
-                        through aligned brand and website work.
+                        'm Tiago Costa Rebelo, a Brand Designer and Web Developer working directly with founder-led service businesses. No account managers, no handoffs, no briefing three different people and hoping it coheres at the end. One person holds the full picture, from identity to website, and builds it as one system.
                     </p>
                 </FadeIn>
                 <FadeIn delay={160}>
                     <p className="font-light text-sm text-white/60 leading-loose mb-5">
-                        My approach combines visual identity thinking with website design and
-                        development, so the end result feels cohesive, clear, and built to reflect
-                        the real standard of the business.
+                        Most businesses treat brand and website as separate problems to be solved separately. I treat them as one. The result is more consistent, more intentional, and built to reflect the real quality of what you've built, not assembled from disconnected parts.
                     </p>
                 </FadeIn>
                 <div className="mt-6">

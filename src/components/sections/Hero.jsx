@@ -21,7 +21,7 @@ const Hero = () => {
             </span>
             <FadeIn delay={120}>
                 <div className="relative z-10 w-[50px] h-[4px] bg-mustard mb-8 rounded"></div>
-                <h1 className="relative z-10 font-display font-black text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter uppercase mb-8">BRAND DESIGNER<br /> <span id="headline-outline">&amp; WEB DEVELOPER</span></h1>
+                <h1 className="relative z-10 font-display font-black text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter uppercase mb-8">You've built something real.<br /> <span id="headline-outline">&amp; Your brand should show it.</span></h1>
             </FadeIn>
 
 
@@ -29,7 +29,7 @@ const Hero = () => {
                 <div>
                     <FadeIn delay={160}>
                         <h4 className="text-white text-base md:text-lg lg:text-xl tracking-tight leading-none font-medium uppercase mb-3">Brand identities and websites that reflect the real quality of your business.</h4>
-                        <p className="text-white/70 text-sm leading-loose font-thin mt-4">I work with founder-led service businesses that need a stronger visual presence, building brands and websites that feel clearer, more credible, and more aligned with the standard of the work behind them.</p>
+                        <p className="text-white/70 text-sm leading-loose font-thin mt-4">I work with founder-led service businesses whose brand and website no longer reflect the standard of what they've built. If you're proud of your business, it's time to bring your brand into alignment. <span className="font-medium">One designer. One developer. One clear process</span>.</p>
                     </FadeIn>
                 </div>
                 <div className="flex flex-col md:items-end lg:justify-end space-y-6 transition-all duration-500">

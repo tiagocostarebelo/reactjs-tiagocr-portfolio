@@ -1,23 +1,23 @@
 const cards = [
     {
         num: '01',
-        title: 'Brand and Website Thinking Together',
-        body: 'Your identity and website are considered as one system, not disconnected deliverables.',
+        title: 'Brand and Website as One System',
+        body: 'Your identity and website are built together, not bolted together after the fact, so the result feels consistent, not assembled from separate pieces.',
     },
     {
         num: '02',
-        title: 'Direct Collaboration',
-        body: 'One clear point of contact from start to finish.',
+        title: 'You Work Directly With Me',
+        body: 'No account managers, no miscommunication chains. Every decision and revision goes through one person, the one actually doing the work.',
     },
     {
         num: '03',
-        title: 'Thoughtful, Tailored Execution',
-        body: 'The work is shaped around the business, its audience, and its goals — not forced into a template.',
+        title: 'Built Around Your Business, Not a Template',
+        body: 'The work starts with understanding what the business is, who it serves, and what i needs to say. The outcome reflects that, not a theme adapted to fit.',
     },
     {
         num: '04',
         title: 'Clarity at Every Step',
-        body: 'Clear communication, clear decisions, and a process designed to reduce noise.',
+        body: 'Clear decisions, clear timelines, clear communication. You always know where the project stands and what happens next, no chasing, no ambiguity.',
     },
 ];
 

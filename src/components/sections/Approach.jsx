@@ -24,8 +24,9 @@ const Approach = () => {
 
             <div className="grid lg:grid-cols-2 grid-rows-2 gap-y-4 lg:gap-y-0 lg:gap-x-4">
                 {cards.map(({ num, title, body }, i) => (
-                    <div
+                    <FadeIn
                         key={num}
+                        delay={i * 200}
                         className="card-dark relative rounded-none border-0 border-l-3 border-mustard pl-2 lg:pl-4"
                     >
                         <span className="font-body text-xs font-medium tracking-[0.15em] text-mustard/50 block mb-6">
@@ -39,7 +40,7 @@ const Approach = () => {
                         <p className="font-light text-sm text-white/35 leading-relaxed">
                             {body}
                         </p>
-                    </div>
+                    </FadeIn>
                 ))}
             </div>
 
