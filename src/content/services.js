@@ -17,12 +17,6 @@ const services = [
         body: 'A joined-up transformation for businesses that need their visual identity and digital presence to work as one coherent system.',
         tag: 'Combined',
     },
-    {
-        num: '04',
-        title: 'Email Design & Development',
-        body: 'Branded, responsive email templates and campaign builds designed to keep your communication clear, consistent, and professional across the inbox.',
-        tag: 'Digital',
-    },
 ]
 
 export default services;
