@@ -26,7 +26,7 @@ const Gap = () => {
                     </p>
                 </FadeIn>
             </div>
-
+            {/* LIST */}
             <div className="border-t border-gray-light/80">
                 {gaps.map(({ num, title, body }, i) => (
 

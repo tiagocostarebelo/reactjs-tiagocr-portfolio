@@ -18,11 +18,11 @@ const HomePage = () => {
         <>
             <Hero />
             <Gap />
+            <About />
             {projectDetails.length > 0 &&
                 <FeaturedProjects projectDetails={filteredFeatured} />
             }
             <Services />
-            <About />
             <Contact />
         </>
     )
