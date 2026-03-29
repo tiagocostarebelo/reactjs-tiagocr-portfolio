@@ -28,7 +28,7 @@ const Services = () => {
                         whiteSpace: 'nowrap',
                     }}
                 >
-                    WORK
+                    OFFER
                 </span>
 
                 <div className="relative z-10 max-w-6xl py-24">
