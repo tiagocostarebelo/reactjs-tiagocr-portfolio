@@ -147,6 +147,60 @@ const projectDetails = [
             }
         }
     },
+    {
+        id: "odette",
+        slug: "odette",
+        title: "Odette",
+        category: ["Brand Design", "Packaging Design"],
+        featured: true,
+        shortDescription: "A premium at-home coffee brand identity inspired by the elegance of a white swan, built on movement, restraint, and the quiet luxury of a daily ritual.",
+        thumbnail: "",
+        liveUrl: "",
+        year: 2026,
+        caseStudy: {
+            brief: "Odette is a premium at-home coffee brand inspired by the elegance of a white swan. The brand offers both flavoured and classic blends, targeting design-conscious young professionals aged 20–35 who value refined daily rituals and small everyday luxuries. The brief called for a complete brand identity: primary logo, at least one secondary mark or variation, and packaging for a minimum of two flavour variants. The identity needed to demonstrate how the brand adapts across different touchpoints. The twist: subtly incorporate a swan-inspired element within the branding, literal or abstract, without it being required in the primary logo.",
+            solution: "Odette is built on movement. The wordmark draws from three sources: the fluid arc of a swan in motion, the oval of a coffee bean, and the discipline of a ballet dancer's form. Rather than illustrating these literally, the letterforms carry them. The 'O' holds the weight of a bean. The 'd' curves with the quiet grace of a swan's neck. The line is never still. The monogram distils this further, a single abstract form that rewards attention without demanding explanation.",
+            role: ["Brand Designer"],
+            goals: [
+                "Create a premium brand identity that feels refined and design-conscious without relying on generic luxury conventions",
+                "Subtly incorporate a swan-inspired element within the branding without making it the centrepiece of the primary logo",
+                "Design a packaging system across multiple blend variants that reads as a coherent family while maintaining individual character",
+                "Demonstrate how the identity adapts across different brand touchpoints beyond the logo itself"
+            ],
+            process: [
+                "Analysed the brief and defined the core brand tension: warmth of coffee ritual meeting the cool elegance of a swan",
+                "Built a moodboard around three pillars: swan geometry, ballet movement, and premium at-home coffee culture. Then locked a colour palette of warm caramel, terracotta, sage and near-black",
+                "Explored abstract mark-making through sketchbook development, moving away from literal swan illustration toward form and movement carried within the letterforms themselves",
+                "Refined the wordmark by integrating coffee bean, swan neck and dancer references directly into the 'O' and 'd' letterforms, paired with a standalone monogram mark",
+                "Built a three-variant rigid box packaging system: Classic, Adagio and Still Water. Each differentiated by colour while maintaining a consistent layout grid, gold accent and monogram language",
+                "Extended the identity into a brand pattern derived from the monogram, a shopping bag application, and lifestyle mockups to demonstrate the full brand world"
+            ],
+            outcome: "The result is a layered brand identity where nothing is literal and everything is felt. The wordmark carries the movement of a swan, the discipline of a dancer and the form of a coffee bean,not as illustration, but as memory held in the letterforms. The packaging system demonstrates how a single identity logic can stretch across a product range while maintaining coherence and premium presence. The brand pattern, derived directly from the monogram, extends the identity into tactile touchpoints that reward the consumer who looks closer. Restraint on the outside. Richness within.",
+            images: {
+                hero: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170026/cover_odette_rqh6e8.jpg",
+                sections: [
+                    {
+                        // Introduction Media
+                        images: [
+                            { url: "" }
+                        ]
+                    },
+                    {
+                        // Main Gallery
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170538/odette_wordmark_cmleml.jpg", layout: "full", caption: "Brand identity — wordmark and monogram" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170901/mockup_lady_whrslq.jpg", layout: "half", caption: "Still Water — Limited Edition" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170539/odette_pattern_ec0td0.jpg", layout: "half", caption: "Brand pattern derived from the monogram mark" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170026/art5_n52cfq.jpg", layout: "half", caption: "Classic — Single Origin, Medium Roast" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170701/art6_rnarnd.jpg", layout: "half", caption: "Adagio — Smooth, Slow Roasted" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170027/bag_bg_lo2zsa.png", layout: "full", caption: "Shopping bag application" },
+
+                        ]
+                    }
+                ]
+            }
+        }
+    },
 
 ];
 
