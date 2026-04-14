@@ -154,7 +154,7 @@ const projectDetails = [
         category: ["Brand Design", "Packaging Design"],
         featured: true,
         shortDescription: "A premium at-home coffee brand identity inspired by the elegance of a white swan, built on movement, restraint, and the quiet luxury of a daily ritual.",
-        thumbnail: "",
+        thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170026/cover_odette_rqh6e8.jpg",
         liveUrl: "",
         year: 2026,
         caseStudy: {
