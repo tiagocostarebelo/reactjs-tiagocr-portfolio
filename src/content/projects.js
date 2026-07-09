@@ -1,10 +1,65 @@
 const projectDetails = [
     {
+        id: "kineticore",
+        slug: "kineticore",
+        title: "Kineticore",
+        category: ["Web Design", "UI/UX Design"],
+        featured: true,
+        heroProject: true,
+        shortDescription: "A full website redesign for Kineticore, a boutique Reformer Pilates studio in Sunbury-on-Thames, consolidating a fragmented 12-page site into a focused, conversion-led experience built around real user needs.",
+        thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-07-09_120149_olmtwz.png",
+        liveUrl: "https://www.kineticore.co.uk/",
+        year: 2026,
+        caseStudy: {
+            brief: "Kineticore had a self-built Squarespace site that was visually inconsistent, difficult to navigate, and failing to convert visitors. With 12 navigation items, no clear user journey, the site was underselling a genuinely differentiated studio. The goal was to redesign the full site, cleaner, more connected to the business, and built to convert.",
+            solution: "I led a full discovery, UX research, design and build process. Starting with a site audit, I identified the core problems and redesigned the site from the ground up,  consolidating 12 pages into 5, establishing a consistent design system using the studio's brand colours, and building a conversion funnel that guides visitors from curious to booked. The final site was designed in Figma and built in Squarespace.",
+            role: ["UI/UX Designer", "Web Developer"],
+            goals: [
+                "Consolidate a fragmented 12-page navigation into a clear, purposeful 5-link structure.",
+                "Create a user journey that guides visitors from discovery to booking without friction.",
+                "Apply the existing brand identity consistently for the first time.",
+                "Surface the studio's key differentiator — guaranteed weekly slots, and an excelence of a team — as the primary value proposition.",
+                "Replace cold direct debit links with a human-first 'get in touch' conversion flow."
+            ],
+            process: [
+                "Conducted a full audit of the existing site across navigation, copy, visual design, conversion flow and technical structure.",
+                "Developed three UX personas: the Returning Mover, the Injury-Led Seeker and the Curious Newcomer, to ground every design decision in real user needs.",
+                "Designed a consolidated site architecture: Classes, Pricing & Times, Therapies, Our Team and Contact.",
+                "Built a full Figma prototype covering all pages, presented to the client for approval before build.",
+                "Implemented the design in Squarespace using a fluid grid, custom CSS, Ovatu booking widget integration, and a Google Drive-connected contact form.",
+                "Produced a handover video and PDF guide to support the client in managing content independently."
+            ],
+            outcome: "Kineticore now has a live, fully branded website that communicates the quality of the studio from the first second. The navigation is clean, the user journey is deliberate, and every page has a clear purpose. The Introductory offer, the studio's primary conversion tool, is front and centre throughout. The client launched with an Instagram post crediting the work and has the tools to manage the site confidently going forward.",
+            images: {
+                hero: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-07-09_120149_olmtwz.png",
+                sections: [
+                    {
+                        // Introduction Media
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-07-09_134906_katp8d.png", layout: 'full', caption: 'Figma prototype' }
+                        ]
+                    },
+                    {
+                        // Main Gallery
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-07-09_120257_gp11e5.png", layout: 'full' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-07-09_120308_gdj26d.png", layout: 'full' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-07-09_120355_tiaviy.png", layout: 'half' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-07-09_120506_jy2foi.png", layout: 'half' },
+                            { url: "https://res.cloudinary.com/dfnqamudd/video/upload/Kineticore_full_website_owm5yo.mp4", layout: 'full' },
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
         id: "anonymous-lover",
         slug: "anonymous-lover",
         title: "Anonymous Lover",
         category: ["Web Development", "UI/UX Design"],
         featured: true,
+        heroProject: false,
         shortDescription: "A responsive eCommerce website for Anonymous Lover, a natural skincare brand selling tallow-based moisturisers and essentials.",
         thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-23_221145_g5z2h6.png",
         liveUrl: "https://anonymouslover.co.uk/",
@@ -55,6 +110,7 @@ const projectDetails = [
         title: "Moodser",
         category: ["Web Development", "UI/UX Design"],
         featured: true,
+        heroProject: false,
         shortDescription: "A lightweight moodboard composer for designers and creatives to quickly collect images, colors, and notes on a single canvas and export as a PNG.",
         thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/Captura_de_ecr%C3%A3_2026-01-28_174400_qjsuke.png",
         liveUrl: "https://moodser.netlify.app",
@@ -104,6 +160,7 @@ const projectDetails = [
         title: "Good Nuts",
         category: ["Brand Design", "Packaging Design"],
         featured: true,
+        heroProject: false,
         shortDescription: "A cheeky and bold brand identity for a nut butter brand, combining expressive typography, vibrant colours, playful copy, and a packaging system designed to stand proudly on the kitchen counter.",
         thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/v1773226075/good_nuts-splash_aq5cbl.webp",
         liveUrl: "",
@@ -147,12 +204,14 @@ const projectDetails = [
             }
         }
     },
+
     {
         id: "odette",
         slug: "odette",
         title: "Odette",
         category: ["Brand Design", "Packaging Design"],
         featured: true,
+        heroProject: false,
         shortDescription: "A premium at-home coffee brand identity inspired by the elegance of a white swan, built on movement, restraint, and the quiet luxury of a daily ritual.",
         thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170026/cover_odette_rqh6e8.jpg",
         liveUrl: "",
@@ -201,6 +260,8 @@ const projectDetails = [
             }
         }
     },
+
+
 
 ];
 

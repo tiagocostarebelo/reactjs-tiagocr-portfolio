@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="relative z-10 grid md:grid-cols-2 gap-12 items-end pb-20">
                 <div>
                     <FadeIn delay={160}>
-                        <h4 className="text-white text-base md:text-lg lg:text-xl tracking-tight leading-none font-medium uppercase mb-3">Brand identities and websites that reflect the real quality of your business.</h4>
+                        <p className="text-white text-base md:text-lg lg:text-xl tracking-tight leading-none font-medium uppercase mb-3">Brand identities and websites that reflect the real quality of your business.</p>
                         <p className="text-white/70 text-sm leading-loose font-thin mt-4">I work with founder-led service businesses whose brand and website no longer reflect the standard of what they've built. If you're proud of your business, it's time to bring your brand into alignment. <span className="font-medium">One designer. One developer. One clear process</span>.</p>
                     </FadeIn>
                 </div>
