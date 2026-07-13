@@ -25,7 +25,7 @@ const FeaturedProjects = ({ projectDetails }) => {
                         Selected Work
                     </p>
                     <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich max-w-5xl">
-                        Projects Built to Close the Gap Between How These Businesses Perform and How They Present.
+                        A selection of my most recent work
                     </h2>
                 </FadeIn>
             </div>

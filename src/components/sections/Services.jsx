@@ -17,14 +17,15 @@ const Services = () => {
                             How I Can Help
                         </h2>
                     </FadeIn>
+                    <FadeIn delay={160}>
+                        <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/60 leading-loose">
+                            Whether the gap is in the brand, the website, or both, the goal is the
+                            same: to create a more aligned, credible presence that supports the next
+                            stage of the business.
+                        </p>
+                    </FadeIn>
                 </div>
-                <FadeIn delay={160}>
-                    <p className="font-light text-sm text-gray-dark/60 leading-loose">
-                        Whether the gap is in the brand, the website, or both, the goal is the
-                        same: to create a more aligned, credible presence that supports the next
-                        stage of the business.
-                    </p>
-                </FadeIn>
+
             </div>
 
             {/* Service rows */}
@@ -44,7 +45,7 @@ const Services = () => {
                             >
                                 {title}
                             </h3>
-                            <p className="font-light text-sm text-gray-dark/55 leading-relaxed max-w-xl pl-2">
+                            <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/55 leading-relaxed max-w-2xl pl-2">
                                 {body}
                             </p>
                         </div>

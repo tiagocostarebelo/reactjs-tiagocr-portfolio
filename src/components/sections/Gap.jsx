@@ -15,7 +15,7 @@ const Gap = () => {
                     </h2>
                 </FadeIn>
                 <FadeIn delay={160}>
-                    <p className="font-light text-sm text-gray-dark/60 leading-loose max-w-2xl">
+                    <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/60 leading-loose max-w-5xl">
                         A weak visual presence does more than look outdated. It makes a good business feel
                         less established, less credible, and less valuable than it is, and that gap has real
                         costs. I close it through aligned brand and website work, built to match the standard
@@ -43,7 +43,7 @@ const Gap = () => {
                             >
                                 {title}
                             </h3>
-                            <p className="font-light text-sm text-gray-dark/60 leading-relaxed max-w-md">
+                            <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/60 leading-relaxed max-w-2xl">
                                 {body}
                             </p>
                         </div>

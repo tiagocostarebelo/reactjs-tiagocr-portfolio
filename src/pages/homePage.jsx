@@ -19,7 +19,7 @@ const HomePage = () => {
         <>
             <Hero />
             <Gap />
-            <About />
+            {/* <About /> */}
             <Services />
             <Approach />
             {projectDetails.length > 0 &&
