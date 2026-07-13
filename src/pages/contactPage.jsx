@@ -54,7 +54,7 @@ const ContactPage = () => {
                         </h1>
                     </FadeIn>
                     <FadeIn delay={160}>
-                        <p className="font-light text-sm text-white/40 leading-loose max-w-lg">
+                        <p className="font-light text-base md:text-lg tracking-tight md:text-lg tracking-tight text-white/40 leading-loose max-w-2xl">
                             I work with a small number of businesses at a time. Tell me about
                             yours and what needs to change, and we'll take it from there.
                         </p>
@@ -80,12 +80,12 @@ const ContactPage = () => {
                         >
                             The Right Start Makes All the Difference.
                         </h2>
-                        <p className="font-light text-sm text-gray-dark/60 leading-loose mb-6">
+                        <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/60 leading-loose mb-6">
                             Fill in the form and give me a clear picture of where your business
                             is and what needs to move. The more specific you are, the more
                             useful my response will be.
                         </p>
-                        <p className="font-light text-sm text-gray-dark/60 leading-loose">
+                        <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/60 leading-loose">
                             I'll follow up with a short brief so I can understand
                             the project properly before we talk.
                         </p>
@@ -103,7 +103,7 @@ const ContactPage = () => {
                                     <span className="font-body text-xs font-medium text-mustard tracking-wider pt-0.5">
                                         {num}
                                     </span>
-                                    <p className="font-light text-xs text-gray-dark/50 leading-relaxed">
+                                    <p className="font-light text-xs text-gray-dark/80 leading-relaxed">
                                         {text}
                                     </p>
                                 </div>

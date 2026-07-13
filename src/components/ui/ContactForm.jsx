@@ -7,6 +7,17 @@ const inputClass =
 const labelClass =
     "font-body text-xs font-medium tracking-[0.12em] uppercase text-gray-dark/50";
 
+const requiredFields = [
+    "firstName",
+    "lastName",
+    "email",
+    "business",
+    "projectType",
+    "message",
+];
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         firstName: "",
@@ -16,6 +27,7 @@ const ContactForm = () => {
         projectType: "",
         message: "",
         source: "",
+        "bot-field": "",
     });
 
     const [status, setStatus] = useState({
@@ -32,17 +44,24 @@ const ContactForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        if (
-            !formData.firstName.trim() ||
-            !formData.lastName.trim() ||
-            !formData.email.trim() ||
-            !formData.business.trim() ||
-            !formData.projectType.trim() ||
-            !formData.message.trim()
-        ) {
+        const hasEmptyField = requiredFields.some(
+            (field) => !formData[field].trim()
+        );
+
+        if (hasEmptyField) {
             alert("Please fill in all required fields.");
             return;
+        };
+
+        if (!emailRegex.test(formData.email.trim())) {
+            alert("Please enter a valid email address.");
+            return;
         }
+
+        if (formData.message.trim().length < 20) {
+            alert("Please provide a little more information.");
+            return;
+        };
 
         setStatus({ loading: true, success: false, error: false });
 
@@ -55,11 +74,15 @@ const ContactForm = () => {
                 .join("&");
 
         try {
-            await fetch("/", {
+            const response = await fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encode({ "form-name": "contact", ...formData }),
             });
+
+            if (!response.ok) {
+                throw new Error("Submission failed.");
+            }
 
             setStatus({ loading: false, success: true, error: false });
             setFormData({
@@ -70,13 +93,16 @@ const ContactForm = () => {
                 projectType: "",
                 message: "",
                 source: "",
+                "bot-field": "",
             });
+
         } catch (err) {
             console.error("Form submission error", err);
             setStatus({ loading: false, success: false, error: true });
         }
     };
-    {/* SUCCESS */ }
+
+    // Success state
     if (status.success) {
         return (
             <FadeIn>
@@ -109,11 +135,21 @@ const ContactForm = () => {
                     method="POST"
                     data-netlify="true"
                     netlify-honeypot="bot-field"
+                    noValidate
                     onSubmit={handleSubmit}
                     className="flex flex-col gap-4"
                 >
                     <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="bot-field" />
+                    <p style={{ display: "none" }}>
+                        <label>
+                            Don't fill this out if you're human:
+                            <input
+                                name="bot-field"
+                                value={formData["bot-field"]}
+                                onChange={handleChange}
+                            />
+                        </label>
+                    </p>
 
                     {/* First + Last name */}
                     <div className="grid sm:grid-cols-2 gap-4">
@@ -128,7 +164,7 @@ const ContactForm = () => {
                                 value={formData.firstName}
                                 onChange={handleChange}
                                 placeholder="Jane"
-                                required
+
                                 className={inputClass}
                             />
                         </div>
@@ -143,7 +179,7 @@ const ContactForm = () => {
                                 value={formData.lastName}
                                 onChange={handleChange}
                                 placeholder="Smith"
-                                required
+
                                 className={inputClass}
                             />
                         </div>
@@ -161,7 +197,7 @@ const ContactForm = () => {
                             value={formData.email}
                             onChange={handleChange}
                             placeholder="jane@yourbusiness.com"
-                            required
+
                             className={inputClass}
                         />
                     </div>
@@ -178,7 +214,7 @@ const ContactForm = () => {
                             value={formData.business}
                             onChange={handleChange}
                             placeholder="Your business name"
-                            required
+
                             className={inputClass}
                         />
                     </div>
@@ -194,7 +230,7 @@ const ContactForm = () => {
                                 name="projectType"
                                 value={formData.projectType}
                                 onChange={handleChange}
-                                required
+
                                 className={`${inputClass} mt-0 appearance-none cursor-pointer pr-9`}
                             >
                                 <option value="" disabled>
@@ -233,7 +269,7 @@ const ContactForm = () => {
                             onChange={handleChange}
                             rows={5}
                             placeholder="What does your business do, who do you serve, and what's not working about your current brand or website?"
-                            required
+
                             className={`${inputClass} resize-y leading-loose`}
                         />
                     </div>
@@ -255,6 +291,7 @@ const ContactForm = () => {
                                     Select an option
                                 </option>
                                 <option value="google">Google Search</option>
+                                <option value="linkedin">LinkedIn</option>
                                 <option value="behance">Behance</option>
                                 <option value="instagram">Instagram</option>
                                 <option value="referral">Referral</option>
@@ -279,13 +316,10 @@ const ContactForm = () => {
                         disabled={status.loading}
                         className="btn-primary w-full mt-2"
                     >
-                        {status.loading ? "Sending..." : "Send Enquiry"}
+                        {status.loading ? "Sending..." : "Submit"}
                     </button>
 
-                    <p className="font-light text-xs text-gray-dark/35 leading-relaxed text-center">
-                        I work with a small number of projects at a time. I'll respond
-                        within two business days.
-                    </p>
+
 
                     {status.error && (
                         <p className="text-red-600 text-xs text-center">
