@@ -39,15 +39,15 @@ const AboutPage = () => {
                     <FadeIn delay={120}>
                         <h1
                             className="relative z-10 font-display font-black text-white text-3xl md:text-4xl lg:text-5xl tracking-tighter uppercase mb-8">
-                            Design by Instinct.
+                            Design & Development
                             <span
                                 id="headline-outline">
-                                Development by Choice.
+                                Together
                             </span>
                         </h1>
                     </FadeIn>
                     <FadeIn delay={160}>
-                        <p className="font-light text-sm text-white/40 leading-loose max-w-lg">
+                        <p className="font-light text-base md:text-lg tracking-tight text-white/40 leading-loose max-w-2xl">
                             Not two separate skills bolted together. One person who thinks in both,
                             and uses both to build something that holds together.
                         </p>
@@ -67,17 +67,17 @@ const AboutPage = () => {
                         </h2>
                     </FadeIn>
                     <FadeIn delay={140}>
-                        <p className="font-light text-sm text-white/60 leading-loose mb-5">
+                        <p className="font-thin text-base md:text-lg tracking-tight text-white/60 leading-loose mb-5">
                             {story.paragraphs[0]}
                         </p>
                     </FadeIn>
                     <FadeIn delay={160}>
-                        <p className="font-light text-sm text-white/60 leading-loose mb-5">
+                        <p className="font-thin text-base md:text-lg tracking-tight text-white/60 leading-loose mb-5">
                             {story.paragraphs[1]}
                         </p>
                     </FadeIn>
                     <FadeIn delay={180}>
-                        <p className="font-light text-sm text-white/60 leading-loose mb-5">
+                        <p className="font-thin text-base md:text-lg tracking-tight text-white/60 leading-loose mb-5">
                             {story.paragraphs[2]}
                         </p>
                     </FadeIn>
@@ -91,26 +91,6 @@ const AboutPage = () => {
                 </div>
             </section>
 
-
-            <section
-                className="bg-white py-24"
-            >
-                <div className="grid lg:grid-cols-2 gap-16 items-start max-w-5xl">
-                    {why.paragraphs.map((para, i) => (
-                        <FadeIn key={i} delay={i * 120}>
-                            <p
-                                className="font-light leading-loose text-gray-dark/65"
-                                style={{
-                                    fontSize: i === 0 ? 'var(--text-lg)' : 'var(--text-sm)',
-                                    fontWeight: i === 0 ? 400 : 300,
-                                }}
-                            >
-                                {para}
-                            </p>
-                        </FadeIn>
-                    ))}
-                </div>
-            </section>
 
             <section
                 className="bg-gray-light py-24"
@@ -128,7 +108,6 @@ const AboutPage = () => {
                     </FadeIn>
                 </div>
 
-                {/* Steps — same service-row pattern, consistent with homepage */}
                 <div className="border-t border-gray-dark/10">
                     {process.steps.map(({ num, title, body, note }, i) => (
                         <FadeIn
@@ -136,7 +115,7 @@ const AboutPage = () => {
                             delay={i * 100}
                             className="service-row grid lg:grid-cols-[52px_1fr] items-start gap-10 py-11 border-b border-gray-dark/10 hover:bg-white/60 transition-all duration-500"
                         >
-                            <span className="font-body text-xs tracking-[0.15em] text-gray-dark/30 pt-1 pl-2 lg:pl-4">
+                            <span className="font-light text-base md:text-lg tracking-tight tracking-[0.15em] text-gray-dark/30 pt-1 pl-2 lg:pl-4">
                                 {num}
                             </span>
                             <div>
@@ -146,7 +125,7 @@ const AboutPage = () => {
                                 >
                                     {title}
                                 </h3>
-                                <p className="font-light text-sm text-gray-dark/55 leading-relaxed max-w-xl pl-2">
+                                <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/55 leading-relaxed max-w-4xl pl-2">
                                     {body}
                                 </p>
                                 {note && (
@@ -161,7 +140,7 @@ const AboutPage = () => {
 
                 {/* Timeline note */}
                 <FadeIn delay={200}>
-                    <p className="font-light text-xs text-gray-dark/40 leading-loose mt-12 max-w-lg">
+                    <p className="font-light text-sm text-gray-dark/60 leading-loose mt-12 ">
                         {process.timeline}
                     </p>
                 </FadeIn>

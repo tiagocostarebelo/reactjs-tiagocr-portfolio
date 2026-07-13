@@ -3,8 +3,8 @@ export const story = {
     headline: ['Built on Craft.', 'Pushed Into Code.'],
     paragraphs: [
         'I grew up drawing. My father was an architect, I spent years watching him turn ideas into structure, and it shaped how I think about everything I make. I went through formal design education, worked in print, worked in agencies, and spent years doing brand and identity work across different markets.',
-        'Development came later, and it came deliberately. I wanted to build what I designed, to understand how it worked, not hand it off and hope it translated. So I taught myself. Enrolled in a front-end development programme. Took a role at a martech consultancy where I worked at the intersection of design thinking and code.',
-        'Now I work as both, not because it happened by accident, but because the combination is where the most useful work lives.',
+        'Development came later. I wanted to build what I designed, to understand how it worked. So I taught myself. Enrolled in a front-end development programme. Took a role at a martech consultancy where I worked at the intersection of design thinking and code.',
+        'Now I work as both, because the combination of design and development is where the most useful work lives.',
     ],
 };
 
@@ -46,5 +46,5 @@ export const process = {
             note: 'Included in Brand + Website projects.',
         },
     ],
-    timeline: 'Brand Identity: approximately 4 weeks. Brand + Website: approximately 6–8 weeks. Every project is scoped individually.',
+    timeline: 'Brand Identity: approximately 6 weeks. Brand + Website: approximately 8-10 weeks. Every project is scoped individually.',
 };
