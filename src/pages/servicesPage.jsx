@@ -53,7 +53,7 @@ const Services = () => {
                     </FadeIn>
 
                     <FadeIn delay={160}>
-                        <p className="font-light text-sm text-white/40 leading-loose max-w-lg">
+                        <p className="font-light text-base md:text-lg tracking-tight text-white/40 leading-loose max-w-2xl">
                             Every project starts in a different place. The right offer depends on
                             where the gap is, and what the business needs to move.
                         </p>
@@ -90,7 +90,7 @@ const Services = () => {
                     <FadeIn delay={120}>
                         <div className="flex flex-col gap-6">
                             {flagship.copy.map((para, i) => (
-                                <p key={i} className="font-light text-sm text-gray-dark/65 leading-loose">
+                                <p key={i} className="font-light text-base md:text-lg tracking-tight text-gray-dark/65 leading-loose">
                                     {para}
                                 </p>
                             ))}
@@ -127,7 +127,7 @@ const Services = () => {
 
             {/*SUPPORTING OFFERS*/}
             <section className="bg-gray-light py-24">
-                <div className="grid lg:grid-cols-2 gap-12 items-end mb-20">
+                <div className="flex flex-col mb-20">
                     <FadeIn delay={80}>
                         <p className="font-body text-xs tracking-[0.22em] uppercase text-gray-dark/40 mb-6">
                             Supporting Offers
@@ -138,7 +138,7 @@ const Services = () => {
                         </h2>
                     </FadeIn>
                     <FadeIn delay={120}>
-                        <p className="font-light text-sm text-gray-dark/60 leading-loose">
+                        <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/60 leading-loose max-w-4xl">
                             If your brand is strong but your website isn't working, or your identity
                             needs clarity without a full website build. These offers address the specific gap.
                         </p>
@@ -162,13 +162,11 @@ const Services = () => {
                                 >
                                     {title}
                                 </h3>
-                                <p className="font-light text-sm text-gray-dark/55 leading-relaxed max-w-xl pl-2">
+                                <p className="font-light text-base md:text-lg tracking-tight text-gray-dark/55 leading-relaxed max-w-4xl pl-2">
                                     {body}
                                 </p>
                             </div>
-                            <span className="font-body text-xs font-medium tracking-[0.15em] uppercase text-teal whitespace-nowrap pr-2">
-                                {tag}
-                            </span>
+
                         </FadeIn>
                     ))}
                 </div>
@@ -176,7 +174,7 @@ const Services = () => {
 
             {/* ADD ON OFFER*/}
             <section className="bg-black-rich py-24">
-                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <div className="flex flex-col">
                     <FadeIn delay={80}>
                         <span className="font-body text-xs tracking-[0.22em] uppercase text-white/25 block mb-6">
                             {addon.eyebrow}
@@ -187,7 +185,7 @@ const Services = () => {
                         </h2>
                     </FadeIn>
                     <FadeIn delay={160}>
-                        <p className="font-light text-sm text-white/40 leading-loose">
+                        <p className="font-light text-base md:text-lg tracking-tight text-white/40 leading-loose max-w-6xl">
                             {addon.body}
                         </p>
                         <span
@@ -203,7 +201,7 @@ const Services = () => {
                 <FadeIn>
                     <h2
                         className="font-display font-bold text-2xl md:text-3xl lg:text-4xl uppercase tracking-tight leading-none text-black-rich mb-8">
-                        Work With a Designer<br />Who Builds It Too.
+                        Let's work<br />Together.
                     </h2>
                 </FadeIn>
                 <FadeIn delay={120}>

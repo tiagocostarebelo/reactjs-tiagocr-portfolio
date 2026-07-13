@@ -54,7 +54,7 @@ const PortfolioPage = () => {
                         </h1>
                     </FadeIn>
                     <FadeIn delay={160}>
-                        <p className="font-light text-base md:text-lg tracking-tight text-white/40 leading-loose max-w-4xl">
+                        <p className="font-light text-base md:text-lg tracking-tight text-white/40 leading-loose max-w-2xl">
                             Brand identity, web design, and development. Built to reflect the real
                             quality of the businesses behind them.
                         </p>
