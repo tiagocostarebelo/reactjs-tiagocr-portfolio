@@ -18,7 +18,7 @@ const projectDetails = [
                 "Consolidate a fragmented 12-page navigation into a clear, purposeful 5-link structure.",
                 "Create a user journey that guides visitors from discovery to booking without friction.",
                 "Apply the existing brand identity consistently for the first time.",
-                "Surface the studio's key differentiator — guaranteed weekly slots, and an excelence of a team — as the primary value proposition.",
+                "Surface the studio's key differentiator - guaranteed weekly slots, and an excelence of a team - as the primary value proposition.",
                 "Replace cold direct debit links with a human-first 'get in touch' conversion flow."
             ],
             process: [
@@ -53,6 +53,7 @@ const projectDetails = [
             }
         }
     },
+
     {
         id: "anonymous-lover",
         slug: "anonymous-lover",
@@ -247,11 +248,11 @@ const projectDetails = [
                     {
                         // Main Gallery
                         images: [
-                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170538/odette_wordmark_cmleml.jpg", layout: "full", caption: "Brand identity — wordmark and monogram" },
-                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170901/mockup_lady_whrslq.jpg", layout: "half", caption: "Still Water — Limited Edition" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170538/odette_wordmark_cmleml.jpg", layout: "full", caption: "Brand identity - wordmark and monogram" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170901/mockup_lady_whrslq.jpg", layout: "half", caption: "Still Water - Limited Edition" },
                             { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170539/odette_pattern_ec0td0.jpg", layout: "half", caption: "Brand pattern derived from the monogram mark" },
-                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170026/art5_n52cfq.jpg", layout: "half", caption: "Classic — Single Origin, Medium Roast" },
-                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170701/art6_rnarnd.jpg", layout: "half", caption: "Adagio — Smooth, Slow Roasted" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170026/art5_n52cfq.jpg", layout: "half", caption: "Classic - Single Origin, Medium Roast" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170701/art6_rnarnd.jpg", layout: "half", caption: "Adagio - Smooth, Slow Roasted" },
                             { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1776170027/bag_bg_lo2zsa.png", layout: "full", caption: "Shopping bag application" },
 
                         ]
@@ -261,7 +262,63 @@ const projectDetails = [
         }
     },
 
-
+    {
+        id: "lowpulse",
+        slug: "lowpulse",
+        title: "lowPulse",
+        category: ["Brand Design", "UI Design"],
+        featured: true,
+        heroProject: false,
+        shortDescription: "A fitness brand identity built around zone two training, where the science of slowing down meets the discipline of doing the work. Every spacing, every curve, every colour has biological logic behind it.",
+        thumbnail: "",
+        liveUrl: "",
+        year: 2026,
+        caseStudy: {
+            brief: "lowPulse is a fitness brand built around zone two training - the science of slowing down to get faster. No intensity theatre, no chasing records. Just the quiet, consistent work that actually changes your body over time. The target audience is runners, cyclists and endurance athletes aged 25–45 who have moved past the obsession with speed and are now training with intention. They follow the science, track their data, and understand that the best results come from the least glamorous sessions. The brief called for a complete brand identity, a training app UI concept of 2–3 screens, a brand campaign poster of 1–2 pieces, and extra deliverables of the designer's choice. Brand character keywords: Steady, Scientific, Minimal, Endurance, Disciplined.",
+            solution: "Every element of the lowPulse identity is derived from a single source - the ECG waveform of a heart beating at zone 2 pace. The wordmark encodes the heartbeat directly into its typography. The letters in 'low' carry even, flat spacing - the baseline silence between beats. Controlled. Steady. The letters in 'Pulse' are spaced according to the PQRST waveform: the P-wave gap, the compressed QRS spike, the ST recovery, and the long T-wave fade back to baseline. The rhythm of a real heartbeat, mapped proportionally onto kerning. The accent on the 'l' marks the QRS peak - the highest point of the beat. The icon is extracted from the T-wave, the final curve of the heartbeat cycle before it returns to rest. One continuous line. The logo doesn't just represent the brand - it performs it.",
+            role: ["Brand Designer", "UI Designer"],
+            goals: [
+                "Create a fitness brand identity that rejects the intensity-driven visual language of the category in favour of science, restraint and discipline",
+                "Encode the brand concept directly into the wordmark through typographic spacing derived from a real ECG waveform at zone 2 pace",
+                "Build a brand icon extracted from the ECG waveform itself, functioning independently across all touchpoints including app icon",
+                "Design a training app UI that reflects the brand's data-focused, scientific personality across multiple screens",
+                "Demonstrate how the identity adapts across campaign, digital product and physical brand applications"
+            ],
+            process: [
+                "Analysed the brief and identified the core brand tension: zone two training is built on restraint and science, the opposite of everything fitness branding typically communicates. That tension became the creative engine.",
+                "Conducted sketchbook exploration splitting the name into its component ideas: LOW as steady, slow, controlled; PULSE as rhythm, beat, biological data. From this emerged the concept of encoding the ECG heartbeat directly into the letter spacing.",
+                "Researched the PQRST ECG waveform at zone 2 heart rate (120–145 BPM) and mapped the proportional gaps between each wave segment onto the kerning between the letters of 'Pulse'. The spacing is not aesthetic, it is biologically accurate.",
+                "Selected Hanken Grotesk as the sole typeface for its authority and precision. The wordmark uses a single consistent typeface throughout, with capitalisation contrast, lowercase 'low', capital 'P' reinforcing the conceptual duality without a second font.",
+                "Developed the icon by extracting the T-wave from the ECG waveform as a single continuous line. The mark is simple, ownable and reads immediately as both a waveform and a resting, steady rhythm, the visual embodiment of zone 2.",
+                "Locked a three-colour palette derived from medical chart paper: warm cream #FFF9D8 as the primary background, deep charcoal #363532 as the primary ink tone, and muted clinical red #A63228 as the single accent, the colour of annotation on a medical chart.",
+                "Built a grid texture from ECG chart paper as the brand's environmental language, used at low opacity across all touchpoints to reference the scientific context without becoming illustrative.",
+                "Designed four app UI screens, splash, onboarding, dashboard and live training session, demonstrating the brand system living in a functional digital product. The live training screen places the BPM large and dominant, with a live ECG line and a single status word in the accent colour.",
+                "Created two campaign posters: a photography-led piece using the icon as a large-scale graphic overlay with the line 'No glamour. Best results.', and a typographic grid poster with the copy 'Zone 2 is the work. Science backs it. Results prove it.'",
+                "Extended the identity into brand applications: apparel, gym towel, water bottles, gym bag and cap - demonstrating the system's coherence across physical touchpoints."
+            ],
+            outcome: "The result is a brand identity where the concept is inseparable from the execution. The wordmark is not a logo that references a heartbeat, it is a heartbeat, encoded at zone 2 pace into the spacing between its letters. The icon is not an interpretation of the ECG, it is extracted from it. The palette is not inspired by science, it is borrowed from the paper it is measured on. Every touchpoint, from the app UI to the campaign poster to the gym towel, speaks the same language: data, restraint, biological precision. For an audience that trains by the science, this is a brand that thinks the same way they do.",
+            images: {
+                hero: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642117/lowPulse_app_hownmq.jpg",
+                sections: [
+                    {
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642116/lowPulse_hero_mksf79.jpg", caption: "Brand identity" }
+                        ]
+                    },
+                    {
+                        images: [
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642116/lowPulse_hero2_ow2he7.jpg", layout: "full", caption: "Brand identity - icon on ECG grid, with color palette" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789644741/lowPulse_heartbeat_wzv0dp.jpg", layout: "full", caption: "Brand identity - The concept of the ECG waveform encoded in letter spacing" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642104/lowpulse10_s0ulnc.jpg", layout: "half", caption: "Brand applications - towel, bottle, bag, cap" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642103/lowpulse9_gixowa.jpg", layout: "half", caption: "Brand applications - towel over gym bench" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642117/lowPulse_app_hownmq.jpg", layout: "full", caption: "App UI - Dashboard and weekly zone overview" },
+                            { url: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642103/lowpulse6_ajvwrr.jpg", layout: "half", caption: "Campaign poster - No glamour. Best results." },
+                        ]
+                    }
+                ]
+            }
+        }
+    },
 
 ];
 
