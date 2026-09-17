@@ -270,7 +270,7 @@ const projectDetails = [
         featured: true,
         heroProject: false,
         shortDescription: "A fitness brand identity built around zone two training, where the science of slowing down meets the discipline of doing the work. Every spacing, every curve, every colour has biological logic behind it.",
-        thumbnail: "",
+        thumbnail: "https://res.cloudinary.com/dfnqamudd/image/upload/v1789642117/lowPulse_app_hownmq.jpg",
         liveUrl: "",
         year: 2026,
         caseStudy: {
